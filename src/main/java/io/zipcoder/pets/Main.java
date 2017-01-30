@@ -43,7 +43,7 @@ public class Main
         }
 
         // print out pets
-        for ( int i = 0; i < numberOfPets*2; i++ )
+        for ( int i = 0; i < numberOfPets; i++ )
         {
             System.out.println(userPets[i]);
         }
