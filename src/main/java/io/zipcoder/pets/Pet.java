@@ -3,7 +3,7 @@ package io.zipcoder.pets;
 /**
  * @author John A. Squier
  * @author Michael Wolfe
- * A pet class for Michael Wolfe to implement.
+ * A pet class that Michael Wolfe will implement.
  */
 abstract public class Pet
 {
