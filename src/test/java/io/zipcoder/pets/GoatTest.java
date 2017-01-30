@@ -7,22 +7,22 @@ import org.junit.Test;
 /**
  * Created by johnsquier on 1/30/17.
  */
-public class DogTest
+public class GoatTest
 {
-    Pet dog;
+    Pet goat;
 
     @Before
     public void setup()
     {
-        dog = new Dog();
+        goat = new Goat();
     }
 
     @Test
     public void speakTest()
     {
-        String expected = "Bork";
+        String expected = "I'm a goat!";
 
-        String actual = dog.speak();
+        String actual = goat.speak();
 
         Assert.assertEquals(expected, actual);
     }

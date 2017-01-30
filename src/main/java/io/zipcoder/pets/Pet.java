@@ -6,37 +6,19 @@ package io.zipcoder.pets;
  */
 abstract public class Pet
 {
-    private String name;
+    protected String name;
 
     public Pet() {}
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    abstract public void speak();
-
-    public int getNumberOfPetsUserHas()
-    {
-        return -1;
-    }
-
-    public String getTypeOfPetUserHas()
-    {
-        return null;
-    }
-
-    public String getNameOfPetUserHas()
-    {
-        return null;
-    }
-
-    public String generateListOfPetsAsString()
-    {
-        return null;
-    }
+    abstract public String speak();
 }
