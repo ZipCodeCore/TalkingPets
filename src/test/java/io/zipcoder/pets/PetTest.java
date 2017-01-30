@@ -8,7 +8,7 @@ import org.junit.Test;
  * @author John A. Squier
  * This class tests the pets superclass that MaWolfe87 will write.
  */
-public class PetsTest
+public class PetTest
 {
     Pet pet;
 
@@ -16,6 +16,28 @@ public class PetsTest
     public void setup()
     {
         pet = new Pet();
+        pet.setName("Petty Pet");
+    }
+
+    @Test
+    public void getNameTest()
+    {
+        String expected = "Petty Pet";
+
+        String actual = pet.getName();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setNameTest()
+    {
+        String expected = "Achy Animal";
+
+        pet.setName("Achy Animal");
+        String actual = pet.getName();
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
