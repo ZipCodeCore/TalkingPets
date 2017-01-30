@@ -1,30 +1,51 @@
 package io.zipcoder.pets;
 
 /**
- * Created by johnsquier on 1/30/17.
+ * @author John A. Squier
+ * @author Michael Wolfe
+ * A main class that Michael Wolfe will implement.
  */
 public class Main
 {
     public static void main(String[] args)
     {
+        // get number of pets user has
         System.out.print(promptForNumberOfPets());
         int numberOfPets = getNumberOfPetsUserHas();
 
-        //Pet[] usersPets = new Pet[numberOfPets]; for polymorphism
-        String[] userInput = new String[numberOfPets*2];
+        // create an array to store user input
+        Pet[] userPets = new Pet[numberOfPets];
+        //String[] userInput = new String[numberOfPets*2]; // original implementation
 
         for ( int i = 0; i < numberOfPets; i++ )
         {
             System.out.print(promptForTypeOfPetUserHas());
-            userInput[i] = getTypeOfPetUserHas();
+
+            switch ( getTypeOfPetUserHas().toLowerCase() )
+            {
+                case "dog":
+                    userPets[i] = new Dog();
+                    break;
+                case "cat":
+                    userPets[i] = new Cat();
+                    break;
+                case "goat":
+                    userPets[i] = new Goat();
+                    break;
+
+                // unknown pet types are dogs
+                default:
+                    userPets[i] = new Dog();
+            }
 
             System.out.print(promptForNameOfPetUserHas());
-            userInput[i+1] = getNameOfPetUserHas();
+            userPets[i].setName(getNameOfPetUserHas());
         }
 
+        // print out pets
         for ( int i = 0; i < numberOfPets*2; i++ )
         {
-            System.out.println(userInput[i]);
+            System.out.println(userPets[i]);
         }
 
     }

@@ -1,8 +1,9 @@
 package io.zipcoder.pets;
 
 /**
- * @author Mawolfe87
- * Created by John A. Squier for Michael Wolfe to implement
+ * @author John A. Squier
+ * @author Michael Wolfe
+ * A pet class for Michael Wolfe to implement.
  */
 abstract public class Pet
 {
@@ -18,6 +19,11 @@ abstract public class Pet
     public void setName(String name)
     {
         this.name = name;
+    }
+
+    public String toString()
+    {
+        return null;
     }
 
     abstract public String speak();

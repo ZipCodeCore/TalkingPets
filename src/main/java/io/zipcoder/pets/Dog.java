@@ -1,7 +1,9 @@
 package io.zipcoder.pets;
 
 /**
- * Created by johnsquier on 1/30/17.
+ * @author John A. Squier
+ * @author Michael Wolfe
+ * A dog class that Michael Wolfe will implement.
  */
 public class Dog extends Pet
 {

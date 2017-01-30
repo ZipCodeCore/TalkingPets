@@ -5,7 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Created by johnsquier on 1/30/17.
+ * @author John A. Squier
+ * A test class for the goat class that should indicate to Michael Wolfe how to implement Goat.
  */
 public class GoatTest
 {
