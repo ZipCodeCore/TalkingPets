@@ -4,7 +4,7 @@ package io.zipcoder.pets;
  * @author Mawolfe87
  * Created by John A. Squier for Michael Wolfe to implement
  */
-public class Pet
+abstract public class Pet
 {
     private String name;
 
@@ -17,6 +17,8 @@ public class Pet
     public void setName(String name) {
         this.name = name;
     }
+
+    abstract public void speak();
 
     public int getNumberOfPetsUserHas()
     {
