@@ -6,7 +6,7 @@ package io.zipcoder.pets;
  */
 public class Pet
 {
-
+    public Pet() {}
 
     public int getNumberOfPetsUserHas()
     {
@@ -14,6 +14,16 @@ public class Pet
     }
 
     public String getTypeOfPetUserHas()
+    {
+        return null;
+    }
+
+    public String getNameOfPetUserHas()
+    {
+        return null;
+    }
+
+    public String generateListOfPetsAsString()
     {
         return null;
     }

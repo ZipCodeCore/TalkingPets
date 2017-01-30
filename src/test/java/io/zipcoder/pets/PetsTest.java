@@ -33,4 +33,20 @@ public class PetsTest
 
         Assert.assertTrue(actual != null);
     }
+
+    @Test
+    public void getNameOfPetUserHasTest()
+    {
+        String actual = pet.getNameOfPetUserHas();
+
+        Assert.assertTrue(actual != null);
+    }
+
+    @Test
+    public void generateListOfPetsAsString()
+    {
+        String actual = pet.generateListOfPetsAsString();
+
+        Assert.assertTrue(actual != null);
+    }
 }
