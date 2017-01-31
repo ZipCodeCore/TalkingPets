@@ -18,33 +18,4 @@ public class MainTest
         main = new Main();
     }
 
-    @Test
-    public void promptForNumberOfPetsTest()
-    {
-        String expected = "How many pets do you have?:";
-
-        String actual = main.promptForNumberOfPets();
-
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void promptForTypeOfPetUserHas()
-    {
-        String expected = "What kind of animal is this pet?:";
-
-        String actual = main.promptForTypeOfPetUserHas();
-
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void promptForNameOfPetUserHas()
-    {
-        String expected = "What is the name of this pet?:";
-
-        String actual = main.promptForNameOfPetUserHas();
-
-        Assert.assertEquals(expected, actual);
-    }
 }
