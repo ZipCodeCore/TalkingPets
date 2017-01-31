@@ -1,6 +1,7 @@
 package io.zipcoder.pets;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -8,6 +9,14 @@ import org.junit.Test;
  */
 public class DisplayTest
 {
+    Display display;
+
+    @Before
+    public void setup()
+    {
+        display = new Display();
+    }
+
     @Test
     public void promptForNumberOfPetsTest()
     {

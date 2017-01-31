@@ -3,7 +3,7 @@ package io.zipcoder.pets;
 /**
  * Created by johnsquier on 1/31/17.
  */
-abstract public class Display
+public class Display
 {
     public static String promptForNumberOfPets()
     {
