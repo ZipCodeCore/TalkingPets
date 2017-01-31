@@ -28,7 +28,7 @@ public class Main
             System.out.println(display.promptForTypeOfPet());
             petType = getTypeOfPet();
 
-            // can be refactored into PetFactory
+            // can be refactored into CanCreatePets
             switch ( petType.toLowerCase() )
             {
                 case "dog":
