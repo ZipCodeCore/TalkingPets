@@ -47,7 +47,7 @@ public class PetTest {
         pet = new Cat("Stacy");
         String expected = "Stacy";
         String actual = pet.getName();
-        Assert.assertEquals("Testing dog name", expected,actual);
+        Assert.assertEquals("Testing cat name", expected,actual);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class PetTest {
         pet = new Pig("Albert");
         String exepected = "Oink";
         String actual = pet.speak();
-        Assert.assertEquals("Testing the cat Speak method", exepected, actual);
+        Assert.assertEquals("Testing the pig Speak method", exepected, actual);
 
     }
 
@@ -66,7 +66,7 @@ public class PetTest {
         pet = new Pig("Albert");
         String expected = "Albert";
         String actual = pet.getName();
-        Assert.assertEquals("Testing dog name", expected,actual);
+        Assert.assertEquals("Testing pig name", expected,actual);
     }
 
 
