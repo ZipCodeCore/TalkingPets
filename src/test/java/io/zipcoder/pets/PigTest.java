@@ -9,12 +9,12 @@ import org.junit.Test;
  */
 public class PigTest
 {
-    Pet goat;
+    Pet pig;
 
     @Before
     public void setup()
     {
-        goat = new Pig();
+        pig = new Pig();
     }
 
     @Test
@@ -22,7 +22,7 @@ public class PigTest
     {
         String expected = "Oink";
 
-        String actual = goat.speak();
+        String actual = pig.speak();
 
         Assert.assertEquals(expected, actual);
     }

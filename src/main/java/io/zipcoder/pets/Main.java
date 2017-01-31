@@ -1,38 +1,78 @@
 package io.zipcoder.pets;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * @author John A. Squier
  */
 public class Main
 {
-    private Display display;
-    private List list;
-    private Pet pet;
-
-    public Main()
-    {
-        // instantiate all fields
-    }
+    private static Display display = new Display();
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args)
     {
-        return;
+        List<Pet> list = new ArrayList<Pet>();
+        Pet pet;
+        int numberOfPets;
+        String petType;
+        String petName;
+
+        System.out.println(display.promptForNumberOfPets());
+        numberOfPets = getNumberOfPets();
+
+        for ( int i = 0; i < numberOfPets; i++ )
+        {
+            System.out.println(display.promptForTypeOfPet());
+            petType = getTypeOfPet();
+
+            // can be refactored into PetFactory
+            switch ( petType.toLowerCase() )
+            {
+                case "dog":
+                    pet = new Dog();
+                    break;
+                case "cat":
+                    pet = new Cat();
+                    break;
+                case "pig":
+                    pet = new Pig();
+                    break;
+                default: // unknown pets are dogs
+                    pet = new Dog();
+                    break;
+            }
+
+            System.out.println(display.promptForNameOfPet());
+            pet.setName(getNameOfPet());
+
+            list.add(pet);
+        }
+
+        // print out pet info
+        for ( Pet p : list )
+        {
+            System.out.println(display.displayPetInfo(p));
+        }
+
     }
 
-    public static int getNumberOfPetsUserHas()
+    public static int getNumberOfPets()
     {
-        return -1;
+        int x = scanner.nextInt();
+        scanner.nextLine();
+        return x;
     }
 
-    public static String getTypeOfPetUserHas()
+    public static String getTypeOfPet()
     {
-        return null;
+        return scanner.nextLine();
     }
 
-    public static String getNameOfPetUserHas()
+    public static String getNameOfPet()
     {
-        return null;
+        return scanner.nextLine();
     }
 }

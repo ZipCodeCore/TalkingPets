@@ -7,6 +7,6 @@ public class Pig extends Pet
 {
     public String speak()
     {
-        return null;
+        return "Oink";
     }
 }

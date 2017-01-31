@@ -7,21 +7,21 @@ public class Display
 {
     public static String promptForNumberOfPets()
     {
-        return null;
+        return "How many pets do you have?:";
     }
 
     public static String promptForTypeOfPet()
     {
-        return null;
+        return "What kind of animal is this pet?:";
     }
 
     public static String promptForNameOfPet()
     {
-        return null;
+        return "What is the name of this pet?:";
     }
 
     public String displayPetInfo(Pet p)
     {
-        return null;
+        return "I am " + p.getName() + " and I say " + p.speak();
     }
 }
