@@ -40,7 +40,7 @@ public class Main
 
     }
 
-    public static int getNumberOfPets()
+    private static int getNumberOfPets()
     {
         int x;
 
@@ -61,12 +61,12 @@ public class Main
         return x;
     }
 
-    public static String getTypeOfPet()
+    private static String getTypeOfPet()
     {
         return scanner.nextLine();
     }
 
-    public static String getNameOfPet()
+    private static String getNameOfPet()
     {
         return scanner.nextLine();
     }
