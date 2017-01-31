@@ -6,7 +6,6 @@ import org.junit.Test;
 
 /**
  * @author John A. Squier
- * A test class for the cat class that should indicate to Michael Wolfe how to implement Cat.
  */
 public class CatTest
 {

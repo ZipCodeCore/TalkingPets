@@ -6,7 +6,6 @@ import org.junit.Test;
 
 /**
  * @author John A. Squier
- * A test class for the goat class that should indicate to Michael Wolfe how to implement Pig.
  */
 public class PigTest
 {
