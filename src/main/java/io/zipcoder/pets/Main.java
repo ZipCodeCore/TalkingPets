@@ -42,8 +42,16 @@ public class Main
 
     public static int getNumberOfPets()
     {
-        int x = scanner.nextInt();
-        scanner.nextLine();             // clear the newline from the buffer
+        int x;
+
+        do
+        {
+            x = scanner.nextInt();
+            // clear the newline from the buffer
+            scanner.nextLine();
+        }
+        while ( x < 0 );
+
         return x;
     }
 
