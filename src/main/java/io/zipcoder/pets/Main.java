@@ -43,7 +43,7 @@ public class Main
     public static int getNumberOfPets()
     {
         int x = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine();             // clear the newline from the buffer
         return x;
     }
 
