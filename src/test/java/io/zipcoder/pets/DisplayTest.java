@@ -1,7 +1,6 @@
 package io.zipcoder.pets;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -9,20 +8,12 @@ import org.junit.Test;
  */
 public class DisplayTest
 {
-    Display display;
-
-    @Before
-    public void setup()
-    {
-        display = new Display();
-    }
-
     @Test
     public void promptForNumberOfPetsTest()
     {
         String expected = "How many pets do you have?:";
 
-        String actual = display.promptForNumberOfPets();
+        String actual = Display.promptForNumberOfPets();
 
         Assert.assertEquals(expected, actual);
     }
@@ -32,7 +23,7 @@ public class DisplayTest
     {
         String expected = "What kind of animal is this pet?:";
 
-        String actual = display.promptForTypeOfPet();
+        String actual = Display.promptForTypeOfPet();
 
         Assert.assertEquals(expected, actual);
     }
@@ -42,7 +33,7 @@ public class DisplayTest
     {
         String expected = "What is the name of this pet?:";
 
-        String actual = display.promptForNameOfPet();
+        String actual = Display.promptForNameOfPet();
 
         Assert.assertEquals(expected, actual);
     }
@@ -55,7 +46,7 @@ public class DisplayTest
 
         String expected = "I am Dewey and I say Bork";
 
-        String actual = display.displayPetInfo(dog);
+        String actual = Display.displayPetInfo(dog);
 
         Assert.assertEquals(expected, actual);
     }
@@ -68,7 +59,7 @@ public class DisplayTest
 
         String expected = "I am Misty and I say Meow!";
 
-        String actual = display.displayPetInfo(cat);
+        String actual = Display.displayPetInfo(cat);
 
         Assert.assertEquals(expected, actual);
     }
@@ -81,7 +72,7 @@ public class DisplayTest
 
         String expected = "I am Babe and I say Oink";
 
-        String actual = display.displayPetInfo(pig);
+        String actual = Display.displayPetInfo(pig);
 
         Assert.assertEquals(expected, actual);
     }

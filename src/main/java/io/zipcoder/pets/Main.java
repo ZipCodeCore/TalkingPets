@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Main
 {
-    // scanner is a field so I dont have to pass it to the getInput methods
+    // scanner is a field so I don't have to pass it to the getInput methods
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args)
