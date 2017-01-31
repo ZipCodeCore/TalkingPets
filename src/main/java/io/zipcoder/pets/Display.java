@@ -3,7 +3,7 @@ package io.zipcoder.pets;
 /**
  * Created by johnsquier on 1/31/17.
  */
-public class Display
+abstract public class Display
 {
     public static String promptForNumberOfPets()
     {
@@ -20,7 +20,7 @@ public class Display
         return "What is the name of this pet?:";
     }
 
-    public String displayPetInfo(Pet p)
+    public static String displayPetInfo(Pet p)
     {
         return "I am " + p.getName() + " and I say " + p.speak();
     }

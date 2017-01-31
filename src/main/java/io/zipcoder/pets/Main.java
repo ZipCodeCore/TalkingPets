@@ -14,19 +14,18 @@ public class Main
 
     public static void main(String[] args)
     {
-        Display display = new Display();
         CanCreatePets petFactory = new PetFactory();
         List<Pet> list = new ArrayList<>();
 
-        System.out.println(display.promptForNumberOfPets());
+        System.out.println(Display.promptForNumberOfPets());
         int numberOfPets = getNumberOfPets();
 
         for ( int i = 0; i < numberOfPets; i++ )
         {
-            System.out.println(display.promptForTypeOfPet());
+            System.out.println(Display.promptForTypeOfPet());
             Pet pet = petFactory.createPet(getTypeOfPet());
 
-            System.out.println(display.promptForNameOfPet());
+            System.out.println(Display.promptForNameOfPet());
             pet.setName(getNameOfPet());
 
             list.add(pet);
@@ -35,7 +34,7 @@ public class Main
         // print out pet info
         for ( Pet p : list )
         {
-            System.out.println(display.displayPetInfo(p));
+            System.out.println(Display.displayPetInfo(p));
         }
 
     }
