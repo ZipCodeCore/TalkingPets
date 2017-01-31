@@ -15,7 +15,7 @@ public class Main
 
     public Main()
     {
-
+        // instantiate all fields
     }
 
     public static void main(String[] args)

@@ -40,14 +40,4 @@ public class PetTest
 
         Assert.assertEquals(expected, actual);
     }
-
-    @Test
-    public void toStringTest()
-    {
-        String expected = "My name is: Dewey.  I say \"Bork\'";
-
-        String actual = dog.toString();
-
-        Assert.assertEquals(expected, actual);
-    }
 }

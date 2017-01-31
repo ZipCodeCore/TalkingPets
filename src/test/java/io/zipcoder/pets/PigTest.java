@@ -6,22 +6,22 @@ import org.junit.Test;
 
 /**
  * @author John A. Squier
- * A test class for the goat class that should indicate to Michael Wolfe how to implement Goat.
+ * A test class for the goat class that should indicate to Michael Wolfe how to implement Pig.
  */
-public class GoatTest
+public class PigTest
 {
     Pet goat;
 
     @Before
     public void setup()
     {
-        goat = new Goat();
+        goat = new Pig();
     }
 
     @Test
     public void speakTest()
     {
-        String expected = "I'm a goat!";
+        String expected = "Oink";
 
         String actual = goat.speak();
 

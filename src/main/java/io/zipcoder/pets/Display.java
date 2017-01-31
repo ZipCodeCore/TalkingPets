@@ -19,4 +19,9 @@ public class Display
     {
         return null;
     }
+
+    public String displayPetInfo(Pet p)
+    {
+        return null;
+    }
 }

@@ -18,4 +18,6 @@ public class MainTest
         main = new Main();
     }
 
+    // Main's other methods are input dependent
+
 }
