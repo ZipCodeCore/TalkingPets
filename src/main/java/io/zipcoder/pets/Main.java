@@ -9,41 +9,22 @@ import java.util.Scanner;
  */
 public class Main
 {
-    private static Display display = new Display();
+    // scanner is a field so I dont have to pass it to the getInput methods
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args)
     {
-        List<Pet> list = new ArrayList<Pet>();
-        Pet pet;
-        int numberOfPets;
-        String petType;
-        String petName;
+        Display display = new Display();
+        CanCreatePets petFactory = new PetFactory();
+        List<Pet> list = new ArrayList<>();
 
         System.out.println(display.promptForNumberOfPets());
-        numberOfPets = getNumberOfPets();
+        int numberOfPets = getNumberOfPets();
 
         for ( int i = 0; i < numberOfPets; i++ )
         {
             System.out.println(display.promptForTypeOfPet());
-            petType = getTypeOfPet();
-
-            // can be refactored into CanCreatePets
-            switch ( petType.toLowerCase() )
-            {
-                case "dog":
-                    pet = new Dog();
-                    break;
-                case "cat":
-                    pet = new Cat();
-                    break;
-                case "pig":
-                    pet = new Pig();
-                    break;
-                default: // unknown pets are dogs
-                    pet = new Dog();
-                    break;
-            }
+            Pet pet = petFactory.createPet(getTypeOfPet());
 
             System.out.println(display.promptForNameOfPet());
             pet.setName(getNameOfPet());
