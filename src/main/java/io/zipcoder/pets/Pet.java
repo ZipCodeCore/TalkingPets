@@ -5,7 +5,7 @@ package io.zipcoder.pets;
  */
 abstract public class Pet
 {
-    protected String name;
+    private String name;
 
     public String getName()
     {
