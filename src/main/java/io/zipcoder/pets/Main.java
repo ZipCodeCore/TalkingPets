@@ -47,10 +47,16 @@ public class Main
         do
         {
             x = scanner.nextInt();
-            // clear the newline from the buffer
-            scanner.nextLine();
+
+            if ( x < 0 )
+            {
+                System.out.println(Display.promptForNumberOfPets());
+            }
         }
         while ( x < 0 );
+
+        // clear the newline from the buffer
+        scanner.nextLine();
 
         return x;
     }
