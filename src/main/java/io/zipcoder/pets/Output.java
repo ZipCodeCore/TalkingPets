@@ -9,12 +9,12 @@ import java.util.Scanner;
  */
 public class Output {
 
-    Scanner sc;
+    private Scanner sc;
     private static int numPets;
     private String typePet;
     private String petName;
-    Pet pet;
-    List<String> listNames = new ArrayList(), listTypes = new ArrayList();
+    private Pet pet;
+    List<String> listNames = new ArrayList<>(), listTypes = new ArrayList<>();
 
 
     public void setNumPets(int num){
@@ -33,7 +33,6 @@ public class Output {
 
         petName = name;
     }
-
 
     public int getNumPets() {
         return numPets;
@@ -74,10 +73,6 @@ public class Output {
 
     public Pet getPet() {
         return pet;
-    }
-
-    public String getPetName() {
-        return petName;
     }
 
     public void getPetTypesMenu(int i){

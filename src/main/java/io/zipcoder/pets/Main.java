@@ -16,8 +16,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         List<Pet> listOfPets = new ArrayList<>();
         Output output = new Output();
-        String type, name;
-
 
         System.out.println("How many pets do you have?");
 
