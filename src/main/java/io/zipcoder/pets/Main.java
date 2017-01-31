@@ -23,6 +23,7 @@ public class Main
         for ( int i = 0; i < numberOfPets; i++ )
         {
             System.out.println(Display.promptForTypeOfPet());
+
             Pet pet = petFactory.createPet(getTypeOfPet());
 
             System.out.println(Display.promptForNameOfPet());

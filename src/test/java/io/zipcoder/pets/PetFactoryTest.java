@@ -20,7 +20,7 @@ public class PetFactoryTest
     @Test
     public void createDogTest()
     {
-        Pet actual = petFactory.createPet("dog");
+        Pet actual = petFactory.createPet("Dog");
 
         Assert.assertTrue(actual instanceof Dog);
     }

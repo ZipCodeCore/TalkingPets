@@ -5,5 +5,5 @@ package io.zipcoder.pets;
  */
 public interface CanCreatePets
 {
-    public Pet createPet(String petType);
+    Pet createPet(String petType);
 }
