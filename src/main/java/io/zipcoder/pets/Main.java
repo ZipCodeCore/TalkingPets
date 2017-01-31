@@ -7,11 +7,9 @@ import java.util.List;
  */
 public class Main
 {
-    int numberOfPets;
-    String typeOfPet;
-    String nameOfPet;
-    List list;
-    Pet pet;
+    private Display display;
+    private List list;
+    private Pet pet;
 
     public Main()
     {
