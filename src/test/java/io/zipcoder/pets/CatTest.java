@@ -24,4 +24,35 @@ public class CatTest {
         String actual = cat.speak();
         assertEquals("Expected Meow", expected, actual);
     }
+
+    @Test
+    public void compareToNegOneTest(){ //Both pet types are different
+        int expected = -1;
+        Dog dog = new Dog("Toby"); //Create a Dog instance just for this test
+        int actual = cat.compareTo(dog);
+        assertEquals("Expected to get -1", expected, actual);
+    }
+
+    @Test
+    public void compareToZeroTest(){ //Both pet types are the same
+        int expected = 0;
+        int actual = cat.compareTo(cat);
+        assertEquals("Expected to get 1", expected, actual);
+    }
+
+    @Test
+    public void compareToStringsDifferent(){ //Compare the pet string names
+        int expected = -1;
+        Dog dog = new Dog("Toby");
+        int actual = cat.compareTo(dog, 1);
+        assertEquals("Expected -1", expected, actual);
+    }
+
+    @Test
+    public void compareToStringsSame(){ //Compare the pet string names
+        int expected = 0;
+        Cat cat2 = new Cat("Toby");
+        int actual = cat.compareTo(cat2, 0);
+        assertEquals("Expected 0", expected, actual);
+    }
 }

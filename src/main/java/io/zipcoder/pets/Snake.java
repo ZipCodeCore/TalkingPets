@@ -16,4 +16,9 @@ public class Snake extends Pet{
     Snake(String name){
         super.setName(name);
     }
+
+    @Override
+    public int compareTo(Pet petType){
+        return -10;
+    }
 }

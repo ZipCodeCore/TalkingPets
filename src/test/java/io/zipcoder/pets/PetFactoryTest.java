@@ -34,4 +34,13 @@ public class PetFactoryTest {
         String actual = dog.getClass().getSimpleName().toString();
         assertEquals("Expected Dog", expected, actual);
     }
+
+    @Test
+    public void makeAPetTest(){
+        Pet dog = petFactory.makeAPet("Dog", "Fido");
+        boolean expected = true;
+        boolean actual = dog instanceof Dog;
+        assertEquals("Expected true", expected, actual);
+
+    }
 }

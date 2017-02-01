@@ -1,5 +1,7 @@
 package io.zipcoder.pets;
 
+import java.util.Collections;
+
 /**
  * Created by gillianreynolds-titko on 1/31/17.
  */
@@ -11,6 +13,7 @@ public class Controller {
     private int numberOfPets = 0;
     private String petType = "";
     private String petName = "";
+    public PetComparator petComparator = new PetComparator();
 
 
     public void askUserForNumberOfPets(){
@@ -27,6 +30,7 @@ public class Controller {
             //Create an array of the pets
             petManagement.pets.add(petMade);
         }
+        Collections.sort(petManagement.pets, petComparator); //Sort the array we created
     }
 
     private String askUserForPetName(){

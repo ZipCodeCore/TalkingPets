@@ -24,4 +24,11 @@ public class SnakeTest {
         String actual = snake.speak();
         assertEquals("Expected Hiss", expected, actual);
     }
+
+    @Test
+    public void compareToTest(){
+        int expected = -1;
+        int actual = snake.compareTo(snake);
+        assertEquals("Expected to get -1", expected, actual);
+    }
 }

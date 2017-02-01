@@ -24,4 +24,11 @@ public class DogTest {
         String actual = dog.speak();
         assertEquals("Expected Bow-wow", expected, actual);
     }
+
+    @Test
+    public void compareToTest(){
+        int expected = -1;
+        int actual = dog.compareTo(dog);
+        assertEquals("Expected to get -1", expected, actual);
+    }
 }

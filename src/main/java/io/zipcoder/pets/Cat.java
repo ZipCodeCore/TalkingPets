@@ -11,11 +11,14 @@ public class Cat extends Pet {
 
     @Override
     public String speak(){
+
         return "Meow";
     }
 
     //Create a Cat constructor; set the name by using the super class (Pet) methods
     Cat(String name){
+
         super.setName(name);
     }
+
 }
