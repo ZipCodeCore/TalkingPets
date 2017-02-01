@@ -5,7 +5,7 @@ package io.zipcoder.pets;
  */
 public class Cobra extends Pet {
     // CONSTRUCTORS
-    Cobra(String name, String type) {
+    public Cobra(String name, String type) {
         this.name = name;
         this.type = type;
     }
@@ -13,6 +13,6 @@ public class Cobra extends Pet {
 
     // OVERRIDE METHOD
     public String speak() {
-        // Define this method for me please...
+        return "Now I know, and knowing is half the battle!";
     }
 }

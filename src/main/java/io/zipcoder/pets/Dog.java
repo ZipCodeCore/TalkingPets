@@ -5,7 +5,7 @@ package io.zipcoder.pets;
  */
 public class Dog extends Pet {
     // CONSTRUCTORS
-    Dog(String name, String type) {
+    public Dog(String name, String type) {
         this.name = name;
         this.type = type;
     }
@@ -13,6 +13,6 @@ public class Dog extends Pet {
 
     // OVERRIDE METHOD
     public String speak() {
-        // Define this method for me please...
+        return "Kick, punch, it's all in the mind!";
     }
 }

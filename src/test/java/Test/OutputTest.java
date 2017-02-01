@@ -15,7 +15,7 @@ public class OutputTest {
 
     @Before
     public void setUp() {
-        puppy = new Dog("Burrito","Dog");
+        Pet puppy = new Dog("Burrito","Dog");
     }
 
     @Test

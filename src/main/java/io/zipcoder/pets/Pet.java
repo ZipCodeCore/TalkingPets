@@ -3,7 +3,7 @@ package io.zipcoder.pets;
 /**
  * Created by alfatihmukhtar on 1/31/17.
  */
-public abstract class Pet {
+public abstract class Pet implements Comparable<Pet> {
     // FIELDS
     protected String name;
     protected String type;
@@ -25,4 +25,10 @@ public abstract class Pet {
 
     // METHODS
     public abstract String speak();
+
+    // OVERRIDES
+    @Override
+    public int compareTo(Pet pet) {
+        return this.getName().compareTo(pet.getName());
+    }
 }

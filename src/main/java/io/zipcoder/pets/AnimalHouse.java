@@ -1,7 +1,7 @@
 package io.zipcoder.pets;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by alfatihmukhtar on 1/31/17.
@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class AnimalHouse {
     // FIELDS
     private int numberOfPets;
-    private List<Pet> petList;
-    private OutPut outPut = new OutPut();       // Please use this object to take in user input
+    private List<Pet> petList = new ArrayList<Pet>();
+    private OutPut outPut = new OutPut();
 
     // CONSTRUCTORS
     public AnimalHouse(int number) {
@@ -27,19 +27,30 @@ public class AnimalHouse {
     public List<Pet> getPetList() { return petList; }
 
     // FACTORY METHOD
-    public void createListOfPetObjects(int numberOfPets) {
-
-        // Ask for number of pets, and loop through to add each one to List<Pets>
-
-        // SUGGESTION: When prompting for user input, use classes from the "OutPut" object instantiated here.
-
-        createSinglePet();              // Use this class at each iteration of "List<Pets>" creation loop.
+    public void createListOfPetObjects(int number) {
+        for(int i=0;i<number;i++) {
+            petList.add(createSinglePet());
+        }
     }
     public Pet createSinglePet() {
-
-        // This method prompts inputs, then passes them into the Pet constructor to return a Pet Object.
-
-        // SUGGESTION: Pet constructor can use "switch" statement to set new Pet into correct Child Class.
-
+        String name = outPut.promptForName();
+        String type = outPut.promptForType().toLowerCase();
+        Pet pet;
+        switch(type) {
+            case "dog":
+                pet = new Dog(name,type);
+                break;
+            case "cat":
+                pet = new Cat(name,type);
+                break;
+            case "cobra":
+                pet = new Cobra(name,type);
+                break;
+            default:
+                outPut.promptForProperType();
+                type = "cobra";
+                pet = new Cobra(name,type);
+        }
+        return pet;
     }
 }

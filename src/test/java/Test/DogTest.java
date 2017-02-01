@@ -23,6 +23,5 @@ public class DogTest {
         String actual = dog.speak();
         assertEquals("This dog must be an idiot, he can't even speak",expected,actual);
     }
-
 }
 
