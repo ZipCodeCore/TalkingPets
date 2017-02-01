@@ -7,10 +7,11 @@ import org.junit.Test;
  */
 public class PetTest {
     Pet pet;
-
+    Pet pet2;
     @Before
     public void setUp(){
-        pet = new Pet("Ham");
+        pet = new Pet("Cb");
+        pet2 = new Pet("Camp");
     }
 
     @Test
@@ -23,7 +24,7 @@ public class PetTest {
     @Test
     public void compareTo1Test(){
         int expected = 1;
-        int actual = pet.compareTo(pet);
+        int actual = pet.compareTo(pet2);
         Assert.assertEquals("Will return a 1 because pet should be sorted behind pet", expected, actual);
     }
 
@@ -37,7 +38,7 @@ public class PetTest {
     @Test
     public void compareToNegative1Test(){
         int expected = -1;
-        int actual = pet.compareTo(pet);
-        Assert.assertEquals("Will return a 1 because pet should be sorted in front pet", expected, actual);
+        int actual = pet2.compareTo(pet);
+        Assert.assertEquals("Will return a -1 because pet should be sorted in front pet", expected, actual);
     }
 }

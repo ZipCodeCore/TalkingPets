@@ -15,54 +15,46 @@ public class PetComparatorTest {
     Dog dog;
     Dino dino;
     ArrayList<Pet> petList;
+    PetDataWarehouse petWare;
     @Before
     public void setUp(){
         pet = new PetComparator();
+        petWare = new PetDataWarehouse();
         cat = new Cat("Adam");
         dog = new Dog("Bravo");
         dino = new Dino("Carl");
-        petList = new ArrayList<>();
-        petList.add(dino);
-        petList.add(dog);
-        petList.add(cat);
-        petList.add(dog);
+        petWare.addPet("Adam", "Cat");
+        petWare.addPet("Bravo", "Dog");
+        petWare.addPet("Carl", "Dino");
+        petWare.addPet("King", "Dog");
     }
 
     @Test
     public void compare1Test(){
         int expected = 1;
         int actual = pet.compare(dog, cat);
-        Assert.assertEquals("Will return a 1 because pet should be sorted behind pet", expected, actual);
+        Assert.assertEquals("Will return a 1 because dog should be sorted behind cat", expected, actual);
     }
 
     @Test
     public void compare0Test(){
         int expected = 0;
         int actual = pet.compare(dog, dog);
-        Assert.assertEquals("Will return a 0 because pet should be equal pet", expected, actual);
+        Assert.assertEquals("Will return a 0 because dog should be equal dog", expected, actual);
     }
 
     @Test
     public void compareNegative1Test(){
-        int expected = -1;
-        int actual = pet.compare(dog, dino);
-        Assert.assertEquals("Will return a 1 because pet should be sorted in front pet", expected, actual);
+        int expected = -6;
+        int actual = pet.compare(dino, dog);
+        Assert.assertEquals("Will return a -6 because dino should be sorted in front dog", expected, actual);
     }
 
     @Test
-    public void sortByNameTest(){
-        pet.sortByName(petList);
-        String expected = "List of pets by name";
-        String actual = petList.toString();
-        Assert.assertEquals("expected list to be sorted by Name", expected, actual);
-
+    public void compareNullTest(){
+        int expected = -6;
+        int actual = pet.compare(null, null);
+        Assert.assertEquals("Will return a -6 because dino should be sorted in front dog", expected, actual);
     }
 
-    @Test
-    public void sortByTypeTest(){
-        pet.sortByType(petList);
-        String expected = "List of pets by type";
-        String actual = petList.toString();
-        Assert.assertEquals("expected list to be sorted by Type", expected, actual);
-    }
 }

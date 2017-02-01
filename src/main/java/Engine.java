@@ -4,12 +4,17 @@
 public class Engine {
     InputOutput io = new InputOutput();
     PetDataWarehouse petDataWarehouse = new PetDataWarehouse();
+    PetComparator petComp = new PetComparator();
 
     public void run(){
         System.out.println(io.askForNumberOfPets());
         petDataWarehouse.setNumberOfPets(io.getInputInteger());
         questionLoop();
-        io.petList(petDataWarehouse.getPetList());
+        petComp.sortByName(petDataWarehouse.getPetList());
+        io.petListByName(petDataWarehouse.getPetList());
+        petComp.sortByType(petDataWarehouse.getPetList());
+        io.petListByType((petDataWarehouse.getPetList()));
+
     }
 
     private void questionLoop(){
@@ -19,6 +24,7 @@ public class Engine {
             System.out.println(io.askKindOfPet());
             String kind = io.getInputString();
             petDataWarehouse.addPet(name, kind);
+
         }
     }
 }

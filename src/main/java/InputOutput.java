@@ -1,4 +1,5 @@
 import com.sun.javafx.binding.StringFormatter;
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -31,6 +32,17 @@ public class InputOutput {
     public void petList(ArrayList<Pet> petList){
         for (Pet pet:petList) {
             System.out.printf("Name: %S\n Says: %S\n", pet.getName(),pet.speak());
+        }
+    }
+
+    public void petListByName(ArrayList<Pet> petList){
+        for (Pet pet:petList) {
+            System.out.printf("Name: %S\n", pet.getName());
+        }
+    }
+    public void petListByType(ArrayList<Pet> petList){
+        for (Pet pet:petList) {
+            System.out.printf("Type: %S\n Name: %S\n\n", pet.getClass().getSimpleName().toString(), pet.getName());
         }
     }
 

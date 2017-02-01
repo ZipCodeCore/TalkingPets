@@ -7,6 +7,8 @@ public class Pet implements Comparable<Pet>{
 
     String name;
 
+    Pet(){};
+
     Pet(String name){
         this.name = name;
     }
@@ -24,7 +26,7 @@ public class Pet implements Comparable<Pet>{
     }
 
     @Override
-    public int compareTo(Pet o) {
-        return 0;
+    public int compareTo(Pet pet) {
+        return (this.name).compareTo(pet.getName());
     }
 }
