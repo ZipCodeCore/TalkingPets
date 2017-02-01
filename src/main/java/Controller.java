@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Collections;
 /**
  * Created by danries on 1/31/17.
  */
@@ -10,16 +10,16 @@ public class Controller {
     PetFactory petFactory = new PetFactory();
 
     public void run(){
-        int numberOfPets = askUserForNumberOfPets();
-        for (int i = 0; i < numberOfPets; i++){
+        askUserForNumberOfPets();
+        for (int i = 0; i < petManagement.numberOfPets; i++){
             askUserForPetInfo();
         }
-
+        sortPets(petManagement.pets);
     }
 
-    public int askUserForNumberOfPets(){
+    public void askUserForNumberOfPets(){
         int amount = display.askUserForInt("How many pets do you have?");
-        return amount;
+        petManagement.numberOfPets = amount;
     }
 
     public void askUserForPetInfo(){
@@ -54,6 +54,10 @@ public class Controller {
 
     public void assignPet(Pet pet){
         petManagement.pets.add(pet);
+    }
+
+    public void sortPets(ArrayList<Pet> pets){
+        Collections.sort(pets,Pet::compareTo);
     }
 
 }
