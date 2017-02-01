@@ -5,12 +5,12 @@ package io.zipcoder.pets;
  */
 public class Controller {
 
-    Display display = new Display();
-    PetFactory petFactory = new PetFactory("", "");
-    PetManagement petManagement = new PetManagement();
-    int numberOfPets = 0;
-    String petType = "";
-    String petName = "";
+    private Display display = new Display();
+    private PetFactory petFactory = new PetFactory("", "");
+    private PetManagement petManagement = new PetManagement();
+    private int numberOfPets = 0;
+    private String petType = "";
+    private String petName = "";
 
 
     public void askUserForNumberOfPets(){
@@ -48,11 +48,11 @@ public class Controller {
 
     }
 
-    public Pet displaySinglePet(int index){
-        return null;
+    public void displaySinglePet(int index){
+
     }
 
-    public void assignPet(Pet pet){
+    private void assignPet(Pet pet){
         for(int i = 0; i < numberOfPets; i++){
             petFactory.makeAPet(petType, petName);
         }

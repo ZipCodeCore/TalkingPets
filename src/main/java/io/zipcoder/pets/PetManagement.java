@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class PetManagement {
 
-    public int numberOfPets;
+    public int numberOfPets = 0;
     //public PetFactory aPetFactory;
     public ArrayList<Pet> pets = new ArrayList<Pet>();
 

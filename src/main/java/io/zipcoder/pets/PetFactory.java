@@ -7,8 +7,8 @@ public class PetFactory {
 
     //This class will create instances of Pets
 
-    String type;
-    String name;
+    private String type;
+    private String name;
 
     PetFactory(String petType, String petName){
         this.type = petType;
