@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class PetDataWarehouse {
     ArrayList<Pet> petsList = new ArrayList<Pet>();
     int numberOfPets;
-    PetGenerator petGenerator = new PetGenerator();
 
     public ArrayList<Pet> getPetsList() {
         return petsList;
@@ -26,5 +25,7 @@ public class PetDataWarehouse {
         this.numberOfPets = numberOfPets;
     }
 
-    void addPet(String name, String type) {}
+    void addPet(Pet pet) {
+        petsList.add(pet);
+    }
 }

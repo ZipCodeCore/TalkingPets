@@ -7,7 +7,7 @@ public class Pet {
 
     String name;
 
-    String speak(){};
+    String speak(){ return "I am pet";}
 
     Pet(String name) {
         this.name = name;

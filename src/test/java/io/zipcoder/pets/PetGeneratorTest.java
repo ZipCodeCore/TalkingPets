@@ -14,3 +14,4 @@ public class PetGeneratorTest {
     public void createPetTest() {
         assertEquals("Cat expected", Cat.class, petGenerator.createPet("fluffy", "cat").getClass());
     }
+}

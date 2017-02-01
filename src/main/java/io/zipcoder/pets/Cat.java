@@ -9,5 +9,5 @@ public class Cat extends Pet {
         super(name);
     }
 
-    String speak() {}
+    String speak() {return "meow";}
 }

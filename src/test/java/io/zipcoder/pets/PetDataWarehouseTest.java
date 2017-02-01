@@ -14,11 +14,10 @@ public class PetDataWarehouseTest {
 
     @Test
     public void getPetsListTest() {
-        ArrayList<Pet> petsList = new ArrayList<Pet>();
-        petsList.add(new Cat("frank"));
-        ArrayList<Pet> expected = petsList;
-        ArrayList<Pet> actual = petDW.getPetsList();
-        assertEquals("List of cat called frank", expected, actual);
+        petDW.addPet(new Cat("frank"));
+        int expected = 1;
+        int actual = petDW.getPetsList().size();
+        assertEquals("length of list 1 expected", expected, actual);
     }
 
     @Test
@@ -31,7 +30,8 @@ public class PetDataWarehouseTest {
 
     @Test
     public void addPetTest() {
-        petDW.addPet("frank", "dino");
+        PetGenerator petGenerator = new PetGenerator();
+        petDW.addPet(petGenerator.createPet("frank", "dino"));
         int expected = 1;
         int actual = petDW.getPetsList().size();
         assertEquals("1 expected", expected, actual);
