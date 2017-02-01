@@ -10,11 +10,11 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class CatTest {
     Cat cat;
-    Cat cat2;
+    Dog dog;
     @Before
     public void startUp(){
         cat = new Cat("rolf");
-        cat2 = new Cat("pinky");
+        dog = new Dog("rolf");
     }
 
     @Test
@@ -26,7 +26,7 @@ public class CatTest {
 
     @Test
     public void compareToTest(){
-        int actual = cat.compareTo(cat2);
+        int actual = cat.compareTo(dog);
         int expected = 1;
         assertEquals(expected, actual);
 
