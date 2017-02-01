@@ -1,7 +1,9 @@
+import java.util.Comparator;
+
 /**
  * Created by randallcrame on 1/31/17.
  */
-public class Pet {
+public class Pet implements Comparable<Pet>{
 
     String name;
 
@@ -21,4 +23,8 @@ public class Pet {
         return "Remember to push often!";
     }
 
+    @Override
+    public int compareTo(Pet o) {
+        return 0;
+    }
 }
