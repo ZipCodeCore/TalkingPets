@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
  * Created by kevinmccann on 1/31/17.
  */
 public class PetTest {
+
     Pet pet = new Pet("Steve");
 
     @Test
@@ -25,4 +26,10 @@ public class PetTest {
         assertEquals("Steve expected", expected, actual);
     }
 
+    @Test
+    public void compareToTest() {
+        Pet pet2 = new Pet("Jazz");
+        int expected = -1;
+        int actual = pet.compareTo(pet2);
+    }
 }

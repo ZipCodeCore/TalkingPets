@@ -38,7 +38,7 @@ public class InputOutput {
         return scanner.nextLine();
     };
 
-    void printList(ArrayList<Pet> petsList){
+    void printListWithSpeak(ArrayList<Pet> petsList){
         for(Pet p : petsList) {
             System.out.println("The pet's name is " + p.getName() + " and when it " + p.speak() + "s when it speaks.");
         }

@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
  * Created by kevinmccann on 1/31/17.
  */
 public class PetDataWarehouseTest {
+
     PetDataWarehouse petDW = new PetDataWarehouse();
 
     @Test
@@ -35,6 +36,31 @@ public class PetDataWarehouseTest {
         int expected = 1;
         int actual = petDW.getPetsList().size();
         assertEquals("1 expected", expected, actual);
+    }
+
+    @Test
+    public void sortByNameTest() {
+        ArrayList<Pet> petList = new ArrayList<>();
+        petList.add(new Cat("fluffy"));
+        petList.add(new Cat("zipper"));
+        petList.add(new Dog("fluffy"));
+        petList.add(new Dino("photography raptor"));
+        String expected = "fluffy Cat\nfluffy Dog\nphotography raptor Dino\nzipper Cat";
+        String actual = petDW.returnListAsString(petList);
+        assertEquals("list sorted by name, tie broken by type",expected,actual);
+    }
+
+    @Test
+    public void sortByTypeTest() {
+        ArrayList<Pet> petList = new ArrayList<>();
+        petList.add(new Dog("fluffy"));
+        petList.add(new Dino("photography raptor"));
+        petList.add(new Cat("fluffy"));
+        petList.add(new Dino("barney"));
+        petList.add(new Cat("zipper"));
+        String expected = "fluffy Cat\nzipper Cat\nfluffy Dog\nbarney Dino\nphotography raptor Dino";
+        String actual = petDW.returnListAsString(petList);
+        assertEquals("list sorted by type, then name", expected, actual);
     }
 
 }

@@ -51,7 +51,7 @@ public class InputOutputTest {
         InputOutput io = new InputOutput();
         String expected = "The pet's name is steve and it meows when it speaks";
         Scanner scanner = new Scanner(System.in);
-        io.printList(petsList);
+        io.printListWithSpeak(petsList);
         String actual = scanner.nextLine();
         assertEquals("I expect 'the pet's name is steve and it says meow when it speaks'", expected, actual);
     }

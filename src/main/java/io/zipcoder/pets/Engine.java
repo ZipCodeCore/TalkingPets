@@ -6,6 +6,7 @@ package io.zipcoder.pets;
 public class Engine {
     InputOutput io = new InputOutput();
     PetDataWarehouse petDW = new PetDataWarehouse();
+    PetComparator petComparator = new PetComparator();
 
     void run() {
         petDW.setNumberOfPets(io.askHowManyPets());
@@ -14,7 +15,9 @@ public class Engine {
             String type = io.askTypeOfPet();
             petDW.addPet(PetGenerator.createPet(name,type));
         }
-        io.printList(petDW.getPetsList());
+        io.printListWithSpeak(petDW.getPetsList());
+        petDW.sortByType(petDW.getPetsList());
+        io.printListWithSpeak(petDW.getPetsList());
 
     }
 }
