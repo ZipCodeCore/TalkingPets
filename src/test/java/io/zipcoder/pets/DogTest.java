@@ -1,3 +1,5 @@
+package io.zipcoder.pets;
+
 import io.zipcoder.pets.Dog;
 import org.junit.Assert;
 import org.junit.Before;
@@ -20,5 +22,13 @@ public class DogTest {
     String expected = "roof";
     String actual = dog.speak();
     Assert.assertEquals("I am expecting Roof",expected,actual);
+    }
+
+    @Test
+    public void CompareToTest(){
+       Pet dog1 = new Dog("dan");
+       Pet dog2 = new Dog("luke");
+       Assert.assertTrue("i am expecting a zero",0<dog1.compareTo(dog2));
+
     }
 }

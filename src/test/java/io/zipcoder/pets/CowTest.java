@@ -1,3 +1,5 @@
+package io.zipcoder.pets;
+
 import io.zipcoder.pets.Cow;
 import org.junit.Assert;
 import org.junit.Before;

@@ -4,6 +4,7 @@ import io.zipcoder.pets.PetFactory;
 import io.zipcoder.pets.PetManagement;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -37,7 +38,7 @@ public class Controller {
     }
 
     private String askUserForPetType(){
-        String petType = display.askUserForThePetNameAndType("What type of pets do you have?");
+        String petType = display.askUserForThePetNameAndType("What type of pet do you have?");
         return petType;
     }
     private String askUserForPetName(){
@@ -66,7 +67,9 @@ public class Controller {
 
 
     }
-
+    public void sortPets (){
+        Collections.sort(petManagement.Pets,Pet::compareTo);
+    }
     }
 
 

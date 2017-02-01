@@ -1,3 +1,5 @@
+package io.zipcoder.pets;
+
 import io.zipcoder.pets.Dog;
 import io.zipcoder.pets.Pet;
 import io.zipcoder.pets.PetFactory;
