@@ -3,6 +3,7 @@ package io.zipcoder.pets;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 /**
@@ -10,9 +11,12 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class FoxTest {
     Fox fox;
+    Fox fox2;
+
     @Before
     public void startUp(){
         fox = new Fox("rolf");
+        fox2 = new Fox("pinky");
     }
 
     @Test
@@ -24,4 +28,13 @@ public class FoxTest {
                 || actual.equals("Joff-tchoff-tchoffo-tchoffo-tchoff!"));
 
     }
+
+    @Test
+    public void compareToTest(){
+        int actual = fox.compareTo(fox2);
+        int expected = 1;
+        assertEquals(expected, actual);
+
+    }
+
 }
