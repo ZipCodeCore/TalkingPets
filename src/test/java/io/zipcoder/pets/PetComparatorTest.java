@@ -6,7 +6,9 @@ import org.junit.Test;
 
 import java.text.Collator;
 import java.text.RuleBasedCollator;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by johnsquier on 2/1/17.
@@ -14,7 +16,7 @@ import java.util.Collections;
 public class PetComparatorTest
 {
     PetComparator petComparator, petComparator2;
-    Pet dog1, cat1, cat2;
+    Pet dog1, cat1, cat2, pig;
 
     @Before
     public void setup()
@@ -30,6 +32,9 @@ public class PetComparatorTest
 
         cat2 = new Cat();
         cat2.setName("C");
+
+        pig = new Pig();
+        pig.setName("C");
     }
 
     @Test
@@ -92,5 +97,25 @@ public class PetComparatorTest
     public void equalsTestComparatorsNotEqual()
     {
         Assert.assertFalse(petComparator.equals(Collections.reverseOrder(petComparator)));
+    }
+
+    @Test
+    public void sortPetsListTest()
+    {
+        List<Pet> expected = new ArrayList<>();
+        expected.add(cat1);
+        expected.add(cat2);
+        expected.add(dog1);
+        expected.add(pig);
+
+        List<Pet> actual = new ArrayList<>();
+        actual.add(pig);
+        actual.add(cat2);
+        actual.add(cat1);
+        actual.add(dog1);
+
+        Collections.sort(actual, petComparator);
+
+        Assert.assertEquals(expected, actual);
     }
 }
