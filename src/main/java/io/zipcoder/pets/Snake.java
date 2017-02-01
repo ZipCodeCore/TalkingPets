@@ -14,11 +14,8 @@ public class Snake extends Pet{
 
     //Create a Snake constructor; set the name by using the super class (Pet) methods
     Snake(String name){
+
         super.setName(name);
     }
 
-    @Override
-    public int compareTo(Pet petType){
-        return -10;
-    }
 }

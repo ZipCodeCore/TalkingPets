@@ -18,8 +18,4 @@ public class Dog extends Pet {
         super.setName(name);
     }
 
-    @Override
-    public int compareTo(Pet petType){
-        return -10;
-    }
 }

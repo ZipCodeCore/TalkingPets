@@ -9,15 +9,12 @@ import java.util.Comparator;
 public class PetManagement implements Comparator<Pet> {
 
     public int numberOfPets = 0;
-    //public PetFactory aPetFactory;
+
     public ArrayList<Pet> pets = new ArrayList<Pet>();
 
     public int compare(Pet pet, Pet petToCompare){
         return 0;
     }
 
-    public boolean equals(Pet pet){
-        return false;
-    }
 
 }

@@ -13,7 +13,7 @@ public class Controller {
     private int numberOfPets = 0;
     private String petType = "";
     private String petName = "";
-    public PetComparator petComparator = new PetComparator();
+    private PetComparator petComparator = new PetComparator();
 
 
     public void askUserForNumberOfPets(){

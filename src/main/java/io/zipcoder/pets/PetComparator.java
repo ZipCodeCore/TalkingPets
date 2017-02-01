@@ -9,6 +9,6 @@ public class PetComparator implements Comparator<Pet> {
 
     @Override
     public int compare(Pet firstPet, Pet petToCompare){
-       return firstPet.compareTo(petToCompare, 0);
+       return firstPet.compareTo(petToCompare, 0); //Will go by name then type
     }
 }

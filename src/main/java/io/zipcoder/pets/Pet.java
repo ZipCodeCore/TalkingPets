@@ -25,25 +25,24 @@ public abstract class Pet implements Comparable<Pet> {
         return 0;
     }
 
-    public int compareTo(Pet pet, int compareType){//can compare by name then type or by type then name
+    //Modify compareTo so that we can compare by name then type (int = 0) or by type then name (int = 1)
+    public int compareTo(Pet pet, int compareType){
         if(compareType == 0){
             return compareToByNameThenType(pet);
         } else
             return compareToByTypeThenName(pet);
     }
 
-    public int compareToByNameThenType(Pet otherPet){
+    private int compareToByNameThenType(Pet otherPet){
         //Compare by the Pet name then compare by the Pet type
-
         if(compareNames(otherPet) == 0){
             return compareTypes(otherPet);
         } else
             return compareNames(otherPet);
     }
 
-    public int compareToByTypeThenName(Pet otherPet){
+    private int compareToByTypeThenName(Pet otherPet){
         //Compare by the Pet type then compare by the Pet name
-
         if(compareTypes(otherPet) == 0){
             return compareNames(otherPet);
         } else
@@ -51,6 +50,7 @@ public abstract class Pet implements Comparable<Pet> {
     }
 
     private int compareNames(Pet otherPet){
+
         return this.getName().compareTo(otherPet.getName());
     }
 

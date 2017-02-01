@@ -15,6 +15,7 @@ public class PetComparatorTest {
 
     @Before
     public void setUp(){
+
         petComparator = new PetComparator();
     }
 
@@ -23,7 +24,7 @@ public class PetComparatorTest {
         Cat cat = new Cat("Toby");
         Cat cat2 = new Cat("Toby");
         int actual = petComparator.compare(cat, cat2);
-        assertTrue("Expected 0", 0 == petComparator.compare(cat, cat2));
+        assertTrue("Expected a value equal to 0", 0 == petComparator.compare(cat, cat2));
     }
 
     @Test
@@ -31,6 +32,7 @@ public class PetComparatorTest {
         Cat cat = new Cat("Toby");
         Dog dog = new Dog("Tom");
         int actual = petComparator.compare(cat, dog);
-        assertTrue("Expected 0", 0 == petComparator.compare(cat, dog));
+        assertTrue("Expected a value < 0", 0 > petComparator.compare(cat, dog));
     }
 }
+
