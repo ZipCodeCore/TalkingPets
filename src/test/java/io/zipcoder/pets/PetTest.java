@@ -67,7 +67,7 @@ public class PetTest
         expected.add(cat);
 
         actual.add(cat);
-        actual.add(dog);
+        actual.add(dog2);
 
         Collections.sort(actual);
 
@@ -122,8 +122,31 @@ public class PetTest
         expected.add(pig);
         expected.add(pig2);
 
-        actual.add(pig2);
+        // stable if everything is the same
         actual.add(pig);
+        actual.add(pig2);
+
+        Collections.sort(actual);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortListOfPets()
+    {
+        expected.add(dog2);
+        expected.add(cat);
+        expected.add(cat2);
+        expected.add(pig);
+        expected.add(pig2);
+        expected.add(dog);
+
+        actual.add(pig);
+        actual.add(pig2);
+        actual.add(cat);
+        actual.add(dog);
+        actual.add(dog2);
+        actual.add(cat2);
 
         Collections.sort(actual);
 

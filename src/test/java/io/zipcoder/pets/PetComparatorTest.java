@@ -4,12 +4,16 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.text.Collator;
+import java.text.RuleBasedCollator;
+import java.util.Collections;
+
 /**
  * Created by johnsquier on 2/1/17.
  */
 public class PetComparatorTest
 {
-    PetComparator petComparator, petComparator2, petComparator3;
+    PetComparator petComparator, petComparator2;
     Pet dog1, cat1, cat2;
 
     @Before
@@ -17,7 +21,6 @@ public class PetComparatorTest
     {
         petComparator = new PetComparator();
         petComparator2 = new PetComparator();
-        petComparator3 = null;
 
         dog1 = new Dog();
         dog1.setName("A");
@@ -88,6 +91,6 @@ public class PetComparatorTest
     @Test
     public void equalsTestComparatorsNotEqual()
     {
-        Assert.assertFalse(petComparator.equals(petComparator3));
+        Assert.assertFalse(petComparator.equals(Collections.reverseOrder(petComparator)));
     }
 }
