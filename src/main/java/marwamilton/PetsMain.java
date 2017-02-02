@@ -1,6 +1,7 @@
 package marwamilton;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ public class PetsMain {
 
     public static void main(String[] args) {
         QueryUser queryUser = new QueryUser();
-
+        PetComparator petComparator = new PetComparator();
         int numPets = queryUser.scanInt("How many pets do you have?");
         List<Pet> listOfPets = new ArrayList<Pet>(numPets);
         int counter = 1;
@@ -29,7 +30,12 @@ public class PetsMain {
             System.out.println(pet.toString());
         }
 
-
+        System.out.println("Here is your list of sorted pets:");
+        Collections.sort(listOfPets, petComparator);
+        for (Pet pet : listOfPets) {
+            System.out.println("\n Pet " + counter++);
+            System.out.println(pet.toString());
+        }
     }
 
     public static Pet createPet(String kindOfPet, String name){

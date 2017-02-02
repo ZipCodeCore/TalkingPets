@@ -13,9 +13,4 @@ public class Iguana extends Pet {
         return "What a gwan!";
     }
 
-    public String toString(){
-        return " Kind: " + this.getClass().getName() +
-                "\n Name: " + this.name +
-                "\n Speak: " + speak();
-    }
 }

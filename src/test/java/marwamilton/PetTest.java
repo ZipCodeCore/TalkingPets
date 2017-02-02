@@ -28,4 +28,12 @@ public class PetTest {
         String expectedToString = " Kind: marwamilton.Cat\n Name: catpuss\n Speak: Meow! Meow!";
         Assert.assertEquals(testMessage, expectedToString, testPet.toString());
     }
+
+    @Test
+    public void compareToTest(){
+        Pet otherPet = new Cat("katniss");
+        int expectedCompareInt = -1;
+        int actualCompareInt = testPet.compareTo(otherPet) / Math.abs(testPet.compareTo(otherPet));
+        Assert.assertTrue(0<actualCompareInt);
+    }
 }
