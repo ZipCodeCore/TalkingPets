@@ -1,9 +1,6 @@
 package collins.john;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by johncollins on 1/31/17.
@@ -63,6 +60,8 @@ public class main {
         //System.out.println(types);
         //System.out.println(names);
         Collections.sort(pets);
+        PetComparator diggityDuDuDOOOthis = new PetComparator();
+        diggityDuDuDOOOthis.sortByType(pets);
         System.out.println("So you have " + numberOfPets + " pets, \n");
         System.out.println(pets);
         for (Pet i : pets

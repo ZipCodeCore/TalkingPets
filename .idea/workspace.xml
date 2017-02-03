@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53970619-d024-4855-949e-0cd8662c37df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/collins/john/PetComparatorTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/collins/john/mainTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/collins/john/mainTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/collins/john/Pet.class" afterPath="$PROJECT_DIR$/target/classes/collins/john/Pet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/collins/john/main.class" afterPath="$PROJECT_DIR$/target/classes/collins/john/main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/collins/john/scratch pad" afterPath="$PROJECT_DIR$/src/test/java/collins/john/scratch pad" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/collins/john/main.java" afterPath="$PROJECT_DIR$/src/main/java/collins/john/main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,24 +29,11 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+            <state relative-caret-position="945">
+              <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#332#340#0" expanded="true" />
-                <element signature="e#386#394#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comparator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Comparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#245#253#0" expanded="true" />
+                <element signature="e#299#307#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,28 +52,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Dog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding>
-                <element signature="e#130#131#0" expanded="true" />
-                <element signature="e#191#192#0" expanded="true" />
-                <element signature="e#220#221#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CatTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/CatTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,8 +75,8 @@
       <file leaf-file-name="Pet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Pet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="e#169#170#0" expanded="true" />
                 <element signature="e#204#205#0" expanded="true" />
@@ -112,11 +88,10 @@
       <file leaf-file-name="PetComparator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="-90">
+              <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
               <folding>
-                <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,15 +107,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
+              <first_editor relative-caret-position="-569">
                 <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PetComparatorTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/PetComparatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/main/java/john/CatTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/CatTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/PetTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/collins/john/mainTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/Display.java" />
         <option value="$PROJECT_DIR$/src/test/java/collins/john/DogTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/collins/john/SnakeTest.java" />
@@ -182,10 +166,12 @@
         <option value="$PROJECT_DIR$/src/main/java/collins/john/Dog.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/Cat.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/Snake.java" />
-        <option value="$PROJECT_DIR$/src/main/java/collins/john/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/collins/john/Pet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java" />
         <option value="$PROJECT_DIR$/src/test/java/collins/john/scratch pad" />
+        <option value="$PROJECT_DIR$/src/main/java/collins/john/main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/collins/john/mainTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/collins/john/PetComparatorTest.java" />
       </list>
     </option>
   </component>
@@ -347,38 +333,15 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="collins.john" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="collins.john" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CatTest.ComparableSortTest">
-    <configuration default="false" name="CatTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="collins.john.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Polymorphism" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="collins.john" />
-      <option name="MAIN_CLASS_NAME" value="collins.john.CatTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.PetComparatorTest.PetCoparatorTest">
     <configuration default="false" name="DogTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -464,6 +427,32 @@
       <option name="PACKAGE_NAME" value="collins.john" />
       <option name="MAIN_CLASS_NAME" value="collins.john.CatTest" />
       <option name="METHOD_NAME" value="ComparableSortTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PetComparatorTest.PetCoparatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="collins.john.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Polymorphism" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="collins.john" />
+      <option name="MAIN_CLASS_NAME" value="collins.john.PetComparatorTest" />
+      <option name="METHOD_NAME" value="PetCoparatorTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -858,19 +847,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CatTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DogTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SnakeTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CatTest.ComparableSortTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.DogTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.main" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SnakeTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CatTest.ComparableSortTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PetComparatorTest.PetCoparatorTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CatTest.ComparableSortTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PetComparatorTest.PetCoparatorTest" />
         <item index="1" class="java.lang.String" itemvalue="Application.main" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SnakeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DogTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CatTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CatTest.ComparableSortTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SnakeTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DogTest" />
       </list>
     </recent_temporary>
   </component>
@@ -885,14 +874,11 @@
       <option name="presentableId" value="Default" />
       <updated>1485881432948</updated>
       <workItem from="1485881440724" duration="2029000" />
-      <workItem from="1485884804639" duration="35069000" />
+      <workItem from="1485884804639" duration="39517000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CatTest - 2017.01.31 at 16h 31m 46s.xml">
-      <configuration name="CatTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CatTest_ComparableSortTest - 2017.02.02 at 22h 07m 45s.xml">
       <configuration name="CatTest.ComparableSortTest" configurationId="JUnit" />
     </history-entry>
@@ -905,24 +891,27 @@
     <history-entry file="CatTest_ComparableSortTest - 2017.02.02 at 23h 25m 19s.xml">
       <configuration name="CatTest.ComparableSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DogTest - 2017.01.31 at 16h 32m 17s.xml">
-      <configuration name="DogTest" configurationId="JUnit" />
+    <history-entry file="PetComparatorTest_PetCoparatorTest - 2017.02.03 at 10h 01m 46s.xml">
+      <configuration name="PetComparatorTest.PetCoparatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DogTest - 2017.01.31 at 16h 32m 36s.xml">
-      <configuration name="DogTest" configurationId="JUnit" />
+    <history-entry file="PetComparatorTest_PetCoparatorTest - 2017.02.03 at 10h 02m 36s.xml">
+      <configuration name="PetComparatorTest.PetCoparatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnakeTest - 2017.01.31 at 16h 33m 23s.xml">
-      <configuration name="SnakeTest" configurationId="JUnit" />
+    <history-entry file="PetComparatorTest_PetCoparatorTest - 2017.02.03 at 10h 05m 28s.xml">
+      <configuration name="PetComparatorTest.PetCoparatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SnakeTest - 2017.01.31 at 16h 33m 35s.xml">
-      <configuration name="SnakeTest" configurationId="JUnit" />
+    <history-entry file="PetComparatorTest_PetCoparatorTest - 2017.02.03 at 10h 05m 46s.xml">
+      <configuration name="PetComparatorTest.PetCoparatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PetComparatorTest_PetCoparatorTest - 2017.02.03 at 10h 07m 10s.xml">
+      <configuration name="PetComparatorTest.PetCoparatorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SnakeTest - 2017.01.31 at 16h 33m 46s.xml">
       <configuration name="SnakeTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37098000" />
+    <option name="totallyTimeSpent" value="41546000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -947,7 +936,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1026,9 +1015,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="70" lean-forward="false" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,14 +1054,6 @@
     <entry file="file://$PROJECT_DIR$/Polymorphism lab UML.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/mainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/DogTest.java">
@@ -1146,50 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#332#340#0" expanded="true" />
-            <element signature="e#386#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/CatTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Pet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/scratch pad">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1198,14 +1133,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/Pet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+          <folding>
+            <element signature="e#245#253#0" expanded="true" />
+            <element signature="e#299#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/CatTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/mainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
+          <first_editor relative-caret-position="-569">
             <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/collins/john/PetComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/collins/john/PetComparatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
