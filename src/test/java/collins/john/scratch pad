@@ -4,3 +4,28 @@ list of their names and what they say when they speak.
 
 
 Q: why are my if statements breaking through to else? do i need a break like a switch?
+
+from matt:
+
+
+import java.util.Comparator;
+import java.util.List;
+
+public class ComparatorClass implements Comparator{
+
+    public void sortByType(List<Pet> petList){
+
+    }
+
+    @Override
+    public int compare(Object pet1, Object pet2) {
+        if(pet1.getClass().getSimpleName().equals(pet2.getClass().getSimpleName())){
+            return 1;
+        }
+        else{
+         return -1;
+        }
+
+    }
+
+}

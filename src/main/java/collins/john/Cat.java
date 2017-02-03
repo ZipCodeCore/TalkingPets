@@ -14,8 +14,4 @@ public class Cat extends Pet {
         return "meow";
     }
 
-
-    public int compareTo(Object o) {
-        return 0;
-    }
 }
