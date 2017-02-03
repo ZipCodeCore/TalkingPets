@@ -1,3 +1,24 @@
+
+Interfaces
+
+1. Begin this lab by rewriting your UML according to the updated features. 
+1.5 New unit tests will also be required.
+
+
+2. add the java.lang.Comparable interface to your pet classes. 
+Implement this interface so that Arrays.sort() or Collections.sort() 
+(both existing static methods) will sort lists of your objects by name, 
+breaking ties by class type.
+
+
+3.Create a new implementation of java.util.Comparator 
+4.that will sort pet objects 
+5.by type, 
+6.breaking ties by name.
+
+
+
+
 # Polymorphism Lab 1
 
 ## Objectives
