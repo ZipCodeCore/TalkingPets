@@ -4,6 +4,7 @@ list of their names and what they say when they speak.
 
 
 Q: why are my if statements breaking through to else? do i need a break like a switch?
+A: because you need else if. otherwise it will do all if's that qualify.
 
 from matt:
 
