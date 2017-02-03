@@ -32,4 +32,22 @@ public class PetTest {
         assertEquals("I expect the speak method to return I am your pet", expected, actual);
 
     }
+    @Test
+    public void compareToTest(){
+        Pet pet2 = new Pet ("yourPet");
+        int expected= -1;
+        int actual = pet.compareTo(pet2);
+        System.out.println(actual);
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void compareToTestSameName(){
+        Dog dog = new Dog();
+        dog.setName("myPet");
+        int expected= -1;
+        int actual = dog.compareTo(pet);
+        assertEquals(expected, actual);
+
+    }
 }

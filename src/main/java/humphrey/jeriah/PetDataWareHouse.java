@@ -1,4 +1,5 @@
 package humphrey.jeriah;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -9,6 +10,7 @@ public class PetDataWareHouse {
     private ArrayList<Pet> petList = new ArrayList<Pet>();
     private int numberOfPets;
     private PetGenerator petgen = new PetGenerator();
+    private PetComparator comp = new PetComparator();
     Scanner input = new Scanner(System.in);
 
 
@@ -54,6 +56,15 @@ public class PetDataWareHouse {
         }
 
         }
+
+        public void sortByName(ArrayList<Pet> listedPets){
+        Collections.sort(listedPets);
+        }
+
+
+        public void sortByType(ArrayList<Pet> listedPets){
+        Collections.sort(listedPets, comp);
+    }
 
 
 

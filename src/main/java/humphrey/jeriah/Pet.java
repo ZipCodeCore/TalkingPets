@@ -3,7 +3,7 @@ package humphrey.jeriah;
 /**
  * Created by jeriahhumphrey on 2/1/17.
  */
-public class Pet {
+public class Pet implements Comparable <Pet> {
     private String name;
 
         public Pet(){
@@ -29,5 +29,27 @@ public class Pet {
         this.name = name;
         return name;
 
+    }
+
+    @Override
+    public int compareTo(Pet p) {
+        int compareValue=0;
+        if(this.getName().compareToIgnoreCase(p.getName())==0){
+            if (this.getClass().getName().compareToIgnoreCase(p.getClass().getName())>0){
+                compareValue=1;
+            }
+            else{
+                compareValue= -1;
+            }
+
+        }
+        else if (this.getName().compareToIgnoreCase(p.getName())>0){
+            compareValue= 1;
+        }
+        else if (this.getName().compareToIgnoreCase(p.getName())<0){
+            compareValue =-1;
+        }
+
+        return compareValue;
     }
 }

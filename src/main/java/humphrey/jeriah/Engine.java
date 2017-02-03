@@ -13,6 +13,14 @@ public class Engine {
     public void run() {
         house.setNumberOfPets(IO.askHowManyPets("How many pets do you want?"));
         runLoop();
+        System.out.println("Here are your pets sorted by name");
+        System.out.println();
+        house.sortByName(house.getPetList());
+        IO.displayPets(house.getPetList());
+        System.out.println();
+        System.out.println("Here are your pets sorted by type");
+        System.out.println();
+        house.sortByType(house.getPetList());
         IO.displayPets(house.getPetList());
 
     }
