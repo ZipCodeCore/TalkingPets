@@ -35,38 +35,8 @@ public class Pet {
     }
 }
 
-class Dog extends Pet {
-    public Dog() {}
-    public Dog(String petName) {
-        super(petName, "dog");
-    }
 
-    @Override
-    public String speak() {
-        return "I bark";
-    }
-}
 
-class Cat extends Pet {
-    public Cat() {}
-    public Cat(String petName) {
-        super(petName, "cat");
-    }
 
-    @Override
-    public String speak() {
-        return "I meow";
-    }
-}
 
-class Bird extends Pet {
-    public Bird() {}
-    public Bird(String petName) {
-        super(petName, "bird");
-    }
 
-    @Override
-    public String speak() {
-        return "I sing";
-    }
-}
