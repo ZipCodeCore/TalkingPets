@@ -28,5 +28,13 @@ public class PetTest {
         Assert.assertEquals("Testing speak method", "I am a dog", pet.speak());
     }
 
+    @Test
+    public void testGetSpecieMethod() {
+        pet.setSpecie("Dog");
+        Assert.assertEquals("Testing speak method", "dog", pet.getSpecie());
+    }
+
+
+
 
 }

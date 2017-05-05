@@ -1,8 +1,27 @@
 package io.zipcoder.Polymorphism;
 
+import org.junit.Test;
+import org.junit.Assert;
 /**
  * Created by aaronlong on 5/1/17.
  */
 public class AppTest {
+
+    private Pet animal;
+
+
+    @Test
+    public void testIdentifyDog() {
+
+        //Given
+        animal = App.petIdentifier("Fido","dog");
+
+        //When
+
+
+        //Then
+        Assert.assertTrue("Correct String should be ", animal instanceof Dog);
+
+    }
 
 }
