@@ -101,7 +101,30 @@ public class PetTests {
 
     @Test
     public void allCatsTest() {
-        
+        //Given
+        Pet ruby = new Cat();
+        Pet dottie = new Cat();
+        Pet sixer = new Cat();
+        Pet iris = new Cat();
+        ruby.setName("Ruby");
+        sixer.setName("Sixer");
+        iris.setName("Iris");
+        String expected = "DorothyIrisRubySixer";
+        //When
+        Pet[] pets = new Pet[4];
+        pets[0] = ruby;
+        pets[1] = dottie;
+        pets[2] = sixer;
+        pets[3] = iris;
+        Arrays.sort(pets);
+        String actual = "";
+        for(Pet p : pets) {
+            actual += p.getName();
+        }
+        //Then
+        Assert.assertEquals(expected, actual);
     }
+
+
 
 }

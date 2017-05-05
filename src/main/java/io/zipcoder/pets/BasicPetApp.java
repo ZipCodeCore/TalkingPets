@@ -1,6 +1,8 @@
 package io.zipcoder.pets;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 
@@ -21,29 +23,36 @@ public class BasicPetApp {
         }
     }
 
+    static void printPets(Pet[] pets) {
+        for (Pet p : pets) {
+            System.out.println(p.getName() + " says " + p.speak() + "\n");
+        }
+    }
+
+
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Pet> petList = new ArrayList<Pet>();
-
-        System.out.println("How many pets you got?");
-        int numPets = Integer.parseInt(scanner.nextLine());
-
         try {
-
-            for (int i = 0; i < numPets; i++) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("How many pets you got?");
+            Pet[] petList = new Pet[Integer.parseInt(scanner.nextLine())];
+            for (int i = 0; i < petList.length; i++) {
                 System.out.println("What kind of pet is pet number " + (i + 1) + "?");
                 Pet pet = petSelector(scanner.nextLine());
                 System.out.println("What's your pet's name?");
-                pet.name = scanner.nextLine();
-                petList.add(pet);
+                pet.setName(scanner.nextLine());
+                petList[i] = pet;
             }
 
             System.out.println();
 
-            for (Pet p : petList) {
-                System.out.println(p.getName() + " says " + p.speak() + "\n");
-            }
+            Arrays.sort(petList);
+            printPets(petList);
+
+            Arrays.sort(petList, new PetComparator());
+            printPets(petList);
+
 
         } catch (Exception e) {
             System.out.println("That's not an acceptable pet. I'm done with you.");

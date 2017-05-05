@@ -2,7 +2,7 @@ package io.zipcoder.pets;
 
 
 abstract class Pet implements Comparable<Pet> {
-    String name;
+    private String name;
 
     abstract String speak();
 
