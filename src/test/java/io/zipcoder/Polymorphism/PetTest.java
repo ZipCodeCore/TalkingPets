@@ -1,4 +1,4 @@
-package io.zipcoder.pets;
+package io.zipcoder.Polymorphism;
 
 import org.junit.Assert;
 import org.junit.Test;
