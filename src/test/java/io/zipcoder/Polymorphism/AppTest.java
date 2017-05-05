@@ -24,4 +24,33 @@ public class AppTest {
 
     }
 
+    @Test
+    public void testIdentifyCat() {
+
+        //Given
+        animal = App.petIdentifier("Mittens","cat");
+
+        //When
+
+
+        //Then
+        Assert.assertTrue("Correct String should be ", animal instanceof Cat);
+
+    }
+
+    @Test
+    public void testIdentifyBird() {
+
+        //Given
+        animal = App.petIdentifier("Gary","bird");
+
+        //When
+
+
+        //Then
+        Assert.assertTrue("Correct String should be ", animal instanceof Bird);
+
+    }
+
+
 }
