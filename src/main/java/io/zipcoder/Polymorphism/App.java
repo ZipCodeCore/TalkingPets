@@ -23,7 +23,7 @@ public class App {
         int numberOfPets = 0;
         double index = 0;
         ArrayList<String> list = new ArrayList<String>();
-        while(scan.hasNext()) {
+        while (scan.hasNext()) {
             if (numberOfPets == 0) {
                 numberOfPets = scan.nextInt();
                 System.out.println(numberOfPets);
@@ -40,7 +40,7 @@ public class App {
         }
         for (int i = 0; i < list.size(); i += 2) {
             String name = list.get(i);
-            String specie = list.get(i+1);
+            String specie = list.get(i + 1);
             Pet pet = petIdentifier(name, specie);
             System.out.println(String.format("%s: %s", pet.getName(), pet.speak()));
         }

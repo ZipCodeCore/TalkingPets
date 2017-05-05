@@ -3,11 +3,12 @@ package io.zipcoder.Polymorphism;
 /**
  * Created by aaronlong on 5/1/17.
  */
-public class Pet {
+public class Pet implements Comparable<Pet> {
     private String name;
     private String specie;
 
-    public Pet() {}
+    public Pet() {
+    }
 
     public Pet(String petName, String petSpecie) {
         name = petName;
@@ -32,6 +33,15 @@ public class Pet {
 
     public String speak() {
         return String.format("I am a %s", specie);
+    }
+
+    public int compareTo(Pet o) {
+        if (specie.equals(o.getSpecie())) {
+            return 0;
+        } else {
+            return specie.compareTo(o.getSpecie());
+
+        }
     }
 }
 

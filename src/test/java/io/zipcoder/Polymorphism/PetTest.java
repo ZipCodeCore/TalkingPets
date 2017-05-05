@@ -4,6 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Before;
 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+
 /**
  * Created by aaronlong on 5/1/17.
  */
@@ -35,6 +39,33 @@ public class PetTest {
     }
 
 
+    @Test
+    public void testCompareTo() {
 
+        Pet[] pets = new Pet[10];
+        for (int i = 0; i < 10; i++) {
+            String petName = String.format("YoMamma%s", i);
+
+            System.out.println(i);
+            if (i < 4) {
+                pets[i] = new Pet(petName, "dog");
+            } else if (i < 7) {
+                pets[i]  = new Pet(petName, "cat");
+            } else if (i < 10) {
+                pets[i] = new Pet(petName, "bird");
+            }
+
+        }
+        Arrays.sort(pets);
+        System.out.println(pets);
+        for(int i = 0; i < 10; i++){
+            System.out.println(pets[i].getSpecie());
+            if (i < 3){
+               Pet petTester = pets[i];
+               petTester.getSpecie();
+               Assert.assertEquals("Checking if bird", "bird", pets[i].getSpecie());
+            }
+        }
+    }
 
 }
