@@ -125,6 +125,42 @@ public class PetTests {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void comparatorEqualsTest() {
+        //Given
+        PetComparator petComparator = new PetComparator();
+        Pet ruby = new Cat();
+        Pet dottie = new Cat();
+        int expected = 0;
+        //When
+        int actual = petComparator.compare(ruby, dottie);
+        //Then
+        Assert.assertEquals("same basic info", expected, actual);
+    }
 
+    @Test
+    public void comparatorDiffTypesTest() {
+        //Given
+        PetComparator petComparator = new PetComparator();
+        Pet ruby = new Cat();
+        Pet otto = new Goldfish();
+        //When
+        int result = petComparator.compare(otto, ruby);
+        //Then
+        Assert.assertTrue(result < 0);
+    }
+
+    @Test
+    public void comparatorCatDogTest() {
+        //Given
+        PetComparator petComparator = new PetComparator();
+        Pet ruby = new Cat();
+        Pet goldie = new Dog();
+        int expected = -1;
+        //When
+        int actual = petComparator.compare(ruby, goldie);
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
 
 }
