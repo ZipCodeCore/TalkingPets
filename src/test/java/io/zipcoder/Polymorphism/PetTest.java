@@ -29,25 +29,4 @@ public class PetTest {
     }
 
 
-    //Dog Tests
-    @Test
-    public void testDogSpeakMethod() {
-        Dog dog = new Dog();
-        Assert.assertEquals("Testing dog speak override", "I bark", dog.speak());
-    }
-
-
-    //Cat Tests
-    @Test
-    public void testCatSpeakMethod() {
-        Cat cat = new Cat();
-        Assert.assertEquals("Testing cat speak override", "I meow", cat.speak());
-    }
-
-    //Bird Tests
-    @Test
-    public void testBirdSpeakMethod() {
-        Bird bird = new Bird();
-        Assert.assertEquals("Testing cat speak override", "I sing", bird.speak());
-    }
 }
