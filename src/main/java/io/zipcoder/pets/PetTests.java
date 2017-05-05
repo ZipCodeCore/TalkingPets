@@ -131,11 +131,24 @@ public class PetTests {
         PetComparator petComparator = new PetComparator();
         Pet ruby = new Cat();
         Pet dottie = new Cat();
-        int expected = 0;
         //When
-        int actual = petComparator.compare(ruby, dottie);
+        int result = petComparator.compare(ruby, dottie);
         //Then
-        Assert.assertEquals("same basic info", expected, actual);
+        Assert.assertTrue(result == 0);
+    }
+
+    @Test
+    public void comparatorEqualsCatsDiffNamesTest() {
+        //Given
+        PetComparator petComparator = new PetComparator();
+        Pet ruby = new Cat();
+        ruby.setName("Ruby");
+        Pet chips = new Cat();
+        chips.setName("Chips");
+        //When
+        int result = petComparator.compare(ruby, chips);
+        //Then
+        Assert.assertTrue(result > 0);
     }
 
     @Test
@@ -147,7 +160,7 @@ public class PetTests {
         //When
         int result = petComparator.compare(otto, ruby);
         //Then
-        Assert.assertTrue(result < 0);
+        Assert.assertTrue(result > 0);
     }
 
     @Test
@@ -156,11 +169,10 @@ public class PetTests {
         PetComparator petComparator = new PetComparator();
         Pet ruby = new Cat();
         Pet goldie = new Dog();
-        int expected = -1;
         //When
         int actual = petComparator.compare(ruby, goldie);
         //Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertTrue(actual < 0);
     }
 
 }
