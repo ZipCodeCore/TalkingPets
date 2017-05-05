@@ -42,13 +42,27 @@ public class AppTest {
     public void testIdentifyBird() {
 
         //Given
-        animal = App.petIdentifier("Gary","bird");
+        animal = App.petIdentifier("Tweety","bird");
 
         //When
 
 
         //Then
         Assert.assertTrue("Correct String should be ", animal instanceof Bird);
+
+    }
+
+    @Test
+    public void testIdentifyOtherPet() {
+
+        //Given
+        animal = App.petIdentifier("Gary","snail");
+
+        //When
+
+
+        //Then
+        Assert.assertTrue("Correct String should be ", animal instanceof Pet);
 
     }
 
