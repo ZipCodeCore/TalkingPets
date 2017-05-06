@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 /**
  * Created by mollyarant on 5/6/17.
  */
@@ -11,9 +14,22 @@ public class Main {
 
         petFactory.addPetsToList(petFactory.createPets());
 
-        for(Pet pet : petFactory.getPetList()) {
+        ArrayList<Pet> petList = petFactory.getPetList();
+
+
+        Collections.sort(petList);
+
+
+
+        for(Pet pet: petList){
+            System.out.println(pet.getPetName());
+        }
+
+        for(Pet pet : petList) {
             System.out.println(pet.speak());
         }
+
+
 
     }
 

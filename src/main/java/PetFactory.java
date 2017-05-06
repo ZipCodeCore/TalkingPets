@@ -1,10 +1,11 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by mollyarant on 5/6/17.
  */
 
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PetFactory {
         ArrayList<Pet> pets = new ArrayList();
@@ -55,9 +56,9 @@ public class PetFactory {
         public void addPetToList(Pet pet) {
             String petType = pet.getPetType();
             String petName = pet.getPetName();
-            System.out.println("Adding a new pet to the list...");
-            System.out.println("The type of the pet is " + petType);
-            System.out.println("The name of the pet is " + petName);
+//            System.out.println("Adding a new pet to the list...");
+//            System.out.println("The type of the pet is " + petType);
+//            System.out.println("The name of the pet is " + petName);
 
 
             pets.add(pet);
@@ -69,12 +70,17 @@ public class PetFactory {
             }
         }
 
+
+
         public ArrayList<Pet> getPetList() {
+
             return pets;
         }
 
 
     }
+
+
 
 
 
