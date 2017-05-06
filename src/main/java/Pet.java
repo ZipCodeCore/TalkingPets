@@ -7,7 +7,7 @@ import java.util.Comparator;
 
 
 
-public class Pet implements Comparable<Pet>, Comparator<Pet> {
+public class Pet implements Comparable<Pet> {
 
     String petName;
     String petType;
@@ -58,13 +58,6 @@ public class Pet implements Comparable<Pet>, Comparator<Pet> {
     }
 
 
-    public int compare(Pet pet1, Pet o2) {
-        if (this.petType.equals(o2.getPetType())){
-            int compareName= this.getPetName().compareTo(o2.getPetName());
-            return compareName;
-        }
-        else{
-            return this.petType.compareTo(o2.getPetType());
-        }
+
     }
-}
+

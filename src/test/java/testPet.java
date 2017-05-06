@@ -124,53 +124,7 @@ public class testPet {
 
     }
 
-    @Test
-    public void testComparePetsIfSameType() {
-        Pet pet = new Cat("Nigel", "Cat");
-        Pet pet2= new Cat("Harry", "Cat");
 
-        //given
-        int expectedResult=6;
-
-        //when
-        int actualResult= pet.compare(pet, pet2);
-
-        //then
-        assertEquals("This should return 6", expectedResult, actualResult);
-
-    }
-
-    @Test
-    public void testComparePetsIfDifferentTypesIfFirstOccursSecond() {
-        Pet pet = new Dog("Nigel", "Dog");
-        Pet pet2= new Cat("Harry", "Cat");
-
-        //given
-        int expectedResult=1;
-
-        //when
-        int actualResult= pet.compare(pet, pet2);
-
-        //then
-        assertEquals("This should return 1", expectedResult, actualResult);
-
-    }
-
-    @Test
-    public void testCompareIfDifferentTypesWherePet1ComesFirst(){
-        Pet pet = new Cat("Larry", "Cat");
-        Pet pet2 = new Fish ("Destroyer","Fish" );
-
-        //given
-        int expectedResult= -3;
-
-        //when
-        int actualResult= pet.compare(pet, pet2);
-
-        //then
-        assertEquals("This should return -1", expectedResult, actualResult);
-
-    }
 
 
 
