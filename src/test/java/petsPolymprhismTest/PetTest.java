@@ -62,41 +62,7 @@ public class PetTest {
               assertEquals("This should return positive", expectedResult, actualResult);
          }
 
-         @Test
-            public void testComparePetTypeForSameType(){
-                Pet pet = new Cat("Mary", "Cat");
-                Pet animal = new Cat("Lucy","Cat");
 
-                int expectedResult = 1;
-
-                int actualResult = pet.compare(pet,animal);
-
-                assertEquals("This is going to return positive", expectedResult, actualResult);
-         }
-
-         @Test
-            public void testCompareDiffrentPetTypes(){
-                Pet pet = new Cat("Mary", "Cat");
-                Pet animal = new Dog("Stu", "Dog");
-
-                int expectedResult = -1;
-
-                int actualResult = pet.compare(pet, animal);
-
-                assertEquals("This should return negitive", expectedResult, actualResult);
-         }
-
-         @Test
-            public void testIfTheTypesAreTheSameAndTheNamesAreTheSame(){
-                Pet pet = new Cat("Mary","Cat");
-                Pet animal = new Cat("Mary", "Cat");
-
-                int expectedResult = 0;
-
-                int actualResult = pet.compare(pet,animal);
-
-                assertEquals("This should be zero", expectedResult, actualResult);
-         }
     }
 
 
