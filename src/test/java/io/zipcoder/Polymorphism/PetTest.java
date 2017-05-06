@@ -53,7 +53,6 @@ public class PetTest {
             }
         }
         Arrays.sort(pets);
-        for(Pet p :  pets) System.out.println(p.getSpecie());
         for(int i = 0; i < 10; i++){
             if (i < 4){
                Assert.assertEquals("Checking if bird", "bird", pets[i].getSpecie());
@@ -64,6 +63,22 @@ public class PetTest {
             else if (i < 10) {
                 Assert.assertEquals("Checking if dog", "dog", pets[i].getSpecie());
             }
+        }
+    }
+
+
+    @Test
+    public void testCompareToAgainstName() {
+        Pet[] pets = { new Pet("Miley", "dog"),
+                       new Pet("Andre", "dog"),
+                       new Pet("Bailey", "dog"),
+                       new Pet("Gail", "dog") };
+        Arrays.sort(pets);
+        for (int i = 0; i < pets.length; i++) {
+            if (i == 0) Assert.assertEquals("Andre", pets[i].getName());
+            else if (i == 1) Assert.assertEquals("Bailey", pets[i].getName());
+            else if (i == 2) Assert.assertEquals("Gail", pets[i].getName());
+            else if (i == 3) Assert.assertEquals("Miley", pets[i].getName());
         }
     }
 

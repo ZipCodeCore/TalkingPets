@@ -37,11 +37,8 @@ public class Pet implements Comparable<Pet> {
 
     public int compareTo(Pet o) {
         if (specie.equals(o.getSpecie())) {
-            return 0;
-        } else {
-            return specie.compareTo(o.getSpecie());
-
-        }
+            return name.compareTo(o.getName());
+        } else return specie.compareTo(o.getSpecie());
     }
 }
 
