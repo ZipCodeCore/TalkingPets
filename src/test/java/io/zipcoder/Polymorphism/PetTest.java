@@ -40,30 +40,29 @@ public class PetTest {
 
 
     @Test
-    public void testCompareTo() {
-
+    public void testCompareToAgainstType() {
         Pet[] pets = new Pet[10];
         for (int i = 0; i < 10; i++) {
             String petName = String.format("YoMamma%s", i);
-
-            System.out.println(i);
-            if (i < 4) {
+            if (i < 3) {
                 pets[i] = new Pet(petName, "dog");
-            } else if (i < 7) {
+            } else if (i < 6) {
                 pets[i]  = new Pet(petName, "cat");
             } else if (i < 10) {
                 pets[i] = new Pet(petName, "bird");
             }
-
         }
         Arrays.sort(pets);
-        System.out.println(pets);
+        for(Pet p :  pets) System.out.println(p.getSpecie());
         for(int i = 0; i < 10; i++){
-            System.out.println(pets[i].getSpecie());
-            if (i < 3){
-               Pet petTester = pets[i];
-               petTester.getSpecie();
+            if (i < 4){
                Assert.assertEquals("Checking if bird", "bird", pets[i].getSpecie());
+            }
+            else if (i < 7) {
+                Assert.assertEquals("Checking if cat", "cat", pets[i].getSpecie());
+            }
+            else if (i < 10) {
+                Assert.assertEquals("Checking if dog", "dog", pets[i].getSpecie());
             }
         }
     }
