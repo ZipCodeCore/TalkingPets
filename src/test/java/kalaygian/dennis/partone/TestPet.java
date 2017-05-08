@@ -1,8 +1,7 @@
-package kalaygian.dennis;
+package kalaygian.dennis.partone;
 
 import org.junit.Assert;
 import org.junit.Test;
-import java.util.Arrays;
 
 /**
  * Created by denniskalaygian on 5/7/17.

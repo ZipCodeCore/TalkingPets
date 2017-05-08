@@ -1,4 +1,4 @@
-package kalaygian.dennis;
+package kalaygian.dennis.partone;
 
 /**
  * Created by denniskalaygian on 5/2/17.

@@ -1,4 +1,4 @@
-package kalaygian.dennis;
+package kalaygian.dennis.partone;
 import org.junit.Test;
 import org.junit.Assert;
 

@@ -1,7 +1,6 @@
-package kalaygian.dennis;
+package kalaygian.dennis.partone;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 /**
  * Created by denniskalaygian on 5/2/17.
