@@ -1,11 +1,14 @@
 package kalaygian.dennis;
 
+import static java.lang.Integer.*;
+
 /**
  * Created by denniskalaygian on 5/2/17.
  */
-public abstract class Pet {
+public abstract class Pet implements Comparable<Pet>{
 
     private String name;
+
 
     public String getName() {
         return name;
@@ -15,5 +18,22 @@ public abstract class Pet {
         this.name = name;
     }
 
+
+
     public abstract String speak();
+
+    public int compareTo(Pet otherPet){
+        if(!(getName().equals(otherPet.getName()))){
+            return getName().compareTo(otherPet.getName());
+        }
+        int compareClass = getClass().getName().compareTo(otherPet.getClass().getName());
+        return compareClass;
+    }
+
 }
+
+
+
+
+
+
