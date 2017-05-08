@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a21ff1c5-6f2b-4422-9b1c-3706c2c77594" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/kalaygian/dennis/Cat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/kalaygian/dennis/Dog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/kalaygian/dennis/Dragon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/kalaygian/dennis/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/kalaygian/dennis/Pet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/kalaygian/dennis/TestCat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/kalaygian/dennis/TestDog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/kalaygian/dennis/TestDragon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/kalaygian/dennis/TestPet.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/Cat.java" afterPath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/partone/Cat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/Dog.java" afterPath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/partone/Dog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/Dragon.java" afterPath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/partone/Dragon.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/Main.java" afterPath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/partone/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/Pet.java" afterPath="$PROJECT_DIR$/src/main/java/kalaygian/dennis/partone/Pet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/TestCat.java" afterPath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/partone/TestCat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/TestDog.java" afterPath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/partone/TestDog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/TestDragon.java" afterPath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/partone/TestDragon.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/TestPet.java" afterPath="$PROJECT_DIR$/src/test/java/kalaygian/dennis/partone/TestPet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a21ff1c5-6f2b-4422-9b1c-3706c2c77594" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -786,7 +766,7 @@
       <option name="presentableId" value="Default" />
       <updated>1494193441399</updated>
       <workItem from="1494193444857" duration="5921000" />
-      <workItem from="1494202240684" duration="6449000" />
+      <workItem from="1494202240684" duration="6520000" />
     </task>
     <servers />
   </component>
@@ -820,7 +800,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12370000" />
+    <option name="totallyTimeSpent" value="12441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-46" y="-745" width="1366" height="677" extended-state="6" />
