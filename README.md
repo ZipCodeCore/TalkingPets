@@ -1,4 +1,4 @@
-# Polymorphism Lab 1
+# Polymorphism Lab 1 -- Extended for Interfaces
 
 ## Objectives
 
@@ -38,3 +38,14 @@ Use the tests provided as examples to write your own tests for other supported t
 
 Modify your program from part 1 to use the Pet class and its subclasses. Keep a list of the pets your user lists and at the end of the program print out a list of their names and what they say when they speak.
 
+## Interfaces
+
+Begin this lab by rewriting your UML according to the updated features. New unit tests will also be required.
+
+### Part 1:
+
+Starting from your completed polymorphism lab, add the `java.lang.Comparable` interface to your pet classes. Implement this interface so that `Arrays.sort()` or `Collections.sort()` (both existing static methods) will sort lists of your objects by name, breaking ties by class type.
+
+### Part 2: 
+
+Create a new implementation of `java.util.Comparator` that will sort pet objects by type, breaking ties by name.
