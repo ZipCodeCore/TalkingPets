@@ -7,7 +7,7 @@ public class MainApplication {
 
     public static void main(String[] args){
 
-    Dog spike = new Dog();
+    Dog spike = new Dog("");
     Cat pussy = new Cat("PussyCat");
     spike.speak();
     pussy.speak();
