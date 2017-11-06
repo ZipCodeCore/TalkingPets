@@ -2,8 +2,11 @@ package io.zipcoder.polymorphism;
 
 public class Cat extends Pet {
 
-    @Override
-    public void speak() {
-        System.out.println("Meow!");
+    public String speak() {
+      return "Meow!";
+    }
+
+    public Cat (String catsName){
+        name = catsName;
     }
 }

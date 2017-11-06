@@ -4,9 +4,9 @@ public abstract class Pet {
     static String name;
     static String type;
 
-    public Pet() {}
-
-    public abstract void speak();
+    public String  speak(){
+        return "";
+    }
 
     public static String getName() {
         return name;
@@ -23,6 +23,7 @@ public abstract class Pet {
     public static void setType(String type) {
         Pet.type = type;
     }
+
 
 
 }
