@@ -14,10 +14,23 @@ public class PetsTest {
     public void testSetGetPetName(){
 
         Pet nagini = new Snake();
+        Pet krypto = new Dog();
+        Pet luna = new Cat();
+
         nagini.setName("Nagini");
         String expected="Nagini";
         String actual=nagini.getName();
-        Assert.assertTrue(expected.equals(actual));
+        Assert.assertEquals(expected, actual);
+
+        krypto.setName("Krypto");
+        expected="Krypto";
+        actual=krypto.getName();
+        Assert.assertEquals(expected, actual);
+
+        luna.setName("Luna");
+        expected="Luna";
+        actual=luna.getName();
+        Assert.assertEquals(expected, actual);
 
     }
 
@@ -30,9 +43,9 @@ public class PetsTest {
         Assert.assertTrue (nagini instanceof Snake && nagini instanceof Pet);
         Assert.assertTrue (krypto instanceof Dog && krypto instanceof Pet);
         Assert.assertTrue (luna instanceof Cat && luna instanceof Pet);
-        Assert.assertTrue("Snake".equals(nagini.getClass().getName()));
-        Assert.assertTrue("Dog".equals(krypto.getClass().getName()));
-        Assert.assertTrue("Cat".equals(luna.getClass().getName()));
+        Assert.assertEquals("Snake", nagini.getClass().getName());
+        Assert.assertEquals("Dog", krypto.getClass().getName());
+        Assert.assertEquals("Cat", luna.getClass().getName());
     }
 
     @Test
@@ -41,9 +54,9 @@ public class PetsTest {
         Pet krypto = new Dog();
         Pet luna = new Cat();
 
-        Assert.assertTrue("Parseltongue".equals(nagini.speak()));
-        Assert.assertTrue("Woof".equals(krypto.speak()));
-        Assert.assertTrue("Meow".equals(luna.speak()));
+        Assert.assertEquals("Parseltongue", nagini.speak());
+        Assert.assertEquals("Woof", krypto.speak());
+        Assert.assertEquals("Meow", luna.speak());
     }
 
 }
