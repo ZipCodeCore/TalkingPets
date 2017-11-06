@@ -1,12 +1,12 @@
 package io.zipcoder.polymorphism;
 
 public abstract class Pet {
-    static String name;
-    static String type;
+    private static String name;
+    private static String type;
 
     public Pet() {}
 
-    public abstract void speak();
+    public abstract String speak();
 
     public static String getName() {
         return name;
