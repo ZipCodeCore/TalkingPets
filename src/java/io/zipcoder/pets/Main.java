@@ -1,41 +1,52 @@
 package io.zipcoder.pets;
 
-import com.sun.deploy.security.ValidationState;
-import com.sun.xml.internal.bind.util.Which;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Main {
+    public static int getIntegerInput(String promptForUserInput) {
+        String stringInput = getStringInput(promptForUserInput);
+        int integerInput = Integer.parseInt(stringInput);
+        return integerInput;
+    }
 
-    public static void main (String [] args) {
+    public static String getStringInput(String promptForUserInput) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(promptForUserInput);
+        String userinput = scanner.nextLine();
+        return userinput;
+    }
 
-        int noOfPets;
+
+    public static void main(String[] args) {
         String typeOfPet;
         String nameOfPet;
+
         ArrayList<Pet> petArrayList = new ArrayList<Pet>();
 
-        Scanner scanner = new Scanner(System.in);
-        //How many pets?
-
-        System.out.println("How many pets?");
-        noOfPets = scanner.nextInt();
-
+        int noOfPets = getIntegerInput("How many pets");
         for (int i = 0; i < noOfPets; i++) {
-            System.out.println("Enter type of pet: "); //+ typeOfPet + "Enter name of per: " + nameOfPet);
-            typeOfPet = scanner.nextLine();
+            typeOfPet = getStringInput("Enter type of pet");
+            nameOfPet = getStringInput("Enter name of pet");
+            switch (typeOfPet.toUpperCase()) {
+                case "DOG":
+                    petArrayList.add(new Dog(nameOfPet));
+                    break;
+                case "CAT": petArrayList.add(new Cat(nameOfPet)); break;
+                case "DUCK": petArrayList.add(new Duck(nameOfPet)); break;
+                default:
+                    System.out.println("Wrong pet type. Please try again");
+                    break;
 
-            System.out.println("Enter name of pet: ");
-            nameOfPet = scanner.nextLine();
+                    }
+            
+                }
+
+
         }
 
-
-        switch (scanner.nextLine()) {
-            case "Dog":
-            case "Cat":
-            case "Bird":
-
-        }
     }
-}
+
+
