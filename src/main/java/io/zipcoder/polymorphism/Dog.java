@@ -1,18 +1,21 @@
 package io.zipcoder.polymorphism;
 
+import java.util.Scanner;
+
 public class Dog extends Pet{
 
-    public Dog() {
+//    public Dog() {
+//        Scanner scanner = new Scanner(System.in);
+//        name = scanner.nextLine();
+//    }
 
-    }
-
-    @Override
-    public void speak(){
-    System.out.println("Woof!");
+    public String speak(){
+        return "Woof!";
     }
 
     public Dog (String dogsName){
         name = dogsName;
     }
+
 
 }
