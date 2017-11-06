@@ -5,17 +5,31 @@ import org.junit.Test;
 
 public  class DogTest {
     boolean dogIsPet;
+    Pet newPet = new Pet("Sire");
+    Dog sire = new Dog("Sire");
 
     @Test
     public void testThePets() {
-        Pet newPet = new Pet("Sire");
         if (newPet instanceof Pet) {
             dogIsPet = true;
         } else {
             dogIsPet = false;
         }
         Assert.assertTrue(dogIsPet);
+    }
 
+    @Test
+    public void testDogHasName (){
+        String expected = "Sire";
+        String actual = newPet.getName();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDogCanSpeak (){
+        String expected = "Why must I chase the cat?";
+        String actual = sire.Speak();
+        Assert.assertEquals(expected, actual);
     }
 
 }
