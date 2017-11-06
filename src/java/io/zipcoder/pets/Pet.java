@@ -4,6 +4,10 @@ public class Pet {
 
     private String Name;
 
+    public Pet(String name){
+        this.Name = name;
+    }
+
     public String Speak(){
         String speak = "";
         return speak;

@@ -3,12 +3,12 @@ package io.zipcoder.pets;
 public class Bird extends Pet{
 
     public Bird(String name){
-        super.setName(name);
+        super(name);
     }
 
     @Override
     public String Speak() {
-        String speak = "Chrip chirp";
+        String speak = "Chirp chirp";
         return speak;
     }
 }

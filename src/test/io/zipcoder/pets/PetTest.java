@@ -24,6 +24,8 @@ public class PetTest {
 
     @Test
     public void testSpeak(){
+        String expected = "woof";
+        pet.Speak();
 
     }
 

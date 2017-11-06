@@ -3,7 +3,7 @@ package io.zipcoder.pets;
 public class Cat extends Pet {
 
     public Cat(String name){
-        super.setName(name);
+        super(name);
     }
 
     @Override
