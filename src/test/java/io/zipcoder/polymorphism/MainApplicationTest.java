@@ -5,9 +5,3 @@ package io.zipcoder.polymorphism;
  */
 public class MainApplicationTest {
 
-
-
-
-
-
-}
