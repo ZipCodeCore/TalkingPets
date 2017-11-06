@@ -1,6 +1,10 @@
 package io.zipcoder.pets;
 
+import java.util.ArrayList;
+
 public class Pet {
+
+    private ArrayList<String> petsName = new ArrayList<String>();
 
     private String Name;
 
@@ -19,6 +23,14 @@ public class Pet {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public ArrayList<String> getPetsName() {
+        return petsName;
+    }
+
+    public void addToPetsName(String petName){
+        petsName.add(petName);
     }
 
 }
