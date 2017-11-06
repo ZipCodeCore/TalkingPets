@@ -7,7 +7,7 @@ public class Pet {
 
 
     public String Speak() {
-        return null;
+        return " ";
     }
 
     public Pet(String name) {
