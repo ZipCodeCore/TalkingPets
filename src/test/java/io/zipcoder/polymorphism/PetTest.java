@@ -16,4 +16,26 @@ public class PetTest {
         String actual = myDog.getName();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void compareToTest_Name() throws Exception {
+        Pet dogOne = new Dog("billy");
+        Pet dogTwo = new Dog("johnny");
+
+        int expected = -8;
+        int actual = dogOne.compareTo(dogTwo);
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void compareToTest_Type() throws Exception {
+        Pet aDog = new Dog("billy");
+        Pet aCat = new Cat("billy");
+
+        int expected = 1;
+        int actual = aDog.compareTo(aCat);
+        Assert.assertEquals(expected, actual);
+
+    }
 }
