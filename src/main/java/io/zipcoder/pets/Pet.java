@@ -13,6 +13,6 @@ public abstract class Pet {
         return this.name;
     }
 
-    public void setName
+    public abstract String speak();
 
 }
