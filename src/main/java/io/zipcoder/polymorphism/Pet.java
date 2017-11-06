@@ -1,6 +1,9 @@
 package io.zipcoder.polymorphism;
 
+import java.util.Scanner;
+
 public abstract class Pet {
+
     static String name;
     static String type;
 
@@ -8,7 +11,8 @@ public abstract class Pet {
         return "";
     }
 
-    public static String getName() {
+
+    public String getName() {
         return name;
     }
 

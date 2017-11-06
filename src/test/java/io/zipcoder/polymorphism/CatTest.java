@@ -9,13 +9,9 @@ public class CatTest {
 
     @Test
     public void testCatSpeak() {
-
-        Cat cat = new Cat("fluffy");
-
+        Cat cat = new Cat("CatsName");
         String expected = "Meow!";
         String actual = cat.speak();
-
-
         Assert.assertEquals(expected, actual);
     }
 
