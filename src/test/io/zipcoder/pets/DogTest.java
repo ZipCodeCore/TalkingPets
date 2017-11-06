@@ -16,7 +16,6 @@ public  class DogTest {
         }
         Assert.assertTrue(dogIsPet);
 
-
     }
 
 }
