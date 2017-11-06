@@ -1,21 +1,20 @@
 package io.zipcoder.pets;
-
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CatTest {
-    Cat newPet = new Cat("cat", "Whiskers");
-
+public class TestDog {
     @Test
     public void testGetName() {
-        String expected = "Whiskers";
-        String actual = newPet.getName();
+        Pet pet = new Dog("dog", "A");
+        String expected = "A";
+        String actual = pet.getName();
         Assert.assertEquals(expected,actual);
     }
     @Test
     public void testSpeak(){
-        String expected="Meooooooow";
-        String actual = newPet.speak();
+        Pet pet= new Dog("dog","B");
+        String expected= "Woof";
+        String actual= pet.speak();
         Assert.assertEquals(expected,actual);
     }
 }

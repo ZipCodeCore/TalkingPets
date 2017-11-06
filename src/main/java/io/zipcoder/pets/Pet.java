@@ -1,6 +1,14 @@
 package io.zipcoder.pets;
 
 public class Pet {
+    private String type;
+    private String name;
+
+    public Pet(String type, String name) {
+        this.type = type;
+        this.name = name;
+    }
+
     public String getType() {
         return type;
     }
@@ -13,13 +21,8 @@ public class Pet {
         this.name = name;
     }
 
-    private String type;
-    private String name;
-    public Pet(String type, String name){
-        this.type = type;
-        this.name = name;
-    }
-    public String speak(){
-        return " ";
+    public String  speak(){
+
+        return "Pet speaking from Super";
     }
 }

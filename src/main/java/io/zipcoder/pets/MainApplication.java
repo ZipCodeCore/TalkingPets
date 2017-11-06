@@ -33,6 +33,7 @@ public class MainApplication {
         }
         for (Pet pet : petList) {
             System.out.println(pet.getName() + ":" + pet.speak());
+
         }
     }
 }

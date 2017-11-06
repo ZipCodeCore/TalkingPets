@@ -3,19 +3,19 @@ package io.zipcoder.pets;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class DogTest {
-    Dog newPet = new Dog("dog", "Max");
-
+public class TestBird {
     @Test
     public void testGetName() {
-        String expected = "Max";
-        String actual = newPet.getName();
+        Pet pet = new Bird("bird", "A");
+        String expected = "A";
+        String actual = pet.getName();
         Assert.assertEquals(expected,actual);
     }
     @Test
     public void testSpeak(){
-        String expected="Wooooof";
-        String actual = newPet.speak();
+        Pet pet= new Bird("bird","B");
+        String expected= "Chirp";
+        String actual= pet.speak();
         Assert.assertEquals(expected,actual);
     }
 }
