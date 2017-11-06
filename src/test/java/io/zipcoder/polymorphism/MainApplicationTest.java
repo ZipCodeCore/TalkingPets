@@ -1,12 +1,19 @@
 package io.zipcoder.polymorphism;
-
-
-import org.junit.Test;
-
-
+import java.util.Scanner;
 /**
- * Created by Timothy R Rager on 11/6/17.
+ * Created by leon on 11/6/17.
  */
 public class MainApplicationTest {
 
+  {
+
+
+
+
+
+
+
+
+
+    }
 }
