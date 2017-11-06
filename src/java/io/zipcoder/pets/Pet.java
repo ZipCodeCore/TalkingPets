@@ -1,23 +1,20 @@
 package io.zipcoder.pets;
 
 public class Pet {
-    private String name;
 
-    public Pet(String name){
-        this.name = name;
+    private String Name;
 
+    public String Speak(){
+        String speak = "";
+        return speak;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
-    }
-
-    public void speak(){
-
+        Name = name;
     }
 
 }
