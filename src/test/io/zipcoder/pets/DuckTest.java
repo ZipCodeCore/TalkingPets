@@ -28,7 +28,7 @@ public class DuckTest {
 
     @Test
     public void testDuckCanSpeak (){
-        String expected = "I like disco.";
+        String expected = "quack";
         String actual = Daffy.Speak();
         Assert.assertEquals(expected, actual);
     }

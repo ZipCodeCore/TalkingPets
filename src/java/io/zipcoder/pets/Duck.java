@@ -7,7 +7,7 @@ public class Duck extends Pet {
         }
 
         public String Speak(){
-            String speak = "I like disco.";
+            String speak = "quack.";
             return speak;
         }
 
