@@ -16,5 +16,10 @@
         </dependency>
     </dependencies>
 
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.complier.source>1.8</maven.complier.source>
+    </properties>
+
 
 </project>
