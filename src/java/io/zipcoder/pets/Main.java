@@ -26,7 +26,7 @@ public class Main {
 
         ArrayList<Pet> petArrayList = new ArrayList<Pet>();
 
-        int noOfPets = getIntegerInput("How many pets");
+        int noOfPets = getIntegerInput("How many pets?");
         for (int i = 0; i < noOfPets; i++) {
             typeOfPet = getStringInput("Enter type of pet");
             nameOfPet = getStringInput("Enter name of pet");
@@ -41,9 +41,11 @@ public class Main {
                     break;
 
                     }
-            
-                }
 
+                }
+            for(Pet pet: petArrayList){
+                System.out.println(pet.getName() + " " + pet.Speak());
+            }
 
         }
 

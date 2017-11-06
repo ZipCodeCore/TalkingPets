@@ -25,7 +25,4 @@ public class Pet {
 //override speak method.  constructor
 
 }
-//petArrayList.add(new Dog(petType, petName)nameOfPet));
-//
-//public class cat extednsds pert{
-//    public cat I
+
