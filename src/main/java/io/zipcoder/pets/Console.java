@@ -1,5 +1,6 @@
 package io.zipcoder.pets;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Console {
@@ -27,6 +28,19 @@ public class Console {
             }
         }
 
+        NameChecker nameChecker = new NameChecker();
+        Arrays.sort(allPets, nameChecker);
+        System.out.println("Sorted by name then type:");
+        System.out.println("*************************");
+        for(int i = 0; i < numPets; i++) {
+            System.out.println(allPets[i].getName() + " says " + allPets[i].speak());
+        }
+        System.out.println();
+
+        TypeChecker typeChecker = new TypeChecker();
+        Arrays.sort(allPets, typeChecker);
+        System.out.println("Sorted by type then name:");
+        System.out.println("*************************");
         for(int i = 0; i < numPets; i++) {
             System.out.println(allPets[i].getName() + " says " + allPets[i].speak());
         }
