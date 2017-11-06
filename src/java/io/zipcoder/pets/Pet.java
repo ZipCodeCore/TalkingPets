@@ -8,8 +8,7 @@ public class Pet {
         this.Name = name;
     }
 
-    public String Speak(){
-        String speak = "";
+    public String Speak(String speak){
         return speak;
     }
 

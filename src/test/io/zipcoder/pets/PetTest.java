@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class PetTest {
     Pet pet = new Pet("buck");
+    Dog fred = new Dog("Fred");
 
     @Test
     public void testConstructor(){
@@ -25,8 +26,16 @@ public class PetTest {
     @Test
     public void testSpeak(){
         String expected = "woof";
-        pet.Speak();
+        String actual = pet.Speak(expected);
+        Assert.assertEquals(expected, actual);
 
+    }
+
+    @Test
+    public void dogSpeakTest(){
+        String expected = "woof";
+        String actual = fred.Speak(expected);
+        Assert.assertEquals(expected, actual);
     }
 
 }
