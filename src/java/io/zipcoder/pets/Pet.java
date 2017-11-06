@@ -8,9 +8,9 @@ public class Pet {
         this.Name = name;
     }
 
-    public String Speak(String speak){
-        speak = "Some Noise";
-        return speak;
+    public String speak(){
+        String nosie = "some noise";
+        return nosie;
     }
 
     public String getName() {
