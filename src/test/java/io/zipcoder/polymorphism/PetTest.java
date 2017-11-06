@@ -1,6 +1,7 @@
 package io.zipcoder.polymorphism;
 
-import sun.jvm.hotspot.utilities.Assert;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 
@@ -11,9 +12,9 @@ public class PetTest {
 
         //Given
 
-        Dog doggo = new Dog("Doggo");
-        Cat kasumi = new Cat("Kasumi");
-        Snake snek = new Snake("Snek");
+        Dog doggo = new Dog("", "Doggo");
+        Cat kasumi = new Cat("", "Kasumi");
+        Snake snek = new Snake("", "Snek");
 
 
         String expectedDog = new String("Doggo");
@@ -28,18 +29,18 @@ public class PetTest {
 
         //Then
 
-        org.junit.Assert.assertEquals(" doggo", expectedDog, actualDog);
-        org.junit.Assert.assertEquals(" cat", expectedCat, actualCat);
-        org.junit.Assert.assertEquals(" snek", expectedSnake, actualSnake);
+        Assert.assertEquals(" doggo", expectedDog, actualDog);
+        Assert.assertEquals(" cat", expectedCat, actualCat);
+        Assert.assertEquals(" snek", expectedSnake, actualSnake);
     }
 
     @Test
 
     public void speakTest(){
 
-        Dog doggo = new Dog("Doggo");
-        Cat kasumi = new Cat("Kasumi");
-        Snake snek = new Snake( "Snek");
+        Dog doggo = new Dog("", "Doggo");
+        Cat kasumi = new Cat("", "Kasumi");
+        Snake snek = new Snake("", "Snek");
 
         String expectedDog = new String( "Woof");
         String expectedCat = new String("Meow");
@@ -49,9 +50,9 @@ public class PetTest {
         String actualCat = kasumi.speak();
         String actualSnake = snek.speak();
 
-        org.junit.Assert.assertEquals(expectedDog, actualDog);
-        org.junit.Assert.assertEquals(expectedCat, actualCat);
-        org.junit.Assert.assertEquals(expectedSnake, actualSnake);
+        Assert.assertEquals(expectedDog, actualDog);
+        Assert.assertEquals(expectedCat, actualCat);
+        Assert.assertEquals(expectedSnake, actualSnake);
 
 
     }

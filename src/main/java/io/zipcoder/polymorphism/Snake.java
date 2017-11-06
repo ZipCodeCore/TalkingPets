@@ -4,7 +4,7 @@ public class Snake extends Pet {
 
     private String speak = "Parseltongue";
 
-    public Snake(String name)
+    public Snake(String petType, String name)
     {
         super(name);
     }

@@ -1,9 +1,9 @@
 package io.zipcoder.pets;
 
-public abstract class Pet {
+public  class Pet {
 
     private String name;
-    private String speech;
+    private String speak;
 
     public Pet(String name){
         this.name=name;
@@ -13,6 +13,12 @@ public abstract class Pet {
         return this.name;
     }
 
-    public abstract String speak();
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String speak(){
+        return " ";
+    }
 
 }
