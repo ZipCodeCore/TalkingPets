@@ -12,8 +12,8 @@ public class PetTest {
         //Given
 
         Dog doggo = new Dog("Doggo");
-        Cat cato = new Cat("Kasumi");
-        Snake snako = new Snake("Snek");
+        Cat kasumi = new Cat("Kasumi");
+        Snake snek = new Snake("Snek");
 
 
         String expectedDog = new String("Doggo");
@@ -23,23 +23,23 @@ public class PetTest {
         //When
 
         String actualDog = doggo.getName();
-        String actualCat = cato.getName();
-        String actualSnake = snako.getName();
+        String actualCat = kasumi.getName();
+        String actualSnake = snek.getName();
 
         //Then
 
         org.junit.Assert.assertEquals(" doggo", expectedDog, actualDog);
-        org.junit.Assert.assertEquals(" doggo", expectedCat, actualCat);
-        org.junit.Assert.assertEquals(" doggo", expectedSnake, actualSnake);
+        org.junit.Assert.assertEquals(" cat", expectedCat, actualCat);
+        org.junit.Assert.assertEquals(" snek", expectedSnake, actualSnake);
     }
 
     @Test
 
     public void speakTest(){
 
-        Dog doggo = new Dog("Woof");
-        Cat kasumi = new Cat("Meow");
-        Snake snek = new Snake( "Parseltongue");
+        Dog doggo = new Dog("Doggo");
+        Cat kasumi = new Cat("Kasumi");
+        Snake snek = new Snake( "Snek");
 
         String expectedDog = new String( "Woof");
         String expectedCat = new String("Meow");
@@ -49,9 +49,9 @@ public class PetTest {
         String actualCat = kasumi.speak();
         String actualSnake = snek.speak();
 
-        org.junit.Assert.assertEquals("Dog doggo", expectedDog, actualDog);
-        org.junit.Assert.assertEquals("Cat Kasumi", expectedCat, actualCat);
-        org.junit.Assert.assertEquals("Snake Snek", expectedSnake, actualSnake);
+        org.junit.Assert.assertEquals(expectedDog, actualDog);
+        org.junit.Assert.assertEquals(expectedCat, actualCat);
+        org.junit.Assert.assertEquals(expectedSnake, actualSnake);
 
 
     }
