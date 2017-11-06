@@ -8,14 +8,15 @@ import static org.junit.Assert.*;
 public class CatTest {
 
     @Test
-    public void testSpeak() {
+    public void testCatSpeak() {
 
-        Cat cat = new Cat();
+        Cat cat = new Cat("fluffy");
 
-        String expected = "meow!";
+        String expected = "Meow!";
         String actual = cat.speak();
 
 
         Assert.assertEquals(expected, actual);
     }
+
 }
