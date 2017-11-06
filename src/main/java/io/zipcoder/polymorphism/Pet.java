@@ -1,6 +1,6 @@
 package io.zipcoder.polymorphism;
 
-public abstract class Pet
+public class Pet
 {
 
     private String name;
