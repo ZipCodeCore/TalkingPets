@@ -15,32 +15,40 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         Integer numberOfPets = 0;
-        ArrayList<String> typeOfPets = new ArrayList<String>();
-        ArrayList<String> namesOfPets = new ArrayList<String>();
+        ArrayList<Pet> pets = new ArrayList<Pet>();
 
         System.out.println("How many pets do you have?");
         numberOfPets =Integer.parseInt(scan.nextLine());
 
-        String allTypesNamed = "";
+        for(int i = 1; i<=numberOfPets; i++) {
 
-        do{
-            System.out.println("What kind?");
-            typeOfPets.add(scan.nextLine());
-
+            System.out.println("And pet " + i  + " is a...?");
+            String pet = scan.nextLine();
             System.out.println("What's it named?");
-            namesOfPets.add(scan.nextLine());
+            String name = scan.nextLine();
 
-            System.out.println("Any other pets?");
-            allTypesNamed = scan.nextLine();
+            if (pet.equalsIgnoreCase("Dog")) {
+                Dog dog = new Dog(name);
+                pets.add(dog);
+            } else if (pet.equalsIgnoreCase("Cat")) {
+                Cat cat = new Cat(name);
+                pets.add(cat);
+            } else if (pet.equalsIgnoreCase("Fish")) {
+                Fish fish = new Fish(name);
+                pets.add(fish);
+            } else {
+                Pet otherPet = new Pet(name);
+                pets.add(otherPet);
             }
-        while(allTypesNamed.equals("y"));
 
-        for(int i = 0; i< typeOfPets.size(); i++){
-                System.out.println("a " + typeOfPets.get(i) + " named, " + namesOfPets.get(i));
-            }
         }
 
+
+        for(int i =0; i<pets.size(); i++){
+            System.out.println("You have a " + pets.get(i).getClass().getSimpleName() + " named " + pets.get(i).getName() +".");
         }
+}
+}
 
 
 
