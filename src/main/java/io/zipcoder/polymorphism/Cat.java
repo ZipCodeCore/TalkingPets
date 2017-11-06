@@ -1,6 +1,6 @@
 package io.zipcoder.polymorphism;
 
-public class Cat extends Pets{
+public class Cat extends Pet {
 
     @Override
     public String speak() {

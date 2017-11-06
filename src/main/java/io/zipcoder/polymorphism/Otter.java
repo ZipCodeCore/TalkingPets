@@ -1,6 +1,6 @@
 package io.zipcoder.polymorphism;
 
-public class Otter {
+public class Otter extends Pet {
     public String speak() {
         return "Chuckle";
     }
