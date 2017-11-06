@@ -6,9 +6,7 @@ public abstract class Pet {
 
     public Pet() {}
 
-    public String speak(String type , String speech){
-        return ( name + " is a " + type +  " and it goes " + speech + " !");
-    }
+    public abstract void speak();
 
     public static String getName() {
         return name;
