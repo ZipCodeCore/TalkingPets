@@ -75,7 +75,10 @@ public class Console {
             if (!isInputInt(sInput)||(Integer.valueOf(sInput)<0)) {
                 System.out.println("Please enter an integer greater than 0.");
             }
-        }while (!isInputInt(sInput)||(Integer.valueOf(sInput)<0));
+            else {
+                validInput = true;
+            }
+        }while (!validInput);
         iInput=Integer.valueOf(sInput);
         return iInput;
     }
