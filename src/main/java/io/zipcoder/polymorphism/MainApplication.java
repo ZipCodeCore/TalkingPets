@@ -15,6 +15,7 @@ public class MainApplication {
         int numberOfPets;
         String petType;
         String petName;
+
         numberOfPets = Integer.parseInt(getUserInput("How many pets you got?"));
 
 
@@ -50,8 +51,7 @@ public class MainApplication {
 
     private static String getPetType() {
         String packageName = "io.zipcoder.polymorphism.";
-        String petType;
-        petType = getUserInput("What type of pet do you have? (Dog, Cat, or Goat)?");
+        String petType = getUserInput("What type of pet do you have? (Dog, Cat, or Goat)?");
         petType = petType.trim();
         petType = petType.substring(0, 1).toUpperCase() + petType.substring(1).toLowerCase();
         return packageName + petType;
@@ -79,7 +79,4 @@ public class MainApplication {
         return scanner.nextLine();
     }
 
-    private static void verifyInteger() {
-
-    }
 }
