@@ -7,8 +7,8 @@ public class Cat extends Pet {
     }
 
     @Override
-    public String Speak(String speak) {
-        speak = "Meow";
+    public String speak() {
+        String speak = "meow";
         return speak;
     }
 }
