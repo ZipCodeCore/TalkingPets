@@ -1,41 +1,29 @@
-/*
 package io.zipcoder.polymorphism.io.zipcoder.pets;
 
-import io.zipcoder.pets.Cat;
-import io.zipcoder.pets.Dog;
-import io.zipcoder.pets.Parrot;
+
 import io.zipcoder.pets.Pet;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class PetsTest {
-
-    Pet[] pets = new Pet[]{new Cat(), new Dog(), new Parrot()};
-    String[] names = new String[]{"Garfield", "Rover", "Polly"};
-    String[] calls = new String[]{"Meow~", "Bark bark!", "Polly wanna cracker!"};
     Pet pet;
-    int i = 0;
+    String name;
+    String call;
 
-    public void allTests() {
 
-
+    public PetsTest(Pet expectedPet, String expectedSpeech, String expectedName) {
+        this.pet = expectedPet;
+        this.call = expectedSpeech;
+        this.name = expectedName;
     }
-
-    @Before
-    public void setUp () {
-        pet = pets[i];
-    }
-
-    //change the setup to match pet copy pasta the actual tests
 
     @Test
-    public void thisPetInstanceOfPetTest () {
+    public void thisPetInstanceOfPetTest() {
         Assert.assertTrue(pet instanceof Pet);
     }
 
     @Test
-    public void petNameSetGetTest () {
+    public void petNameSetGetTest() {
         pet.setName(name);
         String expected = name;
         String actual = pet.getName();
@@ -44,7 +32,7 @@ public class PetsTest {
     }
 
     @Test
-    public void petSpeakTest () {
+    public void petSpeakTest() {
         String expected = call;
         String actual = pet.speak();
 
@@ -52,7 +40,7 @@ public class PetsTest {
     }
 
     @Test
-    public void petToString () {
+    public void petToString() {
         pet.setName(name);
 
         String expected = "This pet is a " + pet.getClass().getSimpleName() + " named " + name + ", who goes " + call;
@@ -61,4 +49,3 @@ public class PetsTest {
         Assert.assertEquals(expected, actual);
     }
 }
-*/
