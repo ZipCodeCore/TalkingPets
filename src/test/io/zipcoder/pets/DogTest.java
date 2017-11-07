@@ -27,7 +27,7 @@ public  class DogTest {
 
     @Test
     public void testDogCanSpeak (){
-        String expected = "Why must I chase the cat?";
+        String expected = "bark";
         String actual = sire.Speak();
         Assert.assertEquals(expected, actual);
     }

@@ -28,10 +28,12 @@ public class CatTest {
 
         @Test
         public void testCatCanSpeak (){
-            String expected = "And a silver Spoon?";
+            String expected = "meow";
             String actual = Cherry.Speak();
             Assert.assertEquals(expected, actual);
         }
+
+
 
     }
 

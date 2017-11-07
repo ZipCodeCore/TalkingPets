@@ -15,7 +15,7 @@ public class Dog extends Pet {
 
     @Override
     public String Speak() {
-       return "Why must I chase the cat?";
+       return "bark.";
     }
 
 
