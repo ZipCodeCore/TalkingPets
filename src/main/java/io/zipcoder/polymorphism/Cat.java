@@ -1,6 +1,5 @@
 package io.zipcoder.polymorphism;
 
-import java.util.Scanner;
 
 public class Cat extends Pet {
 
