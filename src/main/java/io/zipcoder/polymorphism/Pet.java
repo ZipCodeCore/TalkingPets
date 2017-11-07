@@ -1,7 +1,5 @@
 package io.zipcoder.polymorphism;
 
-import java.util.ArrayList;
-
 public abstract class Pet {
 
     private String name;

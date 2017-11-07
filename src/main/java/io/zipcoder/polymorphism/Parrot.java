@@ -1,12 +1,8 @@
 package io.zipcoder.polymorphism;
 
-import java.util.Scanner;
-
 public class Parrot extends Pet {
 
-    public Parrot() {
-
-    }
+    public Parrot() {}
 
     public String speak(){
         return "Squawk!";
@@ -14,4 +10,4 @@ public class Parrot extends Pet {
 
 
     }
-}
+
