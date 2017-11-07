@@ -5,7 +5,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 public class MainApplication {
-    static Scanner sc;
 
     public static void main(String[] args) {
         addPet();
@@ -25,7 +24,7 @@ public class MainApplication {
         Collections.sort(pets);
 
         for (int x = 0; x < pets.size(); x++) {
-            System.out.println(pets.get(x).getName()+" says: "+pets.get(x).speak());
+            System.out.println(pets.get(x).getName() + " says: " + pets.get(x).speak());
         }
 
 
@@ -37,7 +36,7 @@ public class MainApplication {
             Constructor<?>[] constructors = clazz.getConstructors();
             Object object = constructors[0].newInstance(name);
             pet = (Pet) object;
-        }catch (InstantiationException|IllegalArgumentException|IllegalAccessException|InvocationTargetException e) {
+        } catch (InstantiationException | IllegalArgumentException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
         return pet;
@@ -63,19 +62,17 @@ public class MainApplication {
         String packageName = "io.zipcoder.polymorphism.";
         String petType = getString("What type of pet do you have? (Cat, Dog, Goat)");
         petType = petType.trim();
-        petType = petType.substring(0,1).toUpperCase() + petType.substring(1).toLowerCase();
-        return packageName+petType;
+        petType = petType.substring(0, 1).toUpperCase() + petType.substring(1).toLowerCase();
+        return packageName + petType;
     }
 
     public static String getString(String prompt) {
         System.out.println(prompt);
-        sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
 
     public static int getInt(String prompt) {
-        System.out.println(prompt);
-        sc = new Scanner(System.in);
-        return sc.nextInt();
+        return Integer.parseInt(getString(prompt));
     }
 }
