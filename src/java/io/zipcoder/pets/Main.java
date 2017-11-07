@@ -6,7 +6,7 @@ public class Main {
 
         Dog fred = new Dog("Fred");
 
-        fred.setPetsName("Fred");
+        fred.addToPetsName();
 
     }
 }
