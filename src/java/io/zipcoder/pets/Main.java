@@ -1,7 +1,7 @@
 package io.zipcoder.pets;
-
-
+import java.lang.Comparable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 
@@ -27,6 +27,7 @@ public class Main {
         ArrayList<Pet> petArrayList = new ArrayList<Pet>();
 
         int noOfPets = getIntegerInput("How many pets?");
+
         for (int i = 0; i < noOfPets; i++) {
             typeOfPet = getStringInput("Enter type of pet");
             nameOfPet = getStringInput("Enter name of pet");
@@ -34,20 +35,30 @@ public class Main {
                 case "DOG":
                     petArrayList.add(new Dog(nameOfPet));
                     break;
-                case "CAT": petArrayList.add(new Cat(nameOfPet)); break;
-                case "DUCK": petArrayList.add(new Duck(nameOfPet)); break;
+                case "CAT":
+                    petArrayList.add(new Cat(nameOfPet));
+                    break;
+                case "DUCK":
+                    petArrayList.add(new Duck(nameOfPet));
+                    break;
                 default:
                     System.out.println("Wrong pet type. Please try again");
-                    break;
-
+                    if (i <= 0) {
+                        i = i - 1;
+                    } else {
+                        i = i - 1;
                     }
-
-                }
-            for(Pet pet: petArrayList){
-                System.out.println(pet.getName() + " " + pet.Speak());
+                    break;
             }
-
         }
+
+     Collections.sort(petArrayList);
+
+        for (Pet pet : petArrayList) {
+            System.out.println(pet.getName()+ " is a " + pet.getClass().getSimpleName() + " that " + pet.Speak());// unsorted
+        }
+    }
+
 
     }
 

@@ -1,6 +1,6 @@
 package io.zipcoder.pets;
 
-public class Pet {
+public class Pet implements Comparable<Pet> {
 
     public String name;
 
@@ -21,6 +21,15 @@ public class Pet {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Pet o) {
+        if(this.getName().compareTo(o.getName())==0){
+            return this.getClass().getName().compareTo(o.getClass().getName());
+        } else {
+            return this.getName().compareTo(o.getName());
+        }
     }
 
 //override speak method.  constructor
