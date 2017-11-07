@@ -21,37 +21,28 @@ public class Console {
     }
 
     private void inputNumberOfPets() {
-        System.out.println("Please enter how many pets you have.");
-        this.numberOfPets = SanitizeTools.getEnforcedIntegerInput();
+        this.numberOfPets = SanitizeTools.getPositiveIntegerInput("Please enter how many pets you have.");
         System.out.println("So you have "+numberOfPets+" pets.");
     }
 
     private void inputKindAndNameOfPets() {
-        Scanner scanner = new Scanner(System.in);
         String input = "";
+        Pet pet;
         for (int i = 0; i < numberOfPets; i++) {
-            Pet pet;
-            input = getType(scanner, i);
-            pet = getPetOfType(input);
+            pet = getPetOfType(i);
             pets.add(pet);
-            getAndSetName(scanner, pet);
+            getPetName(pet);
         }
     }
 
-    private String getType(Scanner scanner, int i) {
+    private Pet getPetOfType(int i) {
         String input;
+        Pet pet;
         do{
-            System.out.println("what kind of pet is pet#"+(i+1)+"? {Cat, Dog, or Lion?}");
-            input = scanner.nextLine();
-        }while(!"cat".equalsIgnoreCase(input) && !"dog".equalsIgnoreCase(input) && !"lion".equalsIgnoreCase(input));
-        return input;
-    }
-
-    private void getAndSetName(Scanner scanner, Pet pet) {
-        String input;
-        System.out.println("What is this "+pet.getClass().getSimpleName()+"'s name?");
-        input = scanner.nextLine();
-        pet.setName(input);
+            input = SanitizeTools.getStringInput("what kind of pet is pet#"+(i+1)+"? {Cat, Dog, or Lion?}");
+        } while (!"cat".equalsIgnoreCase(input) && !"dog".equalsIgnoreCase(input) && !"lion".equalsIgnoreCase(input));
+        pet = getPetOfType(input);
+        return pet;
     }
 
     private Pet getPetOfType(String input) {
@@ -66,6 +57,12 @@ public class Console {
                 System.out.println("Sorry, we don't know what those are.");
                 return null;
         }
+    }
+
+    private void getPetName(Pet pet) {
+        String input;
+        input = SanitizeTools.getStringInput("What is this "+pet.getClass().getSimpleName()+"'s name?");
+        pet.setName(input);
     }
 
     private void printListOfPets() {

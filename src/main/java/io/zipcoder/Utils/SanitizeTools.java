@@ -5,53 +5,44 @@ import java.util.Scanner;
 
 public class SanitizeTools{
 
-    public static double getEnforcedDoubleInput(){
-        Scanner in = new Scanner(System.in);
-        double dInput;
-        String sInput;
+    public static String getStringInput(String prompt){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(prompt);
+        String stringInput = scanner.nextLine();
+        return stringInput;
+    }
+
+    public static double getDoubleInput(String prompt){
+        String stringInput;
+        double doubleInput;
+
         do {
-            sInput = in.nextLine();
-            if (!isInputDouble(sInput)) {
-                System.out.println("Please enter a decimal number.");
+            stringInput = getStringInput(prompt);
+            try {
+                doubleInput = Double.parseDouble(stringInput);
+                return doubleInput;
+            } catch (IllegalArgumentException iae){
+                System.out.println("Please enter a number.");
+                continue;
             }
-        }while (!isInputDouble(sInput));
-        dInput=Double.valueOf(sInput);
-        return dInput;
+        } while (true);
     }
 
-    private static boolean isInputDouble(String passedString)
-    {
-        try {
-            Double output = Double.valueOf(passedString);
-        } catch (NumberFormatException e) {
-            return false;
-        }
-        return (true);
+    public static int getIntegerInput(String prompt){
+        return (int)getDoubleInput(prompt);
     }
 
-    public static int getEnforcedIntegerInput(){
-        Scanner in = new Scanner(System.in);
-        int iInput;
-        String sInput;
-        do {
-            sInput = in.nextLine();
-            if (!isInputInt(sInput)) {
-                System.out.println("Please enter an integer number.");
+    public static int getPositiveIntegerInput (String prompt){
+        int intInput;
+        do{
+            intInput = getIntegerInput(prompt);
+            if (intInput >= 0){
+                return intInput;
+            } else {
+                System.out.println("Please enter a positive integer.");
+                continue;
             }
-        }while (!isInputInt(sInput));
-        iInput=Integer.valueOf(sInput);
-        return iInput;
+        }while(true);
     }
-
-    private static boolean isInputInt(String passedString)
-    {
-        try {
-            Integer output = Integer.valueOf(passedString);
-        } catch (NumberFormatException e) {
-            return false;
-        }
-        return (true);
-    }
-
 
 }

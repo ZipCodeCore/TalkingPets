@@ -1,9 +1,6 @@
 package io.zipcoder.polymorphism;
 
-import io.zipcoder.pets.Cat;
-import io.zipcoder.pets.Dog;
-import io.zipcoder.pets.Lion;
-import io.zipcoder.pets.Pet;
+import io.zipcoder.pets.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +18,7 @@ public class CompareTest {
     Pet[] unsorted;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         cat1 = new Cat();
         cat1.setName("pet1");
         dog1 = new Dog();
@@ -38,7 +35,7 @@ public class CompareTest {
     }
 
     @Test
-    public void sortByNameTest(){
+    public void sortByNameTest() {
         Arrays.sort(unsorted);
         Pet[] expected = new Pet[]{cat1, dog1, lion1, cat2, dog2, lion2};
 
@@ -46,10 +43,18 @@ public class CompareTest {
     }
 
     @Test
+    public void sortByTypeTest() {
+        Arrays.sort(unsorted, new PetTypeComparator());
+        Pet[] expected = new Pet[]{cat1, cat2, dog1, dog2, lion1, lion2};
+
+        Assert.assertArrayEquals(expected, unsorted);
+
+    /*@Test
     public void sortByTypeTest(){
         Arrays.sort(unsorted, Pet.compareByType);
         Pet[] expected = new Pet[]{cat1, cat2, dog1, dog2, lion1, lion2};
 
         Assert.assertArrayEquals(expected, unsorted);
+    }*/
     }
 }
