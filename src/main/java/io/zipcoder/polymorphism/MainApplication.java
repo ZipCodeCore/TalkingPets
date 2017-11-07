@@ -1,17 +1,18 @@
 package io.zipcoder.polymorphism;
 
-import io.zipcoder.pets.Cat;
-import io.zipcoder.pets.Dog;
-import io.zipcoder.pets.Pet;
-import io.zipcoder.pets.Snake;
+import io.zipcoder.pets.*;
 
+import java.util.Collections;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 /**
  * Created by Timothy R Rager on 11/6/17.
  */
 public class MainApplication {
+
+
     public static void main(String[] args){
 
         int numOfPets;
@@ -34,6 +35,9 @@ public class MainApplication {
             typeOfPet=typeOfPet.toUpperCase();
             addPetsToList(pets, typeOfPet, nameOfPet);
         }//end for
+
+        Comparator<Pet> comp = new PetComparator();
+        Collections.sort(pets, comp);
 
         System.out.println("\n\n");
         for (Pet p : pets){
