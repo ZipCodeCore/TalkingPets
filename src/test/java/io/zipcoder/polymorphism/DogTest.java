@@ -6,7 +6,7 @@ import org.junit.Test;
 public class DogTest {
     @Test
     public void testDogSpeak(){
-        Dog dog = new Dog("Spike");
+        Dog dog = new Dog();
         String expected = "Woof!";
         String actual = dog.speak();
         Assert.assertEquals(expected, actual);

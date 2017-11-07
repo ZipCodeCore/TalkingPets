@@ -14,7 +14,7 @@ public class MainApplicationTest {
     //Testing for user when asked how many pets
 
     @Test
-    public void numberOfPets(){
+    public void numberOfPetsTest(){
 
         String expected =
 
@@ -26,7 +26,7 @@ public class MainApplicationTest {
 
 
 
-    Assert.assertEquals(expected , actual);
+
 
 
 
