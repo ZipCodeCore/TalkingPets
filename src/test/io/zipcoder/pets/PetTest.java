@@ -8,12 +8,9 @@ import java.util.ArrayList;
 
 public class PetTest {
     Pet pet = new Pet("buck");
-    Pet pet1 =  new Pet("barry");
     Pet fred = new Dog("Fred");
     Pet mittens = new Cat("Mittens");
 
-
-   // ArrayList<Pet> petArray = new ArrayList<Pet>();
 
     @Test
     public void testConstructor(){
@@ -42,11 +39,11 @@ public class PetTest {
     @Test
     public void testAddToPetArray(){
         pet.addToPetArray(mittens);
-        pet.addToPetArray(fred);
-        String expected ="Fred--Dog\nMittens--Cat\n";
-        String actual = pet.g;
+        String expected ="Mittens--Cat\n";
+        String actual = pet.getPetsInArray();
+        Assert.assertEquals(expected, actual);
 
-        //Assert.assertEquals(expected, pet);
+
     }
 
     @Test

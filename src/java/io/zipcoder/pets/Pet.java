@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class Pet {
     private String Name;
 
+    private static ArrayList<String> petsNameArray = new ArrayList<String>();
+
+    private static ArrayList<Pet> petsArray = new ArrayList<Pet>();
+
     public Pet(String name){
 
         this.Name = name;
     }
-
-    private static ArrayList<String> petsNameArray = new ArrayList<String>();
-
-    private static ArrayList<Pet> petsArray = new ArrayList<Pet>();
 
     public String getPetsName() {
         String animal = "";
