@@ -5,7 +5,7 @@ public class Cat extends Pet {
         super(name);
     }
 
-    @Override
+
     public void speak (){
         System.out.println("miaw");
     }

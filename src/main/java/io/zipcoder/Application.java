@@ -20,7 +20,7 @@ public class Application {
         scan.nextLine();
         String petsName = "";
 
-        ArrayList<Pet> petNameStringArray = new ArrayList<Pet>();
+        ArrayList<Pet> petNameStringArray = new ArrayList<>();
 
         for (int i =1; i <= numberOfPets; i++){
 
@@ -31,6 +31,7 @@ public class Application {
             if (petType.equalsIgnoreCase("dog")) {
                 Dog dogObj = new Dog(petName);
                 petNameStringArray.add(dogObj);
+
             }
 
                 else if (petType.equalsIgnoreCase("cat")) {
