@@ -62,9 +62,9 @@ public class MainApplication {
         }
 
         for (Pet pet: pets) {
-            System.out.println(pet.getClass().getSimpleName()+ "\n" + pet.getName());
-            System.out.println(pet.speak());
-
+            System.out.println(pet.getClass().getSimpleName() + "\n" +
+                    pet.getName() + "\n" +
+                    pet.speak());
         }
 
     }
