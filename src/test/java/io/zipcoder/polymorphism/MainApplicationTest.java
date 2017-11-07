@@ -13,15 +13,7 @@ import static org.junit.Assert.*;
 public class MainApplicationTest {
     //Testing for user when asked how many pets
 
-    @Test
-    public void numberOfPetsTest(){
-
-        String expected =
-
-
-        Assert.assertEquals(expected, actual);
-    }
-
+    // takes in user input no test necessary.
 
 
 
