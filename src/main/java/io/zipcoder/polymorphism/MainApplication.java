@@ -38,21 +38,18 @@ public class MainApplication {
                 dog.setName(dogsName);
                 pets.add(dog);
                 break;
-//            case "Parrot":
-//                Parrot parrot = new Parrot();
-//                System.out.println("What's the parrot's name?");
-//                String parrotsName = scanner.nextLine();
-//                parrot.setName(parrotsName);
-//                pets.add(parrot);
-//                break;
+            case "Parrot":
+                Parrot parrot = new Parrot();
+                System.out.println("What's the parrot's name?");
+                String parrotsName = scanner.nextLine();
+                parrot.setName(parrotsName);
+                pets.add(parrot);
+                break;
             default:
                 addPetsToArrayList();
                 break;
         }
     }
-
-
-
 
 
     public static void main(String[] args) {
