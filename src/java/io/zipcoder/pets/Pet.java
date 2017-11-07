@@ -1,8 +1,8 @@
 package io.zipcoder.pets;
-
 import java.util.ArrayList;
+import java.util.Comparator;
 
-public class Pet {
+public class Pet implements Comparable<Pet> {
     private String Name;
 
     private static ArrayList<String> petsNameArray = new ArrayList<String>();
@@ -29,7 +29,8 @@ public class Pet {
     public static String getPetsInArray(){
         String animal = "";
         for(Pet animals: petsArray){
-            animal += animals.Name + "--" + String.valueOf(animals.getClass()).replace("class io.zipcoder.pets.", "") + "\n";
+            animal += animals.Name + " the " + animals.getClass().getSimpleName() +
+                    " goes " + animals.speak() + "\n";
         }
         return animal;
     }
@@ -50,5 +51,12 @@ public class Pet {
         Name = name;
     }
 
-
+    @Override
+    public int compareTo(Pet otherPet) {
+        int compareName = this.Name.compareTo(otherPet.Name);
+        int compareSpecies = this.getClass().getSimpleName().compareTo(otherPet.getClass().getSimpleName());
+        int returnedInt = compareName == 0 ?  compareSpecies : compareName;
+        //if names are equal then compare by species
+        return returnedInt;
+    }
 }

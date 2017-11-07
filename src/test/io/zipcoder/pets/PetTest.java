@@ -10,6 +10,7 @@ public class PetTest {
     Pet pet = new Pet("buck");
     Pet fred = new Dog("Fred");
     Pet mittens = new Cat("Mittens");
+    Pet fred2 = new Bird("Fred");
 
 
     @Test
@@ -39,10 +40,9 @@ public class PetTest {
     @Test
     public void testAddToPetArray(){
         pet.addToPetArray(mittens);
-        String expected ="Mittens--Cat\n";
+        String expected ="Mittens the Cat goes meow\n";
         String actual = pet.getPetsInArray();
         Assert.assertEquals(expected, actual);
-
 
     }
 
@@ -57,8 +57,23 @@ public class PetTest {
     public void testGetPetsInArray(){
         pet.addToPetArray(fred);
         pet.addToPetArray(mittens);
-        String expected = "Fred--Dog\nMittens--Cat\n";
+        String expected = "Fred the Dog goes bark\n" +
+                "Mittens the Cat goes meow\n";
         String actual = pet.getPetsInArray();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCompareToDifferentNames(){
+        int expected = 7;
+        int actual = mittens.compareTo(fred);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCompareToSameName(){
+        int expected = -2;
+        int actual = fred2.compareTo(fred);
         Assert.assertEquals(expected, actual);
     }
 

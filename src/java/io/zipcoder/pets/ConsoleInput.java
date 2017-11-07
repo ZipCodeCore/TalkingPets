@@ -18,10 +18,10 @@ public class ConsoleInput {
     }
 
     public void createAnimal() {
-        String name = Console.getStringInput("What is the name?");
+        String name = Console.getStringInput("Enter the name of one of your pets?");
 
         do {
-            String typeOfAnimal = Console.getStringInput("What type of animal is it?");
+            String typeOfAnimal = Console.getStringInput("What type of animal is " + name + " ?");
             Pet pet;
 
             switch (typeOfAnimal.toLowerCase()) {
