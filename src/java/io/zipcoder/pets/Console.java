@@ -7,15 +7,13 @@ public class Console {
 
     public static String getStringInput(String askForString){
         System.out.println(askForString);
-        String userInput = scanner.nextLine();
+        String userInput = new Scanner(System.in).nextLine();
         return userInput;
 
     }
 
     public static int getIntInput(String askForInt){
-        System.out.println(askForInt);
-        int userInput = scanner.nextInt();
-        return userInput;
+        return Integer.parseInt(getStringInput(askForInt));
     }
 
 

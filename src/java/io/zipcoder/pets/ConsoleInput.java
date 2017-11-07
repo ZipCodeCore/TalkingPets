@@ -1,25 +1,52 @@
 package io.zipcoder.pets;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConsoleInput {
 
-    Scanner scan = new Scanner(System.in);
-    int num;
-    String words;
+    void startQuestions() {
+        System.out.println("Hey there! This program is here to record your annoying pets!!");
+        int num = Console.getIntInput("How many annoying pets do you own?");
 
-    public void startQuestions(){
-        System.out.println("Hey there! This program is here to record your annoying pets!!\n" +
-                "How many annoying pets do you own?");
-        num = scan.nextInt();
-        System.out.println("Oh my, you have " + num + " annoying pets!!!\n" +
-                "What kind of pets do you own and what are their names?");
-        words = scan.nextLine();
-        words = scan.nextLine();
-        System.out.println(words);
-        words = words.substring(0);
-        System.out.println(words);
-        
+        System.out.println("Oh my, you have " + num + " annoying pets!!!");
+
+        for (int i = 1; i <= num; i++) {
+            createAnimal();
+        }
+        System.out.println(Pet.getPetsInArray());
     }
 
+    public void createAnimal() {
+        String name = Console.getStringInput("What is the name?");
+
+        do {
+            String typeOfAnimal = Console.getStringInput("What type of animal is it?");
+            Pet pet;
+
+            switch (typeOfAnimal.toLowerCase()) {
+                case "dog":
+                    pet = new Dog(name);
+                    break;
+
+                case "cat":
+                    pet = new Cat(name);
+                    break;
+
+                case "bird":
+                    pet = new Bird(name);
+                    break;
+
+                default:
+                    System.out.println("Invalid animal, please respond with dog, cat, or bird.");
+                    continue;
+            }
+
+            pet.addToPetsNameArray(name);
+            pet.addToPetArray(pet);
+            break;
+        } while (true);
+    }
 }
+
+
