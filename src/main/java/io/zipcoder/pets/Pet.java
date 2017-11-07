@@ -1,6 +1,7 @@
 package io.zipcoder.pets;
+import java.util.*;
 
-public class Pet {
+public class Pet implements Comparable<Pet>{
     private String type;
     private String name;
 
@@ -17,12 +18,19 @@ public class Pet {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String  speak(){
+    public String speak() {
 
         return "Pet speaking from Super";
     }
+//Part 1: compare objects by name, break ties by class type
+    @Override
+    public int compareTo(Pet o) {
+        if(this.getName().compareTo(o.getName())==0) {
+            return this.getClass().getName().compareTo(o.getClass().getName());
+        }
+        else {
+            return this.getName().compareTo(o.getName());
+        }
+    }
+
 }

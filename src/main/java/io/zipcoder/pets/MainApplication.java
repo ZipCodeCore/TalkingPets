@@ -29,11 +29,20 @@ public class MainApplication {
                     break;
                 default:
                     System.out.println("No pet type is match. Please enter dog, cat or bird");
+                    i--;
+                    break;
             }
         }
+        Collections.sort(petList);
+        System.out.println("Using comparable:");
         for (Pet pet : petList) {
             System.out.println(pet.getName() + ":" + pet.speak());
+        }
+            Collections.sort(petList, new Compare());
+        System.out.println("Using comparator:");
+            for (Pet pet : petList) {
+                System.out.println(pet.getName() + ":" + pet.speak());
 
+            }
         }
     }
-}
