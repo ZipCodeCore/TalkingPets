@@ -1,20 +1,46 @@
 package io.zipcoder.pets;
-
 import java.util.ArrayList;
+import java.util.Comparator;
 
-public class Pet {
-
-    private ArrayList<String> petsName = new ArrayList<String>();
-
+public class Pet implements Comparable<Pet> {
     private String Name;
 
     public Pet(String name){
+
         this.Name = name;
     }
 
+    private static ArrayList<String> petsNameArray = new ArrayList<String>();
+
+    private static ArrayList<Pet> petsArray = new ArrayList<Pet>();
+
+    public String getPetsName() {
+        String animal = "";
+        for(String animals: petsNameArray) {
+            animal += animals;
+        }
+        return animal;
+    }
+
+    public void addToPetArray(Pet pet){
+        petsArray.add(pet);
+    }
+
+    public static String getPetsInArray(){
+        String animal = "";
+        for(Pet animals: petsArray){
+            animal += animals.Name + " the " + animals.getClass().getSimpleName() +
+                    " goes " + animals.speak() + "\n";
+        }
+        return animal;
+    }
+
+    public void addToPetsNameArray(String petName){
+        petsNameArray.add(petName);
+    }
+
     public String speak(){
-        String nosie = "some noise";
-        return nosie;
+        return "some noise";
     }
 
     public String getName() {
@@ -25,12 +51,12 @@ public class Pet {
         Name = name;
     }
 
-    public ArrayList<String> getPetsName() {
-        return petsName;
+    @Override
+    public int compareTo(Pet otherPet) {
+        int compareName = this.Name.compareTo(otherPet.Name);
+        int compareSpecies = this.getClass().getSimpleName().compareTo(otherPet.getClass().getSimpleName());
+        int returnedInt = compareName == 0 ?  compareSpecies : compareName;
+        //if names are equal then compare by species
+        return returnedInt;
     }
-
-    public void addToPetsName(String petName){
-        petsName.add(petName);
-    }
-
 }
