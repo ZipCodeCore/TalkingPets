@@ -1,6 +1,6 @@
 package io.zipcoder.polymorphism;
 
-public class Parrot extends Pet {
+public class Parrot extends Pet implements Comparable <Pet> {
 
     public Parrot() {}
 
@@ -9,5 +9,8 @@ public class Parrot extends Pet {
     }
 
 
-    }
+
+
+
+}
 
