@@ -67,15 +67,6 @@ public class MainApplication {
                     " says " + pet.speak());
         }
 
-        Collections.sort(pets, new PetComparator());
-        System.out.println(for(int i = 0; i < pets.size(); i++) {
-            pets.get(i).speak();
-        })
-
-//        Collections.sort(pets,new PetComparator());
-//        for(int i = 0; i < pets.size(); i++) {
-//           int i +=pets.get(i).speak();
-//        }
     }
 
 

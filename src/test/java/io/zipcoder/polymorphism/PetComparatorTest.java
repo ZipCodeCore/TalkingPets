@@ -1,10 +1,7 @@
 package io.zipcoder.polymorphism;
-
+import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 public class PetComparatorTest {
 
@@ -18,18 +15,37 @@ public class PetComparatorTest {
 
         dog.setName("Riki");
         cat.setName("Mimi");
-        parrot.setName("Para");
 
         petTest.add(dog);
         petTest.add(cat);
         petTest.add(parrot);
 
-        String expected = "bark";
-        String actual = "";
+        int expected = 5;
+        int actual = dog.compareTo(cat);
 
-        Collections.sort(petTest, new PetComparator());
-        for(int i = 0; i < petTest.size(); i++) {
-            actual += petTest.get(i).getName() + petTest.get(i).speak();
-        }
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCompareType(){
+        ArrayList<Pet> petTest = new ArrayList<>();
+
+        Pet dog = new Dog();
+        Pet cat = new Cat();
+        Pet parrot = new Parrot();
+
+        dog.setName("Riki");
+        cat.setName("Riki");
+
+        petTest.add(dog);
+        petTest.add(cat);
+        petTest.add(parrot);
+
+        int expected = 0;
+        int actual = dog.compareTo(cat);
+
+
+        Assert.assertEquals(expected, actual);
     }
 }
