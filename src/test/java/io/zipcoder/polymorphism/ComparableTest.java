@@ -32,7 +32,11 @@ public class ComparableTest {
         Pet pet4 = new Snake("LtCdrWoof");
         Pet pet5 = new Cat("Rufus");
 
-        Comparator<Pet> comp = new PetComparator();
+        Comparator<Pet> comp = (p1, p2) ->{
+            String pet1Type = p1.getClass().getSimpleName();
+            String pet2Type = p2.getClass().getSimpleName();
+            return( pet1Type.equals(pet2Type) ? p1.compareTo(p2) : pet1Type.compareTo(pet2Type) );
+        };
 
         Assert.assertNotEquals(0,comp.compare(pet1, pet2));
         Assert.assertNotEquals(0,comp.compare(pet1, pet3));

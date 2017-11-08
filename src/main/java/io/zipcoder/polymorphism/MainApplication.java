@@ -36,7 +36,11 @@ public class MainApplication {
             addPetsToList(pets, typeOfPet, nameOfPet);
         }//end for
 
-        Comparator<Pet> comp = new PetComparator();
+        Comparator<Pet> comp = (pet1, pet2) ->{
+            String pet1Type = pet1.getClass().getSimpleName();
+            String pet2Type = pet2.getClass().getSimpleName();
+            return( pet1Type.equals(pet2Type) ? pet1.compareTo(pet2) : pet1Type.compareTo(pet2Type) );
+        };
         Collections.sort(pets, comp);
 
         System.out.println("\n\n");
