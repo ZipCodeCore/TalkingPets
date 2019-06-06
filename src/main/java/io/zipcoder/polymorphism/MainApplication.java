@@ -6,6 +6,11 @@ import java.util.Scanner;
 
 public class MainApplication {
 
+    private static void petTypes(int number) {
+        System.out.println("Is pet # " + number + " a dog, cat, or bird ?");
+    }
+
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -25,18 +30,46 @@ public class MainApplication {
                 System.out.println("That's not a valid number!");
             }
         }
-        System.out.println("Thanks. You have " + numberOfPets + " pets.");
-    }
-
-}
+        System.out.println("Thanks.");
 
 
+        ArrayList<Pet> petList = new ArrayList<Pet>(numberOfPets);
+
+        for (int i = 0; i < numberOfPets; i++) {
+
+            petTypes(i + 1);
+            String petType = input.next().toLowerCase();
+            System.out.println(petType);
+
+            if (petType.equals("dog")) {
+                System.out.print("Enter your dog's name:\n");
+                String petName = input.next();
+                Dog dog = new Dog(petName);
+                petList.add(dog);
+            } else if (petType.equals("cat")) {
+                System.out.print("Enter your cat's name:\n");
+                String petName = input.next();
+                Cat cat = new Cat(petName);
+                petList.add(cat);
+            } else if (petType.equals("bird")) {
+                System.out.print("Enter your bird's name:\n");
+                String petName = input.next();
+                Bird bird = new Bird(petName);
+                petList.add(bird);
+            } else {
+                System.out.println("That is not a valid pet type.");
+                i--;
+            }
+        }
+
+
+//        System.out.println("Thank you.");
+//        System.out.println(Arrays.toString(petList.toArray()));
 //
-//                } else {
-  //               numberOfPets = input.nextInt();
-//                }
+//        petList = new ArrayList<Pet>(0);
+//        if (pets != null) {
+//            for (Pet each : pets) {
+//                addPet(each);
 
-  //              while (numberOfPets < 0)
-//                }
-//                System.out.println("Thanks, you have " + numberOfPets + " pets.");
-//            }
+    }
+}
