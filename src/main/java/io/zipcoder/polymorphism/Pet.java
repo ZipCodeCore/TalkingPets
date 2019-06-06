@@ -14,4 +14,7 @@ public abstract class Pet {
     public void setName(String name) {
         this.name = name;
     }
+    public String speak() {
+        return "animal talk!";
+    }
 }

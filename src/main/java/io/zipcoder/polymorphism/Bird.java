@@ -6,6 +6,7 @@ public class Bird extends Pet{
         super(name);
     }
 
+    @Override
     public String speak() {
         return "Chirp!";
     }

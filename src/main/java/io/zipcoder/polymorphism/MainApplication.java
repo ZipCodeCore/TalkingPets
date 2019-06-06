@@ -39,7 +39,6 @@ public class MainApplication {
 
             petTypes(i + 1);
             String petType = input.next().toLowerCase();
-            System.out.println(petType);
 
             if (petType.equals("dog")) {
                 System.out.print("Enter your dog's name:\n");
@@ -62,14 +61,10 @@ public class MainApplication {
             }
         }
 
-
-//        System.out.println("Thank you.");
-//        System.out.println(Arrays.toString(petList.toArray()));
-//
-//        petList = new ArrayList<Pet>(0);
-//        if (pets != null) {
-//            for (Pet each : pets) {
-//                addPet(each);
+        //print the petList
+        for (Pet each: petList){
+            System.out.println(each.getName() + " says " + each.speak());
+        }
 
     }
 }
