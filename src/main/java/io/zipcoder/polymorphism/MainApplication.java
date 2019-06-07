@@ -1,7 +1,16 @@
 package io.zipcoder.polymorphism;
 
-/**
- * Created by leon on 11/6/17.
- */
+import java.util.*;
+
+
 public class MainApplication {
+
+    public static void main(String[] args) {
+
+       Mediator mediator = new Mediator();
+       mediator.handleInput();
+       mediator.handleOutputs();
+
+    }
+    
 }
