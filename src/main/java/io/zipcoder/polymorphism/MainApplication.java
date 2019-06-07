@@ -1,17 +1,18 @@
 package io.zipcoder.polymorphism;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
+
 
 public class MainApplication {
 
-    private static void petTypes(int number) {
+    private static void petTypes(int number){
         System.out.println("Is pet # " + number + " a dog, cat, or bird ?");
     }
 
 
+
     public static void main(String[] args) {
+        sortBy mySort = new sortBy();
 
         Scanner input = new Scanner(System.in);
         int numberOfPets = 0;
@@ -60,11 +61,19 @@ public class MainApplication {
                 i--;
             }
         }
+        System.out.println("Pets sorted by Name: ");
+        for (Pet each: mySort.sortByName(petList)){
+            System.out.println(each.getName());
+        }
 
-        //print the petList
+
+      //print the petList
+        System.out.println("Pets say: ");
         for (Pet each: petList){
+
             System.out.println(each.getName() + " says " + each.speak());
         }
 
     }
+    
 }
