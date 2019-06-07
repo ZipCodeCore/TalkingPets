@@ -1,5 +1,7 @@
 package io.zipcoder.polymorphism;
 
+import java.util.ArrayList;
+
 public abstract class Pet implements Comparable<Pet> {
     String name;
     String type;
@@ -29,6 +31,10 @@ public abstract class Pet implements Comparable<Pet> {
 
     public abstract int compareTo(Pet o);
 
-
+    @Override
+    public String toString() {
+        return "Pet list: " +
+                "name: " + getName() + ' ' + getType() + '\n';
+    }
 
 }
