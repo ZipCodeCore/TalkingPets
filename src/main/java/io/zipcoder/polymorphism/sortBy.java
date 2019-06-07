@@ -13,4 +13,11 @@ public class sortBy {
         return petList;
     }
 
+    public ArrayList<Pet> sortByType(ArrayList<Pet> petList){
+        Comparator<Pet> petTypeComparator
+                = Comparator.comparing(Pet::getType);
+        Collections.sort(petList, petTypeComparator);
+        return petList;
+    }
+
 }

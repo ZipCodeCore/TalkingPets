@@ -76,6 +76,12 @@ public class MainApplication {
         }
         System.out.println();
 
+     //print petList sorted by Type
+        System.out.println("Pets sorted by Type: ");
+        for (Pet each: mySort.sortByType(petList)){
+            System.out.println(each.getName() + " is a " + each.getType());
+        }
+        System.out.println();
     }
     
 }
