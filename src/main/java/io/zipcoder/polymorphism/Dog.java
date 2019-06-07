@@ -5,6 +5,7 @@ public class Dog extends Pet{
 
     public Dog(String name) {
         super(name);
+        this.type = "dog";
     }
 
     @Override
@@ -15,4 +16,5 @@ public class Dog extends Pet{
     public int compareTo(Pet o){
         return this.getName().compareTo(o.getName());
     }
+
 }

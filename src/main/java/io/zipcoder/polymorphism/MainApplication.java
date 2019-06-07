@@ -5,18 +5,18 @@ import java.util.*;
 
 public class MainApplication {
 
+    //method to prompt for petType
     private static void petTypes(int number){
         System.out.println("Is pet # " + number + " a dog, cat, or bird ?");
     }
 
-
-
     public static void main(String[] args) {
-        sortBy mySort = new sortBy();
 
         Scanner input = new Scanner(System.in);
         int numberOfPets = 0;
+        sortBy mySort = new sortBy();
 
+    //Get numberOfPets from user input
         System.out.print("How many pets do you have: ");
         while (numberOfPets <= 0) {
             while (!input.hasNextInt()) {
@@ -33,7 +33,7 @@ public class MainApplication {
         }
         System.out.println("Thanks.");
 
-
+    //create newpetList and fill based on user input
         ArrayList<Pet> petList = new ArrayList<Pet>(numberOfPets);
 
         for (int i = 0; i < numberOfPets; i++) {
@@ -61,18 +61,20 @@ public class MainApplication {
                 i--;
             }
         }
+
+    //print petList sorted by Name
         System.out.println("Pets sorted by Name: ");
         for (Pet each: mySort.sortByName(petList)){
             System.out.println(each.getName());
         }
+        System.out.println();
 
-
-      //print the petList
+     //print what pets say
         System.out.println("Pets say: ");
         for (Pet each: petList){
-
             System.out.println(each.getName() + " says " + each.speak());
         }
+        System.out.println();
 
     }
     
