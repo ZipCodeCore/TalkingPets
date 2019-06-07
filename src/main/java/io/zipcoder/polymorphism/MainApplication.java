@@ -9,8 +9,7 @@ public class MainApplication {
 
        Mediator mediator = new Mediator();
        mediator.handleInput();
-       mediator.handleSorts();
-       mediator.petSpeak();
+       mediator.handleOutputs();
 
     }
     

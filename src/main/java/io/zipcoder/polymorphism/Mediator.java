@@ -23,32 +23,11 @@ public class Mediator {
         System.out.println();
     }
 
-    public void handleSorts() {
-        sortBy mySort = new sortBy();
-
-     //print petList sorted by Name
-        System.out.println("Pets sorted by Name: ");
-        for (Pet each: mySort.sortByName(petList)){
-            System.out.println(each.getName());
-        }
-        System.out.println();
-
-    //print petList sorted by Type
-        System.out.println("Pets sorted by Type: ");
-        for (Pet each: mySort.sortByType(petList)){
-            System.out.println(each.getName() + " is a " + each.getType());
-        }
-        System.out.println();
+    public void handleOutputs() {
+        Output output = new Output();
+        output.petSpeak(petList);
+        output.listSortedByName(petList);
+        output.listSortedByType(petList);
     }
 
-    //print what pets say
-    public void petSpeak() {
-        System.out.println("Pets say: ");
-        for (Pet each : petList) {
-            System.out.println(each.getName() + " says " + each.speak());
-        }
-
-        System.out.println();
-
-    }
 }

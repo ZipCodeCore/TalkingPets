@@ -40,7 +40,6 @@ public class UserInput {
         return petType;
      }
 
-
     /* method to prompt for petName */
     public String getPetName() {
         System.out.print("Enter your pet's name:\n");
