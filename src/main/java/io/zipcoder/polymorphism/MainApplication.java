@@ -13,7 +13,7 @@ public class MainApplication {
 
         while(turnOn){
 
-            Integer prompt = Console.getIntegerInput("\nHow many pets do you have?");
+            Integer prompt = Console.getIntegerInput("\nHow many pets do you have?\n");
             ArrayList<Pet> petsLog = new ArrayList<Pet>();
 
             if(prompt > 0){
@@ -24,15 +24,14 @@ public class MainApplication {
                         case ("dog"):
                             Dog dog = new Dog(nameValue);
                             petsLog.add(dog);
-                            System.out.println(dog);
                             break;
                         case ("cat"):
                             Cat cat = new Cat(nameValue);
                             petsLog.add(cat);
                             break;
-                        case ("bluejay"):
-                            Bird bluejay = new Bird(nameValue);
-                            petsLog.add(bluejay);
+                        case ("bird"):
+                            Bird bird = new Bird(nameValue);
+                            petsLog.add(bird);
                             break;
                         default:
                             System.out.println("Wow, that's a really cool pet...");
