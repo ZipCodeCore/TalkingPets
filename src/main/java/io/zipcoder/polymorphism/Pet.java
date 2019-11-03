@@ -1,6 +1,6 @@
 package io.zipcoder.polymorphism;
 
-public class Pet {
+public abstract class Pet implements Comparable<Pet>{
     private String name;
 
     public Pet(String name){
