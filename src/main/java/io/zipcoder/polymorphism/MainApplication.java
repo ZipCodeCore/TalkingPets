@@ -13,11 +13,11 @@ public class MainApplication {
 
         while(turnOn){
 
-            Integer prompt = Console.getIntegerInput("\nHow many pets do you have?\n");
+            Integer input = Console.getIntegerInput("\nHow many pets do you have?\n");
             ArrayList<Pet> petsLog = new ArrayList<Pet>();
 
-            if(prompt > 0){
-                for(int i = 0; i < prompt; i++){
+            if(input > 0){
+                for(int i = 0; i < input; i++){
                     String petValue = Console.getStringInput("What kind of animal is pet #" + (i + 1) + "?");
                     String nameValue = Console.getStringInput("What is your pet's name?");
                     switch (petValue){
