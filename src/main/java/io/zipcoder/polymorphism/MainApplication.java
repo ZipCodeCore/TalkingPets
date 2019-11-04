@@ -1,9 +1,6 @@
 package io.zipcoder.polymorphism;
 
-import io.zipcoder.polymorphism.Pets.Cat;
-import io.zipcoder.polymorphism.Pets.Cow;
-import io.zipcoder.polymorphism.Pets.Dog;
-import io.zipcoder.polymorphism.Pets.Pets;
+import io.zipcoder.polymorphism.Pets.*;
 
 import java.util.Scanner;
 

@@ -1,6 +1,4 @@
-package io.zipcoder.polymorphism;
-
-import io.zipcoder.polymorphism.Pets.Pets;
+package io.zipcoder.polymorphism.Pets;
 
 public class Pet extends Pets {
 
