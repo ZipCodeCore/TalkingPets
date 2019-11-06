@@ -10,4 +10,8 @@ public class Bird extends Pet {
             return "Chirp Chirp";
         }
 
+    @Override
+    public int compareTo(Pet o) {
+        return this.getName().compareTo(o.getName());
+    }
 }

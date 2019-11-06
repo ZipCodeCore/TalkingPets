@@ -30,4 +30,31 @@ public class DogTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void compareToTest() {
+        // Given
+        Dog dog = new Dog("Bobby");
+        Cat cat = new Cat("Tiger");
+
+        // When
+        Integer actual = dog.compareTo(cat);
+
+        // Then
+        Assert.assertTrue(actual<0);
+    }
+
+    @Test
+    public void compareToByNameTest() {
+        // Given
+        Bird bird = new Bird("Bobby");
+        Dog dog = new Dog("Bobby");
+
+        // When
+        Integer actual = dog.compareTo(bird);
+
+        // Then
+        Assert.assertTrue(actual>0);
+    }
+
 }

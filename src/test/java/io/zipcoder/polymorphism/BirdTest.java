@@ -29,4 +29,31 @@ public class BirdTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void compareToTest() {
+        // Given
+        Bird bird = new Bird("BlueJay");
+        Cat cat = new Cat("Tiger");
+
+        // When
+        Integer actual = bird.compareTo(cat);
+
+        // Then
+        Assert.assertTrue(actual<0);
+    }
+
+    @Test
+    public void compareToByNameTest() {
+        // Given
+        Bird bird = new Bird("BlueJay");
+        Dog dog = new Dog("BlueJay");
+
+        // When
+        Integer actual = bird.compareTo(dog);
+
+        // Then
+        Assert.assertTrue(actual<0);
+    }
+
 }

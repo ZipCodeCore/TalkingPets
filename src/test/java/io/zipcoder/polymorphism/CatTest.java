@@ -29,4 +29,31 @@ public class CatTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void compareToTest() {
+        // Given
+        Cat cat = new Cat("Tiger");
+        Dog dog = new Dog("Bobby");
+
+        // When
+        Integer actual = cat.compareTo(dog);
+
+        // Then
+        Assert.assertTrue(actual>0);
+    }
+
+    @Test
+    public void compareToByNameTest() {
+        // Given
+        Cat cat = new Cat("Tiger");
+        Dog dog = new Dog("Tiger");
+
+        // When
+        Integer actual = cat.compareTo(dog);
+
+        // Then
+        Assert.assertTrue(actual<0);
+    }
+
 }
