@@ -33,11 +33,19 @@ public class ComparatorTest {
         Assert.assertTrue(actual==0);
     }
 
+    @Test
+    public void compareToTest3() {
+        // Given
+        Bird bird = new Bird("BlueJay");
+        Dog dog = new Dog("Bobby");
 
+        // When
+        PetComparator petComp = new PetComparator();
+        Integer actual = petComp.compare(bird, dog);
 
-
-
-
+        // Then
+        Assert.assertTrue(actual<0);
+    }
 
 
 }
