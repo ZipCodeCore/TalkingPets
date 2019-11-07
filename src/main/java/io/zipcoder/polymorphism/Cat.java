@@ -1,7 +1,5 @@
 package io.zipcoder.polymorphism;
 
-import com.sun.media.jfxmedia.logging.Logger;
-
 public class Cat extends Pets{
 
     public Cat(String petName, String petType) {

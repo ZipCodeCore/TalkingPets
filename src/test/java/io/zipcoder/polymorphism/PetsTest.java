@@ -35,52 +35,30 @@ public class PetsTest {
 //
 //    }
 
-    @Test
-    public void TestCatConstructor(){
-        Cat cat = new Cat("Bilbo", "cat");
 
-        logger.info(cat.toString());
+
+    @Test
+    public void TestPetConstructor() {
+        String expectedName = "Bilbo";
+        String expectedType = "cat";
+
+        Pets pet = new Pets(expectedName, expectedType);
+
+        String actualName = pet.getPetName();
+        String actualType = pet.getPetType();
+
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedType, actualType);
     }
 
     @Test
-    public void TestCatSpeak(){
-        Cat cat = new Cat("Bilbo", "cat");
-
-        String expected = "Meow";
-        String actual = cat.speak();
-        Assert.assertEquals(expected,actual);
+    public void speak() {
+        Pets pet = new Pets("Bilbo", "cat");
+        String expected = "AnimalNoise";
+        String actual = pet.speak();
+        Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void TestDogConstructor(){
-        Dog dog = new Dog("Frodo", "dog");
 
-        logger.info(dog.toString());
-    }
-
-    @Test
-    public void TestDogSpeak(){
-        Dog dog = new Dog("Frodo", "dog");
-
-        String expected = "Woof";
-        String actual = dog.speak();
-        Assert.assertEquals(expected,actual);
-    }
-
-    @Test
-    public void TestTurtleConstructor(){
-        Turtle turtle = new Turtle("Gretchen", "turtle");
-
-        logger.info(turtle.toString());
-    }
-
-    @Test
-    public void TestTurtleSpeak(){
-        Turtle turtle = new Turtle("Gretchen", "turle");
-
-        String expected = "Meowf";
-        String actual = turtle.speak();
-        Assert.assertEquals(expected,actual);
-    }
 
 }
