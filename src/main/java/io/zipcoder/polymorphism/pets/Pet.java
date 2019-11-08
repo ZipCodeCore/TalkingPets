@@ -4,6 +4,9 @@ public abstract class Pet {
 
     private String name;
 
+
+    private String petType;
+
     public abstract String speak();
 
     public String getName() {
@@ -12,6 +15,14 @@ public abstract class Pet {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPetType() {
+        return petType;
+    }
+
+    public void setPetType(String petType) {
+        this.petType = petType;
     }
 
 }
