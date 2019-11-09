@@ -6,7 +6,7 @@ public class Bird extends Pet {
     }
     public String speak() {
         String sound = "chirp!";
-        Console.println(sound);
+//        Console.println(sound);
         return sound;
     }
 }

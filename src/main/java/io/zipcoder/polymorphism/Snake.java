@@ -6,7 +6,7 @@ public class Snake extends Pet {
     }
     public String speak() {
         String sound = "slither!";
-        Console.println(sound);
+//        Console.println(sound);
         return sound;
     }
 }

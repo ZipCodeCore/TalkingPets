@@ -19,7 +19,7 @@ public class MainApplication {
             petTypes[i] = Console.getStringInput(String.format("What kind of pet is %s? ", petNames[i]));
         }
         PetWarehouse petWarehouse = new PetWarehouse(numberOfPets, petTypes, petNames);
-        petWarehouse.displayPetInfo();
+        Console.print(petWarehouse.displayPetInfo());
     }
 
     public static Integer getNumberOfPets() {

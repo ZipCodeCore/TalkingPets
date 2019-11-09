@@ -3,6 +3,8 @@ package io.zipcoder.polymorphism;
 public class PetWarehouse {
     private Pet[] pets;
 
+    public PetWarehouse() {}
+
     public PetWarehouse(Pet... pets) {
         this.pets = pets;
     }
@@ -42,13 +44,15 @@ public class PetWarehouse {
         return this.pets;
     }
 
-    public void displayPetInfo() {
+    public String displayPetInfo() {
+        StringBuilder output = new StringBuilder();
         Console.println("\n\n\n");
-        Console.println("You have %s pets.", pets.length);
+        output.append(String.format("You have %s pets.", pets.length));
 
         for (int i = 0; i < pets.length; i++) {
-            Console.println("Pet %s is a %s named %s.", i+1, pets[i].getType(), pets[i].getName());
-            pets[i].speak();
+            output.append(String.format("\nPet %s is a %s named %s.", i+1, pets[i].getType(), pets[i].getName()));
+            output.append("\n" + pets[i].speak());
         }
+        return output.toString();
     }
 }

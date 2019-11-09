@@ -7,7 +7,7 @@ public class UnknownPet extends Pet {
 
     public String speak() {
         String sound = String.format("(%s noises)!", getType());
-        Console.println(sound);
+//        Console.println(sound);
         return sound;
     }
 }
