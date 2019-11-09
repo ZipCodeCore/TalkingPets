@@ -41,4 +41,12 @@ public class PetTest {
         dog.speak();
 
     }
+    @Test
+    public void testSetType() {
+        Dog dog = new Dog("Tucker");
+        dog.setType("orange");
+        String actual = dog.getType();
+        String expected = "orange";
+        Assert.assertEquals(expected, actual);
+    }
 }
