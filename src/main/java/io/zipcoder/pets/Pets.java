@@ -1,17 +1,17 @@
 package io.zipcoder.pets;
 
-public class Pets {
+public abstract class Pets {
     private String name;
+    private String type;
 
-    public Pets(String name){
+
+    public Pets(String name, String type){
         this.name = name;
+        this.type = type;
     }
+
     public String name(){
         return name;
-    }
-
-    public String speak(){
-        return "I'm a speaking pet!";
     }
 
     public String getName() {
@@ -21,6 +21,14 @@ public class Pets {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getType() { return type; }
+
+    public void setType(String type) { this.type = type; }
+
+    abstract public String speak();
+
+
 
 }
 
