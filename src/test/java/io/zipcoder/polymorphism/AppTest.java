@@ -35,4 +35,17 @@ public class AppTest {
         actual = testApp.petList.get(1).getName();
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void printHorse(){
+        testApp.addPet("Horse");
+
+        String expected = "No name horse";
+        String actual = testApp.petList.get(0).getName();
+
+        Assert.assertEquals(expected,actual);
+
+    }
+
+
 }

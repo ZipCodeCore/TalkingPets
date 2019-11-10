@@ -5,36 +5,31 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class CatTest {
-
-    Cat testCat;
+public class DogTest {
 
     @Test
     public void speak() {
-
-        testCat = new Cat();
-
-        String expected = "meow";
-        String actual = testCat.speak();
+        Dog testDog = new Dog();
+        String expected = "Woof";
+        String actual = testDog.speak();
 
         Assert.assertEquals(expected,actual);
     }
+
     @Test
     public void testConstructorNoName() {
-
-        testCat = new Cat();
-
-        String expected = "No name cat";
-        String actual = testCat.getName();
+        Dog testDog = new Dog();
+        String expected = "No name dog";
+        String actual = testDog.getName();
 
         Assert.assertEquals(expected,actual);
     }
+
     @Test
     public void testConstructorWithName() {
-
-        String expected = "Jiffy";
-        testCat = new Cat(expected);
-        String actual = testCat.getName();
+        String expected = "Scully";
+        Dog testDog = new Dog(expected);
+        String actual = testDog.getName();
 
         Assert.assertEquals(expected,actual);
     }
@@ -42,11 +37,12 @@ public class CatTest {
     @Test
     public void testGetType() {
 
-        testCat = new Cat("Jiffy");
+        Dog testDog = new Dog("Scully");
 
-        String expected = "Cat";
-        String actual = testCat.getPetType();
+        String expected = "Dog";
+        String actual = testDog.getPetType();
 
         Assert.assertEquals(expected, actual);
     }
+
 }
