@@ -11,11 +11,11 @@ import java.util.List;
 
 public class App {
 
-    List<Pet> petList;
+    List<Pet> petList = new ArrayList<Pet>();
     Console menu = new Console(System.in, System.out);
 
     public void runApp() {
-        petList = new ArrayList<Pet>();
+
         int numberOfPets;
 
         numberOfPets = this.menu.getIntegerInput("How many pets do you have?");
