@@ -19,12 +19,12 @@ public abstract class Pets {
         this.name = name;
     }
 
-    public String outputPet () {
+    public String toString() {
         String[] className;
         className = this.getClass().getName().split("\\.");
 
-        return String.format(" %s is a %s and sounds like %s",
-                this.getName(), className[className.length-1], this.speak());
+        return String.format("\n%s is a %s and sounds like %s",
+                this.getName(), className[className.length - 1], this.speak());
     }
 
 }
