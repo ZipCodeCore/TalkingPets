@@ -3,8 +3,7 @@ package io.zipcoder.polymorphism.Pets;
 public abstract class Pets {
 
     private String name;
-    //private String type;
-
+    public abstract String type();
     public abstract String speak();
 
     public Pets(String name) {

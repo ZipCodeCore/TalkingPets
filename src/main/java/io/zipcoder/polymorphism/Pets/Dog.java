@@ -6,6 +6,14 @@ public class Dog extends Pets {
         super(name);
     }
 
+    public Dog(){
+        super("Dingo");
+    }
+
+    public String type(){
+        return "Dog";
+    }
+
     @Override
     public String speak() {
         return "woof!";
