@@ -19,19 +19,23 @@ public class MainApplication {
         Integer numberOfPets = input.nextInt();
         ArrayList<Pet> petList = new ArrayList<Pet>();
         for (int i = 1; i <= numberOfPets; i++) {
-            String petType = getTypeOfPet();
+            String petType = getTypeOfPet().toLowerCase();
             String petName = getPetName();
-            if (petType.equals("Dog")) {
+            if (petType.equals("dog")) {
                 Dog dog = new Dog(petName);
                 petList.add(dog);
             }
-            if (petType.equals("Cat")) {
+            if (petType.equals("cat")) {
                 Cat cat = new Cat(petName);
                 petList.add(cat);
             }
-            if (petType.equals("Bear")) {
+            if (petType.equals("bear")) {
                 Bear bear = new Bear(petName);
                 petList.add(bear);
+            }
+            if (petType.equals("pet")){
+                Pet pet = new Pet(petName);
+                petList.add(pet);
             }
         }
         for (int i = 1; i <= petList.size(); i++)
