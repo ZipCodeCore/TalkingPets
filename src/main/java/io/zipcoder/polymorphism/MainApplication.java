@@ -16,19 +16,22 @@ private static ArrayList<Pet> pets;
         pets = pet;
 
 
-            for(int i = 0; i < numOfPets; i++) {
-                String species = getStringInput("What kind of pet?");
-                String name = getStringInput("What is their name?");
-                if(species.equals("cat")) {
-                    pets.add(new Cat(name));
-                }
-                else if(species.equals("dog")) {
-                    pets.add(new Dog(name));
-                }
-                else{
-                    pets.add(new Fish(name));
-                }
+        for(int i = 0; i < numOfPets; i++) {
+            String species = getStringInput("What kind of pet?");
+            String name = getStringInput("What is their name?");
+            if(species.equals("cat")) {
+                pets.add(new Cat(name));
             }
+            else if(species.equals("dog")) {
+                pets.add(new Dog(name));
+            }
+            else if(species.equals("guineapig")){
+                pets.add(new GuineaPig(name));
+            }
+            else{
+                pets.add(new Fish(name));
+            }
+        }
 
 
         printPets();
