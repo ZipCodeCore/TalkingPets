@@ -5,12 +5,14 @@ import io.zipcoder.polymorphism.Animal;
 public abstract class Pet implements Animal {
     private String name;
     private String type;
-    protected Pet() {}
 
-   public Pet(String type, String name) {
+    protected Pet() {
+    }
+
+    public Pet(String type, String name) {
         this.type = type;
         this.name = name;
-   }
+    }
 
     public String getType() {
         return type;

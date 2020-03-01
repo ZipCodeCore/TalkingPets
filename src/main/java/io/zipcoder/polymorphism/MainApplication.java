@@ -6,8 +6,6 @@ import io.zipcoder.pets.Cat;
 import io.zipcoder.pets.Dog;
 import io.zipcoder.pets.Hampster;
 import io.zipcoder.pets.Pet;
-
-
 import javax.crypto.spec.PSource;
 import javax.xml.namespace.QName;
 import java.util.ArrayList;
