@@ -3,9 +3,14 @@ package io.zipcoder.pets;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class DogTest extends Pet {
+
+    @Test
+    public void inheritanceTest() {
+        Dog TestDog = new Dog("dog", "Rex");
+        Assert.assertTrue(TestDog instanceof Pet);
+        Assert.assertTrue(TestDog instanceof Dog);
+    }
 
     @Test
     public void testGetName() {
@@ -21,13 +26,5 @@ public class DogTest extends Pet {
         String expected = "Ruff Ruff";
         String actual = pet.speak();
         Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void inheritanceTest() {
-        Dog TestDog = new Dog("dog", "Rex");
-        Assert.assertTrue(TestDog instanceof Pet);
-        Assert.assertTrue(TestDog instanceof Dog);
-
     }
 }

@@ -6,7 +6,6 @@ import org.junit.Test;
 
 public class CatTest extends Pet {
 
-
     @Test
     public void testGetName() {
         Pet pet = new Cat("cat", "Sylvester");
@@ -28,8 +27,5 @@ public class CatTest extends Pet {
         Cat TestCat = new Cat("cat", "Fluffy");
         Assert.assertTrue(TestCat instanceof Pet);
         Assert.assertTrue(TestCat instanceof Cat);
-
     }
-
-
 }

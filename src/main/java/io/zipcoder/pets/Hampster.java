@@ -10,5 +10,4 @@ public class Hampster extends Pet {
     public String speak() {
         return "Squeak, Squeak.";
     }
-
 }
