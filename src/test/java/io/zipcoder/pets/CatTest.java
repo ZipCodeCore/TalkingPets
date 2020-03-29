@@ -1,33 +1,35 @@
 package io.zipcoder.pets;
 
+import io.zipcoder.polymorphism.Animal;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+public class CatTest extends Pet {
 
-public class DogTest extends Pet {
 
     @Test
     public void testGetName() {
-        Pet pet = new Dog("dog", "X");
-        String expected = "X";
+        Pet pet = new Cat("cat", "Sylvester");
+        String expected = "Sylvester";
         String actual = pet.getName();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testSpeak() {
-        Pet pet = new Dog("dog", "XX");
-        String expected = "Ruff Ruff";
+        Pet pet = new Cat("cat", "Socks");
+        String expected = "Meow!";
         String actual = pet.speak();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void inheritanceTest() {
-        Dog TestDog = new Dog("dog", "Rex");
-        Assert.assertTrue(TestDog instanceof Pet);
-        Assert.assertTrue(TestDog instanceof Dog);
+        Cat TestCat = new Cat("cat", "Fluffy");
+        Assert.assertTrue(TestCat instanceof Pet);
+        Assert.assertTrue(TestCat instanceof Cat);
 
     }
+
+
 }
