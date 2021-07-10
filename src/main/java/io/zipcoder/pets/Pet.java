@@ -21,14 +21,6 @@ public abstract class Pet implements Animal {
 
     }
 
-    public void eat(Food treat){
-
-    }
-
-    public Food getLastMealEaten(){
-        return null;
-    }
-
     public String speak(){
         return null;
     }

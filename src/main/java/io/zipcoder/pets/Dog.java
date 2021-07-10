@@ -4,14 +4,7 @@ package io.zipcoder.pets;
 public class Dog extends Pet{
 
     public Dog(String name, Integer id) {
-        super(name, id);
+        super(null, null);
     }
 
-    public String speak() {
-        return null;
-    }
-
-    public Integer getId() {
-        return null;
-    }
 }

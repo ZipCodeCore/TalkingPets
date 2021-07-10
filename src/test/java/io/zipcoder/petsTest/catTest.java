@@ -43,7 +43,7 @@ public class catTest {
     }
 
     @Test
-    public void inheritanceOfAnimalTest(){
+    public void inheritanceOfPetTest(){
         //given
         Cat cat = new Cat("Taco", 1);
         //then
@@ -51,7 +51,7 @@ public class catTest {
     }
 
     @Test
-    public void inheritanceOfMammalTest(){
+    public void inheritanceOfAnimalTest(){
         //given
         Cat cat = new Cat("Taco", 1);
         //then
@@ -68,19 +68,8 @@ public class catTest {
         cat.setName(givenName);
 
         // Then
-        String dogName = cat.getName();
-        Assert.assertEquals(dogName, givenName);
+        String catName = cat.getName();
+        Assert.assertEquals(catName, givenName);
     }
 
-    @Test
-    public void eatTest(){
-        //given
-        Food tuna = new Food();
-        Cat cat = new Cat("Taco", 1);
-        //when
-        cat.eat(tuna);
-        Food lastMeal = cat.getLastMealEaten();
-        //then
-        Assert.assertEquals(lastMeal,tuna);
-    }
 }

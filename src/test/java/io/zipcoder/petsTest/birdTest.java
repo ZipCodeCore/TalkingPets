@@ -1,21 +1,21 @@
 package io.zipcoder.petsTest;
 
 import io.zipcoder.pets.Animal;
-import io.zipcoder.pets.Dog;
+import io.zipcoder.pets.Bird;
 import io.zipcoder.pets.Pet;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class DogTest {
+public class birdTest {
     @Test
     public void dogConstructorTest(){
         //Given
-        String givenName = "Sparky";
+        String givenName = "Mango";
         Integer givenId = 0;
         //When
-        Dog dog = new Dog(givenName, givenId);
-        String retrievedName = dog.getName();
-        Integer retrievedId = dog.getId();
+        Bird bird = new Bird(givenName, givenId);
+        String retrievedName = bird.getName();
+        Integer retrievedId = bird.getId();
         //Then
         Assert.assertEquals(givenName, retrievedName);
         Assert.assertEquals(givenId, retrievedId);
@@ -24,21 +24,21 @@ public class DogTest {
     @Test
     public void speakTest(){
         //given
-        Dog dog = new Dog("Sparky", 0);
-        String bark = "Bark!";
+        Bird bird = new Bird("Mango", 0);
+        String speak = "Chirp!";
         //when
-        String retrievedSpeak = dog.speak();
+        String retrievedSpeak = bird.speak();
         //then
-        Assert.assertEquals(bark, retrievedSpeak);
+        Assert.assertEquals(speak, retrievedSpeak);
     }
 
     @Test
     public void getIdTest(){
         //given
         Integer givenId = 1;
-        Dog dog = new Dog("Sparky", givenId);
+        Bird bird = new Bird("Mango", 0);
         //when
-        Integer retrievedId = dog.getId();
+        Integer retrievedId = bird.getId();
         //then
         Assert.assertEquals(givenId, retrievedId);
     }
@@ -46,33 +46,30 @@ public class DogTest {
     @Test
     public void inheritanceOfPetTest(){
         //given
-        Dog dog = new Dog("Sparky", 0);
+        Bird bird = new Bird("Mango", 0);
         //then
-        Assert.assertTrue(dog instanceof Pet);
+        Assert.assertTrue(bird instanceof Pet);
     }
 
     @Test
     public void inheritanceOfAnimalTest(){
         //given
-        Dog dog = new Dog("Sparky", 0);
+        Bird bird = new Bird("Mango", 0);
         //then
-        Assert.assertTrue(dog instanceof Animal);
+        Assert.assertTrue(bird instanceof Animal);
     }
 
     @Test
     public void setNameTest() {
         // Given
-        Dog dog = new Dog(null, null);
-        String givenName = "Milo";
+        Bird bird = new Bird(null, null);
+        String givenName = "Chipper";
 
         // When
-        dog.setName(givenName);
+        bird.setName(givenName);
 
         // Then
-        String dogName = dog.getName();
-        Assert.assertEquals(dogName, givenName);
+        String birdName = bird.getName();
+        Assert.assertEquals(birdName, givenName);
     }
-
-
-
 }
