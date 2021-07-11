@@ -56,6 +56,7 @@ public class Console {
         }
     }
     public static void speak(){
+        System.out.println("You have " + count + " pets.");
         for(Pet eachPet: petList){
             System.out.println(eachPet.getName() + " the " + eachPet.getClass().getSimpleName() + " says " + eachPet.speak());
         }
