@@ -15,6 +15,7 @@ public class CatTest {
         Integer retrievedID = cat.getId();
         //then
         Assert.assertEquals(givenName, retrievedName);
+        Assert.assertEquals(givenId, retrievedID);
     }
     @Test
     public void testGetName() {
@@ -39,9 +40,9 @@ public class CatTest {
     @Test
     public void testSpeak() {
         //given
-        String expectedSpeak = "meow";
+        String expectedSpeak = "Meow!";
         //when
-        Cat newCat = new Cat(expectedSpeak);
+        Cat newCat = new Cat("Spooky", 1);
         String actualSpeak = newCat.speak();
         //then
         Assert.assertEquals(expectedSpeak, actualSpeak);

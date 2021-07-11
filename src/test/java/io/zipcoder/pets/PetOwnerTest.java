@@ -10,7 +10,7 @@ public class PetOwnerTest {
         //given
         String expectedName = "Kira";
         //when
-        PetOwner petOwner = new PetOwner(expectedName);
+        PetOwner petOwner = new PetOwner(expectedName, 4);
         String actualName = petOwner.getName();
         //then
         Assert.assertEquals(expectedName, actualName);
@@ -20,10 +20,10 @@ public class PetOwnerTest {
     public void testSetNumberOfPets() {
         //given
         int expected = 1;
-        PetOwner petOwner = new PetOwner("Annette");
+        PetOwner petOwner = new PetOwner("Annette", expected);
         //when
         petOwner.setNumberOfPets(expected);
-        int actual = petOwner.setNumberOfPets();
+        int actual = petOwner.getNumberOfPets();
 
         //then
         Assert.assertEquals(expected, actual);
@@ -32,28 +32,27 @@ public class PetOwnerTest {
     @Test
     public void testAddPets() {
         //given
-        Pet[] expectedPets = {cat1, cat2};
-        PetOwner petOwner = new PetOwner("Caroline");
+        PetOwner petOwner = new PetOwner("Caroline", 0);
         petOwner.setNumberOfPets(2);
         Cat cat1 = new Cat("Luna", 0);
         Cat cat2 = new Cat("Binks", 1);
         //when
         petOwner.addPet(cat1);
         petOwner.addPet(cat2);
-        Pet[] actualPets = petOwner.getPets();
+        Pet actualPet = petOwner.getPetById(0);
         //then
-        Assert.assertEquals(expectedPets, actualPets);
+        Assert.assertEquals(cat1.getName(), actualPet.getName());
     }
 
     @Test
     public void testGetPetById() {
         //given
         String expected = "YunYun";
-        PetOwner petOwner = new PetOwner("Rayna");
+        PetOwner petOwner = new PetOwner("Rayna", 2);
         Dog dog = new Dog(expected, 0);
         Cat cat = new Cat("Sophie", 1);
         //when
-        String actual = petOwner.getPetById(0);
+        Pet actual = petOwner.getPetById(0);
         //then
         Assert.assertEquals(expected, actual);
     }
@@ -62,7 +61,7 @@ public class PetOwnerTest {
     public void testSetPetName() {
         //given
         String expected = "Poppy";
-        PetOwner petOwner = new PetOwner("Peter");
+        PetOwner petOwner = new PetOwner("Peter", 0);
         petOwner.setNumberOfPets(2);
         Cat cat = new Cat("Ghost", 0);
         //when

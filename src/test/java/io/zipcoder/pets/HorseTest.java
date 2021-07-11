@@ -10,7 +10,7 @@ public class HorseTest {
         String givenName = "Misty";
         Integer givenId = 3;
         //when
-        Horse horse = new Horse(givenName);
+        Horse horse = new Horse(givenName, givenId);
         String retrievedName = horse.getName();
         Integer retrievedId = horse.getId();
         //then
@@ -40,9 +40,9 @@ public class HorseTest {
     @Test
     public void testSpeak() {
         //given
-        String expectedSpeak = "neigh";
+        String expectedSpeak = "Neigh!";
         //when
-        Horse newHorse = new Horse(expectedSpeak);
+        Horse newHorse = new Horse("Layla", 2);
         String actualSpeak = newHorse.speak();
         //then
         Assert.assertEquals(expectedSpeak, actualSpeak);
