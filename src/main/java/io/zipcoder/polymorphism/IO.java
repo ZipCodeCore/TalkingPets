@@ -21,4 +21,9 @@ public class IO {
         Integer chooseYourPet = scanner.nextInt();
         return chooseYourPet;
     }
+    public static Integer thePetsAge() {
+        Scanner scanner = new Scanner(System.in);
+        Integer chooseYourPet = scanner.nextInt();
+        return chooseYourPet;
+    }
 }

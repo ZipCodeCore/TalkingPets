@@ -4,6 +4,16 @@ public class Pets {
     String name;
     String speak;
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    Integer age;
+
     public String getName() {
         return name;
     }

@@ -31,31 +31,47 @@ public class Console {
                         break;
                 }
             }
-            System.out.println("What are their names?" + "\n");
-            for (int i = 0; i < listOfPets.size(); i++) {
-                if (listOfPets.get(i) instanceof Cat) {
-                    System.out.println("The name of your cat?");
-                    listOfPets.get(i).setName(IO.namesOfPets());
-                } else if (listOfPets.get(i) instanceof Dog) {
-                    System.out.println("The name of your dog?");
-                    listOfPets.get(i).setName(IO.namesOfPets());
-                } else {
-                    System.out.println("The name of your bird?");
-                    listOfPets.get(i).setName(IO.namesOfPets());
-                }
+        }
+        assigningNames();
+        assigningAges();
+        System.out.println("Wow! You have " + listOfPets.size() + " pets?! That's a lot!" +
+                "\n" + "Thank you for telling me about..." + "\n");
+        printingTheList();
+    }
+    public void assigningNames () {
+        System.out.println("What are their names?" + "\n");
+        for (Pets listOfPet : listOfPets) {
+            if (listOfPet instanceof Cat) {
+                System.out.println("The name of your cat?");
+                listOfPet.setName(IO.namesOfPets());
+            } else if (listOfPet instanceof Dog) {
+                System.out.println("The name of your dog?");
+                listOfPet.setName(IO.namesOfPets());
+            } else {
+                System.out.println("The name of your bird?");
+                listOfPet.setName(IO.namesOfPets());
             }
-            for (int i = 0; i < listOfPets.size(); i++) {
-                if (listOfPets.get(i) instanceof Cat) {
-                    System.out.println("Your cat, " + listOfPets.get(i).getName() +
-                            ", wants to tell you " + listOfPets.get(i).speak());
-                } else if (listOfPets.get(i) instanceof Dog) {
-                    System.out.println("Your dog, " + listOfPets.get(i).getName() +
-                            ", wants to tell you " + listOfPets.get(i).speak());
-                } else {
-                    System.out.println("Your bird, " + listOfPets.get(i).getName() +
-                            ", wants to tell you " + listOfPets.get(i).speak());
-                }
+        }
+    }
+    public void printingTheList () {
+        for (Pets listOfPet : listOfPets) {
+            if (listOfPet instanceof Cat) {
+                System.out.println("Your cat, " + listOfPet.getName() + ", who is " + listOfPet.getAge() +
+                        " years old, wants to tell you " + listOfPet.speak());
+            } else if (listOfPet instanceof Dog) {
+                System.out.println("Your dog, " + listOfPet.getName() + ", who is " + listOfPet.getAge() +
+                        " years old, wants to tell you " + listOfPet.speak());
+            } else {
+                System.out.println("Your bird, " + listOfPet.getName() + ", who is " + listOfPet.getAge() +
+                        " years old, wants to tell you " + listOfPet.speak());
             }
+        }
+    }
+    public void assigningAges () {
+        System.out.println("What are their Ages?" + "\n");
+        for (Pets eachPet : listOfPets) {
+            System.out.println("How old is " + eachPet.getName() + "?");
+            eachPet.setAge(IO.thePetsAge());
         }
     }
 }
