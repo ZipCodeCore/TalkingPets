@@ -11,7 +11,8 @@ public class Cat extends Pet{
         super.setName(name);
     }
 
+    @Override
     public String speak() {
-        return "Meow";
+        return "Meow!";
     }
 }

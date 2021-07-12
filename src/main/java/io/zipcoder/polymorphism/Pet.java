@@ -1,5 +1,6 @@
 package io.zipcoder.polymorphism;
 
+
 public abstract class Pet implements Animal{
 
     private String name;
@@ -24,5 +25,9 @@ public abstract class Pet implements Animal{
     public PetOwner getOwner() {
 
         return this.owner;
+    }
+
+    public String speak() {
+        return "A man chooses, a slave obeys";
     }
 }

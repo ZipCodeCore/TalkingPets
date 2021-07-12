@@ -18,11 +18,11 @@ public class PetOwner {
     }
 
     public PetOwner() {
-        petsList = null;
+        petsList = new ArrayList<Pet>();
     }
 
     public Pet[] getPets() {
-        return petsList.toArray(new Pet [petsList.size()]);
+        return petsList.toArray(new Pet [0]);
     }
 
     public void addPet(Pet pet) {
