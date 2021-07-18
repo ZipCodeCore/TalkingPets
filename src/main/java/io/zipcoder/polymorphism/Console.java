@@ -29,7 +29,6 @@ public class Console {
             userInput = new Scanner(System.in);
             input = userInput.nextInt();
             switch (input) {
-
                 case 1:
                     storePets.add(new Cat());
                     break;

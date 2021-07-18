@@ -25,22 +25,24 @@ public class TestDog {
     @Test
     public void getNameTest() {
         // Given
-
+        String name = "Mochi";
+        Dog dog = new Dog(name);
+        String expectedName = "Mochi";
         // When
-
+        String actualName = dog.getName();
         // Then
-
-
+        Assert.assertEquals(actualName, expectedName);
     }
 
     @Test
     public void dogSpeakTest() {
         // Given
-
+        Dog dog = new Dog();
+        String expected = "Woof!";
         // When
-
+        String actual = dog.speak();
         // Then
-
+        Assert.assertEquals(expected, actual);
 
     }
 
