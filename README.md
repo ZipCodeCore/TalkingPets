@@ -12,7 +12,7 @@ In this lab you will practice creating a simple Java program designed to make us
 
 ## Unit Test
 
-Select a partner from your tribe; You will each write tests for the requirements below, but your partner must develop against your tests and vice versa. Be sure to use the `io.zipcoder.pets` package for your Pet classes to allow tests to execute properly.
+Select a partner from your tribe; You will each write tests for the requirements below, but your partner must develop against your tests and vice versa. Be sure to use the `io.zipcoder.pets` package for your io.zipcoder.pets.Pet classes to allow tests to execute properly.
 
 **Hint:** *An easy way to achieve this is for each partner to set up a GitHub repository for this lab, and add the other partner as a collaborator with write access (in the repository settings).*
 
@@ -24,17 +24,17 @@ Create a program that asks the user how many pets they have. Once you know how m
 
 ### Part 2:
 
-Create a Pet class, and a subclass for each type of pet that you want your program to support. Your classes should follow the following requirements:
+Create a io.zipcoder.pets.Pet class, and a subclass for each type of pet that you want your program to support. Your classes should follow the following requirements:
 
 - You must support at least three types of pets.
 - Dog must be one of the types you support.
 - Cat must be one of the types you support.
-- The Pet class must have a `speak` method that each subclass overrides.
-- The Pet class must have a `name` field with setters and getters.
+- The io.zipcoder.pets.Pet class must have a `speak` method that each subclass overrides.
+- The io.zipcoder.pets.Pet class must have a `name` field with setters and getters.
 
 Use the tests provided as examples to write your own tests for other supported types of pets.
 
 ### Part 3:
 
-Modify your program from part 1 to use the Pet class and its subclasses. Keep a list of the pets your user lists and at the end of the program print out a list of their names and what they say when they speak.
+Modify your program from part 1 to use the io.zipcoder.pets.Pet class and its subclasses. Keep a list of the pets your user lists and at the end of the program print out a list of their names and what they say when they speak.
 
